@@ -10,6 +10,7 @@
     padding: 30px;
     margin: auto;
     width: 100%;
+
 }
 
 .optionsBar{
@@ -79,3 +80,89 @@ color: #FFFFFF;
     left: 1321px;
     top: 55px;
 }
+
+.about{
+    position: absolute;
+    left: 174px;
+    top: 1160px;
+    display: flex;
+    flex-direction: row;
+
+}
+.about h3 {
+    width: 588px;
+    height: 90px;
+    left: 176px;
+    top: 1268px;
+    font-weight: 300;
+    font-size: 25px;
+  
+}
+
+.about ul li{
+    font-weight: 300;
+    font-size: 25px;
+  
+}
+
+.about__information{
+    flex-direction: column;
+}
+
+.about__information button{
+    margin-top: 30px;
+    width: 355px;
+    height: 75px;
+    background: #000000;
+    border-radius: 25px;
+    color: white;
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.about__image {
+    flex-direction: row;
+    width: 594px;
+    height: 594px;
+    left: 846px;
+    top: 1110px;
+    
+}
+
+.reasons{
+    position: absolute;
+    left: 174px;
+    top: 1804px;
+}
+
+.reasons h2{
+    font-weight: 500;
+    font-size: 30px;
+}
+
+.reasons__items{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.reasons__items h3{
+    font-weight: 600;
+    font-size: 27px;
+    text-align: center;
+}
+
+.reasons__items h4{
+    font-weight: 300;
+    font-size: 20px;
+    text-align: center;
+}
+
+.reasons__items1{
+    display: inline-block;
+    justify-content: center;
+ 
+ }
+
+
+
