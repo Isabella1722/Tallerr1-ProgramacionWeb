@@ -46,6 +46,7 @@
     top: 15%;
     background-image: url(/Images/WomanBanner1.jpg);
     background-size: 100% 100%;
+ 
 }
 
 .banner h1{
@@ -83,7 +84,9 @@ color: #FFFFFF;
 
 .about{
     position: absolute;
-    left: 174px;
+    left: 10%;
+    width: 100%;
+    height: 100%;
     top: 1160px;
     display: flex;
     flex-direction: row;
@@ -107,6 +110,7 @@ color: #FFFFFF;
 
 .about__information{
     flex-direction: column;
+  
 }
 
 .about__information button{
@@ -120,6 +124,7 @@ color: #FFFFFF;
     font-size: 25px;
 }
 
+
 .about__image {
     flex-direction: row;
     width: 594px;
@@ -131,7 +136,7 @@ color: #FFFFFF;
 
 .reasons{
     position: absolute;
-    left: 174px;
+    left: 8%;
     top: 1804px;
 }
 
@@ -144,6 +149,8 @@ color: #FFFFFF;
     display: flex;
     flex-direction: row;
     width: 100%;
+    height: 438px;
+    margin-top: 80px;
 }
 
 .reasons__items h3{
@@ -159,9 +166,28 @@ color: #FFFFFF;
 }
 
 .reasons__items1{
+
     display: inline-block;
     justify-content: center;
- 
+    width: 360px;
+    margin-right: 50px;
+    text-align: center;
+ }
+
+ .reasons__items2{
+    display: inline-block;
+    justify-content: center;
+    width: 360px;
+    margin-right: 50px;
+    text-align: center;
+ }
+
+ .reasons__items3{
+    display: inline-block;
+    justify-content: center;
+    width: 360px;
+    margin-right: 50px;
+    text-align: center;
  }
 
 
