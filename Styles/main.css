@@ -9,10 +9,23 @@
     display: flex;
     padding: 30px;
     margin: auto;
-    width: 100%;
+  
 
 }
 
+body{
+    margin: 0px;
+    width: 100%;
+    height: 100vh;
+}
+main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+}
 .optionsBar{
     margin: auto;
     justify-content: center;
@@ -38,32 +51,33 @@
 }
 
 .banner{
-    margin: auto;
-    position: absolute;
+    /* margin: auto;
+    position: absolute; */
     width: 100%;
-    height: 961px;
-    left: 0px;
-    top: 15%;
+    height: 100%;
+    margin-top: 20px;
+    /*
     background-image: url(/Images/WomanBanner1.jpg);
-    background-size: 100% 100%;
- 
+    background-repeat: no-repeat;
+    background-size: cover; */
+}
+
+.banner img{
+    width: 100%;
+    height: 100%;
 }
 
 .banner h1{
     position: absolute;
-    width: 570px;
-    height: 201px;
-    left: 71px;
-    top: 217px;
-
+    width: 40%;
+    left: 5%;
+    top: 30%;
     font-family: Montserrat;
     font-style: normal;
     font-weight: bold;
     font-size: 55px;
-    line-height: 67px;
     text-transform: uppercase;
-
-color: #FFFFFF;
+    color: #FFFFFF;
 }
 
 .searchIcon{
@@ -82,14 +96,18 @@ color: #FFFFFF;
     top: 55px;
 }
 
-.about{
-    position: absolute;
-    left: 10%;
+.separator{
+    background-color:black ;
+    height: 2px;
     width: 100%;
+}
+.about{
+    
     height: 100%;
-    top: 1160px;
+    width: 100%;
     display: flex;
     flex-direction: row;
+    justify-content: flex-end;
 
 }
 .about h3 {
@@ -110,7 +128,7 @@ color: #FFFFFF;
 
 .about__information{
     flex-direction: column;
-  
+    margin-top: 8%;
 }
 
 .about__information button{
@@ -127,17 +145,23 @@ color: #FFFFFF;
 
 .about__image {
     flex-direction: row;
-    width: 594px;
-    height: 594px;
-    left: 846px;
-    top: 1110px;
+    width: 40%;
+    height: 100%;
+ 
     
 }
 
+.about__image img{
+    width: 100%;
+    height: 100%;
+}
+
 .reasons{
-    position: absolute;
-    left: 8%;
-    top: 1804px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
 
 .reasons h2{
@@ -148,8 +172,8 @@ color: #FFFFFF;
 .reasons__items{
     display: flex;
     flex-direction: row;
-    width: 100%;
-    height: 438px;
+    justify-content: space-around;
+    width: 80%;
     margin-top: 80px;
 }
 
@@ -170,7 +194,6 @@ color: #FFFFFF;
     display: inline-block;
     justify-content: center;
     width: 360px;
-    margin-right: 50px;
     text-align: center;
  }
 
@@ -178,7 +201,6 @@ color: #FFFFFF;
     display: inline-block;
     justify-content: center;
     width: 360px;
-    margin-right: 50px;
     text-align: center;
  }
 
@@ -186,7 +208,6 @@ color: #FFFFFF;
     display: inline-block;
     justify-content: center;
     width: 360px;
-    margin-right: 50px;
     text-align: center;
  }
 
