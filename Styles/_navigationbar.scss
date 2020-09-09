@@ -1,0 +1,33 @@
+.navigationbar {
+  
+    display: flex;
+    padding: 30px;
+    margin: auto;
+  
+
+}
+.optionsBar{
+    margin: auto;
+    justify-content: center;
+    align-content: space-between;
+
+    width: 30%;
+    height: 28px;
+    left: 731px;
+    top: 66px;
+    
+    ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    
+    }
+
+    ul li{
+        display: inline-block;
+        font-size: 22px;
+        margin: 22px;
+    }
+}
+
+
