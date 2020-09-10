@@ -2,7 +2,13 @@
 
 
     $primary-color: black;
+    $secondary-color: white;
     $primary-font: "Montserrat",sans-serif;
+    $font-size-h1: 35px;
+    $font-size-h2: 30px;
+    $font-size-h3: 25px;
+    $font-size-h4: 20px;
+
 
 
 
@@ -13,4 +19,5 @@
 @import '_banner';
 @import '_about';
 @import '_reasons';
+@import '_product';
 
