@@ -1,4 +1,246 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap");
+/*
+	HTML5 Reset :: style.css
+	----------------------------------------------------------
+	We have learned much from/been inspired by/taken code where offered from:
+
+	Eric Meyer					:: https://meyerweb.com
+	HTML5 Doctor				:: https://html5doctor.com
+	and the HTML5 Boilerplate	:: https://html5boilerplate.com
+
+-------------------------------------------------------------------------------*/
+/* Let's default this puppy out
+-------------------------------------------------------------------------------*/
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-weight: normal;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+article, aside, figure, footer, header, nav, section, details, summary {
+  display: block;
+}
+
+/* Handle box-sizing while better addressing child elements:
+   https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+/* consider resetting the default cursor: https://gist.github.com/murtaugh/5247154 */
+/* Responsive images and other embedded objects
+*/
+img,
+object,
+embed {
+  max-width: 100%;
+}
+
+/*
+   Note: keeping IMG here will cause problems if you're using foreground images as sprites.
+	 In fact, it *will* cause problems with Google Maps' controls at small size.
+	If this is the case for you, try uncommenting the following:
+
+#map img {
+		max-width: none;
+}
+*/
+/* force a vertical scrollbar to prevent a jumpy page */
+html {
+  overflow-y: scroll;
+}
+
+/* we use a lot of ULs that aren't bulleted.
+	don't forget to restore the bullets within content. */
+ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted #000;
+  cursor: help;
+}
+
+/* tables still need cellspacing="0" in the markup */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+th {
+  font-weight: bold;
+  vertical-align: bottom;
+}
+
+td {
+  font-weight: normal;
+  vertical-align: top;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+pre {
+  white-space: pre;
+  /* CSS2 */
+  white-space: pre-wrap;
+  /* CSS 2.1 */
+  white-space: pre-line;
+  /* CSS 3 (and 2.1 as well, actually) */
+  word-wrap: break-word;
+  /* IE */
+}
+
+input[type="radio"] {
+  vertical-align: text-bottom;
+}
+
+input[type="checkbox"] {
+  vertical-align: bottom;
+}
+
+.ie7 input[type="checkbox"] {
+  vertical-align: baseline;
+}
+
+.ie6 input {
+  vertical-align: text-bottom;
+}
+
+select, input, textarea {
+  font: 99% sans-serif;
+}
+
+table {
+  font-size: inherit;
+  font: 100%;
+}
+
+small {
+  font-size: 85%;
+}
+
+strong {
+  font-weight: bold;
+}
+
+td, td img {
+  vertical-align: top;
+}
+
+/* Make sure sup and sub don't mess with your line-heights https://gist.github.com/413930 */
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* standardize any monospaced elements */
+pre, code, kbd, samp {
+  font-family: monospace, sans-serif;
+}
+
+/* hand cursor on clickable elements */
+.clickable,
+label,
+input[type=button],
+input[type=submit],
+input[type=file],
+button {
+  cursor: pointer;
+}
+
+/* Webkit browsers add a 2px margin outside the chrome of form elements */
+button, input, select, textarea {
+  margin: 0;
+}
+
+/* make buttons play nice in IE */
+button,
+input[type=button] {
+  width: auto;
+  overflow: visible;
+}
+
+/* scale images in IE7 more attractively */
+.ie7 img {
+  -ms-interpolation-mode: bicubic;
+}
+
+/* prevent BG image flicker upon hover
+   (commented out as usage is rare, and the filter syntax messes with some pre-processors)
+.ie6 html {filter: expression(document.execCommand("BackgroundImageCache", false, true));}
+*/
+/* let's clear some floats */
+.clearfix:before, .clearfix:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
 * {
   font-family: "Montserrat", sans-serif;
 }
@@ -45,11 +287,6 @@ body {
 .container {
   width: 100%;
   height: 100%;
-  /*
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: space-between;*/
 }
 
 .banner {
@@ -210,106 +447,29 @@ body {
   text-align: center;
 }
 
-.product {
-  width: 100%;
-  height: 100%;
+.row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  /*
-    &__promotiontitle {
-        width: 50%;
-        height: 70px;
-        background-color: $primary-color;
-        color: $secondary-color;
-        text-transform: uppercase;
-        padding: 5px;
-        display: flex;
-        align-items: center;
-        
-
-        h1 {
-            height: 100%;
-            width: 100%;
-            margin-left: 100px;
-            margin-top: 0;
-            margin-bottom: 0;
-            font-size: $font-size-h1;
-        }
-    }
-
-    &__image {
-        width: 40%;
-        height: 70%;
-    }
-
-    &__title {
-        width: 50%;
-        height: 70px;
-        background-color: $primary-color;
-        color: $secondary-color;
-
-        h1 {
-            margin-left: 100px;
-            margin-top: 0;
-            margin-bottom: 0;
-            font-size: $font-size-h1;
-            font-weight: 100;
-            color: $secondary-color;
-        }
-    }
-
-    &__information {
-        width: 44%;
-        height: 20px;
-        margin-left: 100px;
-
-        h2 {
-            font-size: $font-size-h2;
-            font-weight: 100;
-            color: $primary-color;
-        }
-
-        h4 {
-            font-size: $font-size-h4;
-            font-weight: 100;
-            color: $primary-color;
-        }
-
-        h3 {
-            font-size: $font-size-h3;
-            font-weight: 100;
-            color: $primary-color;
-        }
-    }
-
-    &__rating{
-
-        flex-direction: column;
-        width: 50%;
-        height: 50%;
-    }*/
+  width: 100%;
 }
 
-.product__information {
+.row__col {
   width: 50%;
+}
+
+.information {
+  width: 100%;
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
 }
 
-.product__information__promotiontitle {
-  width: 100%;
-  height: 70px;
+.information__promotiontitle {
+  width: 80%;
+  height: 60px;
   background-color: black;
   color: white;
   text-transform: uppercase;
@@ -322,29 +482,34 @@ body {
           align-items: center;
 }
 
-.product__information__promotiontitle h1 {
-  height: 100%;
+.information__promotiontitle h1 {
   width: 100%;
   margin-left: 100px;
   margin-top: 0;
   margin-bottom: 0;
+  margin-right: 0;
   font-size: 35px;
 }
 
-.product__information__image {
-  width: 100%;
-  height: 80%;
+.information__image {
+  width: 75%;
+  height: 57%;
 }
 
-.product__information__title {
-  width: 100%;
-  height: 70px;
-  margin-top: 60px;
+.information__title {
+  width: 81%;
+  height: 60px;
   background-color: black;
   color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.product__information__title h1 {
+.information__title h1 {
   margin-left: 100px;
   margin-top: 0;
   margin-bottom: 0;
@@ -353,34 +518,40 @@ body {
   color: white;
 }
 
-.product__information__description {
-  width: 100%;
-  height: 20px;
+.information__description {
+  width: 72%;
+  height: 20%;
   margin-left: 100px;
 }
 
-.product__information__description h2 {
+.information__description h2 {
+  margin-top: 30px;
+  margin-bottom: 0;
   font-size: 30px;
   font-weight: 100;
   color: black;
 }
 
-.product__information__description h4 {
+.information__description h4 {
+  margin-top: 10px;
+  margin-bottom: 0;
   font-size: 20px;
   font-weight: 100;
   color: black;
 }
 
-.product__information__description h3 {
+.information__description h3 {
+  margin-top: 10px;
+  margin-bottom: 0;
   font-size: 25px;
   font-weight: 100;
   color: black;
 }
 
-.product__rating {
+.rating {
   margin: 0;
-  width: 15%;
-  height: 80%;
+  width: 100%;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -388,18 +559,73 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
-.product__rating__image {
+.rating__image {
+  width: 100%;
+  height: 71%;
+}
+
+.rating__image img {
+  width: 100%;
+  height: 100%;
+}
+
+.rating__content {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 15%;
+}
+
+.rating__content h2 {
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.rating__items {
+  width: 45%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  width: 50%;
-  height: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.product__rating__image img {
+.interaction {
+  background-color: black;
+}
+
+.interaction h2 {
+  font-size: 30px;
+  color: white;
+  margin-left: 100px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.interaction__image {
+  margin-top: 50px;
+  width: 50%;
+  height: 71%;
+  margin-left: 100px;
+  margin-top: 20px;
+}
+
+.interaction__image img {
   width: 100%;
   height: 100%;
 }
