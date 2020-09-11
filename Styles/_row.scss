@@ -4,6 +4,11 @@
     
     &__col{
         width: 50%;
+
+        &--bg{
+            background-color: $primary-color;
+        }
         
     }
+
 }

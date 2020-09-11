@@ -1,12 +1,12 @@
 .interaction{
-    background-color: $primary-color;
-   
+    margin-top: 20px;
+    
 
     h2{
         font-size: $font-size-h2;
         color: $secondary-color;
-        margin-left: 100px;
         width: 100%;
+        text-align: center;
     }
 
     h4{
@@ -14,13 +14,15 @@
         color: $secondary-color;
         margin-left: 100px;
         margin-top: 20px;
-        width: 100%;
+        margin-bottom: 30px;
+        width: 80%;
+ 
     }
 
     &__image{
         margin-top: 50px;
-        width: 50%;
-        height: 71%;
+        width: 70%;
+        height: 70%;
         margin-left: 100px;
         margin-top: 20px;
         img {
