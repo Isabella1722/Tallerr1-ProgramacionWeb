@@ -1,0 +1,37 @@
+.finalcontent{
+    width: 100%;
+    height: 35%;
+    background-color: $primary-color;
+    
+    //flex-direction: column;
+    &__links{
+        height: 100%;
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        color: $secondary-color;
+        
+
+        a{
+            color: $secondary-color;
+            font-size: $font-size-h4;
+            font-weight: 100;
+            margin-bottom: 10px;
+        }
+        h4{
+            font-size: $font-size-h4;
+            font-weight: 100;
+            margin-bottom: 10px;
+        }
+
+        &--social{
+            width: 50%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            
+        
+        }
+    }
+
+}
