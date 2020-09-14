@@ -364,7 +364,6 @@ body {
 }
 
 .btnPrimary--small {
-  margin-top: 30px;
   width: 144px;
   height: 44px;
   background: black;
@@ -733,5 +732,92 @@ body {
 .barbrand img {
   width: 100%;
   height: 100%;
+}
+
+.newsletter {
+  width: 100%;
+  height: 286px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.newsletter__image {
+  width: 20%;
+  height: 100%;
+}
+
+.newsletter__content {
+  width: 25%;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px;
+}
+
+.newsletter__content h2 {
+  font-size: 30px;
+  font-weight: 600;
+  color: black;
+  text-align: start;
+}
+
+.newsletter__content h3 {
+  margin-top: 15px;
+  font-size: 25px;
+  font-weight: 100;
+  color: black;
+  text-align: start;
+}
+
+.newsletter__subscription {
+  width: 55%;
+  height: 100%;
+  padding: 40px;
+}
+
+.newsletter__subscription h3 {
+  margin-top: 15px;
+  font-size: 25px;
+  font-weight: 500;
+  color: black;
+  text-align: start;
+}
+
+.newsletter__subscription input {
+  width: 533px;
+  height: 44px;
+  border-radius: 25px;
+  border-color: black;
+  font-size: 15px;
+}
+
+.newsletter__subscription input::-webkit-input-placeholder {
+  padding: 15px;
+  color: #5a5a5a;
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.newsletter__subscription input:-ms-input-placeholder {
+  padding: 15px;
+  color: #5a5a5a;
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.newsletter__subscription input::-ms-input-placeholder {
+  padding: 15px;
+  color: #5a5a5a;
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.newsletter__subscription input::placeholder {
+  padding: 15px;
+  color: #5a5a5a;
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
 }
 /*# sourceMappingURL=main.css.map */
