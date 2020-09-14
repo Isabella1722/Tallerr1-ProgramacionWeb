@@ -3,7 +3,16 @@
     width: 100%;
     
     &__col{
-        width: 50%;
+     
+
+        &--2{
+            width: 50%;
+        }
+
+        &--3{
+            width: 33.3%;
+        }
+
 
         &--bg{
             background-color: $primary-color;

@@ -2,8 +2,8 @@
   
     display: flex;
     padding: 30px;
-  
     width: 100%;
+
     img{
         width: 15%;
     }
@@ -15,24 +15,24 @@
    
     width: 70%;
     height: 28px;
-   
+    justify-content: flex-end;
     
     ul{
         list-style: none;
-        width:70%;
+        width:40%;
         display: flex;
         justify-content: space-around;
     
     }
     ul li{
         font-size: 22px;
-       // margin: 22px;
     }
     &__icons{
         
         width: 15%;
-        justify-content: space-between;
-       // padding: 15px;
+        display: flex;
+        justify-content: space-around;
+
         
 }
 }
