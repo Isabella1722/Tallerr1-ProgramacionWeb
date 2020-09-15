@@ -1,5 +1,5 @@
 .btnPrimary {
-    margin-top: 30px;
+    margin-top: 50px;
     width: 320px;
     height: 75px;
     background: $primary-color;
@@ -9,6 +9,10 @@
     font-weight: 600;
     font-size: $font-size-h3;
     border: none;
+
+    &:hover{
+        background:#4D4D4D;
+    }
 
     &--background{
     margin-top: 30px;
@@ -21,9 +25,14 @@
     font-weight: 600;
     font-size: $font-size-h3;
     border: none;
+
+    &:hover{
+        background:#DDDDDD;
+    }
     }
 
     &--small{
+        margin-top: 0;
         width: 144px;
         height: 44px;
         background:$primary-color;

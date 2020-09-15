@@ -1,39 +1,52 @@
 .navigationbar {
-  
     display: flex;
     padding: 30px;
     width: 100%;
 
-    img{
-        width: 15%;
-    }
-  
+   
 }
-.optionsBar{
+.brand {
+    width: 15%;
+}
+.optionsBar {
     display: flex;
     margin: auto;
-   
+
     width: 70%;
     height: 28px;
     justify-content: flex-end;
-    
-    ul{
+
+    ul {
         list-style: none;
-        width:40%;
+        width: 40%;
         display: flex;
         justify-content: space-around;
-    
     }
-    ul li{
+    ul li {
         font-size: 22px;
     }
-    &__icons{
-        
-        width: 15%;
+
+    &__icons {
+        width: 10%;
+        height: auto;
         display: flex;
         justify-content: space-around;
+        /*
+       
+            img{
+                width: 25%;
+                height: auto;
+            }
+       
+*/
+        &--search {
+            width: 100%;
+            height: auto;
+        }
 
-        
+        &--shopping {
+            width: 90%;
+            height: auto;
+        }
+    }
 }
-}
-
