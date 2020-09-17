@@ -16,15 +16,21 @@
     height: 28px;
     justify-content: flex-end;
 
-    ul {
+    &__list {
         list-style: none;
         width: 40%;
         display: flex;
         justify-content: space-around;
     }
-    ul li {
-        font-size: 22px;
+    &__list li {
+        font-size: 25px;
+        
     }
+
+    &__list a {
+        text-decoration: none;
+    }
+ 
 
     &__icons {
         width: 10%;
@@ -47,6 +53,98 @@
         &--shopping {
             width: 90%;
             height: auto;
+        }
+    }
+}
+
+
+//Tablet
+@media (max-width:992px){
+    .brand {
+        width: 20%;
+    }
+
+    .optionsBar {
+        &__list {
+            width: 50%;
+        }
+        &__list li {
+            font-size: 22px;
+        }
+    
+        &__icons {
+           
+            width: 15%;
+
+            &--search {
+                width: 90%;
+                height: auto;
+            }
+    
+            &--shopping {
+                width: 80%;
+                height: auto;
+            }
+        }
+    }
+    
+    
+}
+
+//Celular grande
+@media (max-width: 768px){
+    .navigationbar {
+        display: flex;
+        //padding: 40px;
+        width: 100%;
+    
+    }
+    
+    .brand {
+        width: 25%;
+    }
+    .optionsBar {
+        display: flex;
+        margin: auto;
+        width: 100%;
+        height: 28px;
+        flex-direction: column;
+        //justify-content: flex-end;
+    
+        &__list {
+         
+            order: 1;
+            list-style: none;
+            width: 40%;
+            display: flex;
+            justify-content: space-around;
+        }
+        &__list li {
+            font-size: 22px;
+            
+        }
+    
+        &__list a {
+            text-decoration: none;
+        }
+     
+    
+        &__icons {
+            order: 0;
+            width: 10%;
+            height: auto;
+            display: flex;
+            justify-content: space-around;
+           
+            &--search {
+                width: 100%;
+                height: auto;
+            }
+    
+            &--shopping {
+                width: 90%;
+                height: auto;
+            }
         }
     }
 }
