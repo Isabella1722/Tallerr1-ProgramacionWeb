@@ -23,3 +23,23 @@
     }
 
 }
+
+@media (max-width: 768px){
+    .row__col--interaction{
+        align-items: center;
+        flex-direction: column;
+        &Width{
+            width: 100%;
+        }
+    }
+
+    .specification{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h2{
+            text-align: center;
+        }
+    }
+}
