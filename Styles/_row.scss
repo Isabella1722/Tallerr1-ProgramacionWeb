@@ -1,30 +1,26 @@
-.row{
+.row {
     display: flex;
     width: 100%;
-    
-    &__col{
-     
 
-        &--2{
+    &__col {
+        &--2 {
             width: 50%;
         }
 
-        &--3{
+        &--3 {
             width: 33.3%;
-           // padding: 30px;
+            // padding: 30px;
             //height: 100%;
         }
 
-
-        &--bg{
+        &--bg {
             background-color: $primary-color;
         }
-        
     }
-
 }
 
-@media (max-width: 768px){
+@media (max-width: 768px) {
+    /*
     .row__col--interaction{
         align-items: center;
         flex-direction: column;
@@ -32,14 +28,23 @@
             width: 100%;
         }
     }
-
-    .specification{
+*/
+    .row {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        &__col {
+         
+            &--2 {
+                width: 100%;
+                align-items: center;
+              
+            }
 
-        h2{
-            text-align: center;
+            &--bg {
+                width: 100%;
+                align-items: center;
+             
+            }
         }
     }
 }

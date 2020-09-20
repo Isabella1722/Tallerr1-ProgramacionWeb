@@ -20,7 +20,7 @@
             width: 90%;
             height: 20%;
             font-weight: 300;
-            font-size: $font-size-h3;
+            font-size: $font-size-p;
             margin-top: 15px;
         }
 
@@ -53,40 +53,38 @@
     }
 }
 
-//Celular grande
+//Big Mobile
 
 @media (max-width: 768px) {
     .about {
         height: 60%;
         &__information {
-            width: 50%;
+            width: 55%;
             margin-left: 60px;
             margin-top: 40px;
-            margin-bottom: 30px;
+            margin-bottom: 50px;
 
             img {
-                width: 50%;
+                width: 65%;
             }
             p {
-                font-size:  $font-size-h3-big-mobile;
+                font-size: $font-size-h3-big-mobile;
             }
-    
+
             ul {
                 margin-top: 40px;
             }
-    
+
             ul li {
                 font-weight: 300;
-                font-size:  $font-size-h3-big-mobile;
+                font-size: $font-size-h3-big-mobile;
             }
-    
-           
         }
 
         &__image {
             width: 60%;
             height: auto;
-    
+
             img {
                 width: 100%;
                 height: 100%;

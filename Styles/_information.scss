@@ -1,9 +1,9 @@
-.information{
+.information {
     width: 100%;
     height: 100%;
     flex-direction: column;
 
-    &__promotiontitle { 
+    &__promotiontitle {
         width: 100%;
         height: 60px;
         background-color: $primary-color;
@@ -14,7 +14,6 @@
         align-items: center;
 
         h1 {
-            
             width: 100%;
             margin-left: 100px;
             margin-top: 0;
@@ -32,7 +31,7 @@
     &__title {
         width: 100%;
         height: 60px;
-      
+
         background-color: $primary-color;
         color: $secondary-color;
         display: flex;
@@ -60,11 +59,17 @@
             font-weight: 100;
             color: $primary-color;
         }
-
-        p {
+        h4{
             margin-top: 10px;
             margin-bottom: 0;
             font-size: $font-size-h4;
+            font-weight: 400;
+            color: $primary-color;
+        }
+        p {
+            margin-top: 10px;
+            margin-bottom: 0;
+            font-size: $font-size-p;
             font-weight: 100;
             color: $primary-color;
         }
@@ -76,5 +81,74 @@
             font-weight: 100;
             color: $primary-color;
         }
+
+       
     }
+}
+
+//Big Mobile
+@media (max-width: 768px) {
+    .information {
+        
+       /* display: flex;
+        align-items: center;*/
+
+        height: 100%;
+        &__promotiontitle {
+            width: 100%;
+            height: 70px;
+            justify-content: center;
+            h1 {
+                width: 100%;
+                margin-left: 0px;
+                font-size: $font-size-h1-big-mobile;
+                text-align: center;
+            }
+        }
+
+        &__image {
+            align-self: center;
+            width: 100%;
+        }
+
+        &__title {
+            height: 70px;
+            justify-content: center;
+            h1 {
+                margin-left: 0px;
+                font-size: $font-size-h1-big-mobile;
+                text-align: center;
+               
+            }
+        }
+
+        &__description {
+            width: 80%;
+            height: 21%;
+            margin-left: 60px;
+            
+    
+            h2 {
+                font-size:  $font-size-h2-big-mobile;
+            }
+            h4{
+               
+                font-size: $font-size-h4-big-mobile;
+    
+            }
+            p {
+               
+                font-size: $font-size-p-big-mobile;
+               
+            }
+    
+            h3 {
+            
+                font-size: $font-size-h3-big-mobile;
+    
+            }
+        }
+    }
+
+
 }

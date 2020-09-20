@@ -37,14 +37,7 @@
         height: auto;
         display: flex;
         justify-content: space-around;
-        /*
-       
-            img{
-                width: 25%;
-                height: auto;
-            }
-       
-*/
+
         &--search {
             width: 100%;
             height: auto;
@@ -91,11 +84,10 @@
     
 }
 
-//Celular grande
+//Big Mobile
 @media (max-width: 768px){
     .navigationbar {
         display: flex;
-        //padding: 40px;
         width: 100%;
         flex-direction: column;
         align-items: center;
@@ -113,7 +105,6 @@
         width: 100%;
         height: 28px;
         flex-direction: row;
-        //justify-content: flex-end;
         margin-top: 20px;
     
         &__list {

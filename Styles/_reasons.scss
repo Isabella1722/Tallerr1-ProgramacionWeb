@@ -1,11 +1,9 @@
 .reasons {
     display: flex;
     flex-direction: column;
-    //align-items: center;
     width: 90%;
     height: 80%;
     border-left: 3px solid black;
-    //flex-flow: column wrap;
 
     h2 {
         font-weight: 500;
@@ -18,7 +16,6 @@
     &__items {
         display: flex;
         flex-direction: row;
-        //justify-items: center;
         justify-content: space-around;
         width: 90%;
         margin-top: 80px;
@@ -33,7 +30,7 @@
         p {
             margin-top: 10px;
             font-weight: 300;
-            font-size: $font-size-h4;
+            font-size: $font-size-p;
             text-align: center;
         }
 
@@ -47,23 +44,39 @@
     }
 }
 
-//Celular grande
+//Big Mobile
 @media (max-width: 768px) {
     .reasons {
         height: 100%;
 
+        h2 {
+            font-size:  $font-size-h2-big-mobile;
+            margin-top: 30px;
+            margin-left: 0px;
+            text-align: center;
+      
+        }
+
+        h3 {
+            font-size: $font-size-h3-big-mobile;
+        }
+
+        p {
+            font-size: $font-size-p-big-mobile;
+         
+        }
 
         &__items {
             flex-flow: column wrap;
             align-items: center;
             margin-left: 0px;
             width: 100%;
-
+            margin-top: 40px;
             div {
               
-                width: 55%;
+                width: 60%;
                 text-align: center;
-                margin-bottom: 60px;
+                margin-bottom: 70px;
             }
         }
     }

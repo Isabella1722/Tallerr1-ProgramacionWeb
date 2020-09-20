@@ -7,7 +7,7 @@
     text-align: center;
     color:$secondary-color;
     font-weight: 600;
-    font-size: $font-size-h3;
+    font-size: $font-size-primary-bottom;
     border: none;
 
     &:hover{
@@ -23,7 +23,7 @@
     text-align: center;
     color: $primary-color;
     font-weight: 600;
-    font-size: $font-size-h3;
+    font-size:$font-size-primary-bottom;
     border: none;
 
     &:hover{
@@ -40,7 +40,7 @@
         text-align: center;
         color: $secondary-color;
         font-weight: 600;
-        font-size: $font-size-h4;
+        font-size:  $font-size-small-bottom;
         border: none;  
     }
 
@@ -49,6 +49,7 @@
     }
 }
 
+//Big Mobile
 @media (max-width: 768px) {
 .btnPrimary {
     margin-top: 20px;
