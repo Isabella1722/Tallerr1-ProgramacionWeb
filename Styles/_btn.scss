@@ -48,3 +48,14 @@
         margin-bottom: 30px;
     }
 }
+
+@media (max-width: 768px) {
+.btnPrimary {
+    margin-top: 20px;
+    width: 255px;
+    height: 55px;
+    font-size: $font-size-primary-bottom-big-mobile;
+    
+
+}
+}

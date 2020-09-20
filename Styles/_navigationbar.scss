@@ -126,11 +126,11 @@
         }
     
         &__icons {
-            order: 0;
+           
             width: 15%;
             height: auto;
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
            
             &--search {
                 width: 100%;
