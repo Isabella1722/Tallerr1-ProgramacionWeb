@@ -16,3 +16,17 @@
      
     }
 }
+
+
+//Big Mobile
+
+@media (max-width: 576px) {
+
+    .barbrand{
+    &__image{
+        width: 30%;
+        height: 35%;
+    }
+
+}
+}

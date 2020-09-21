@@ -334,7 +334,7 @@ input[type=button] {
     padding: 0px;
   }
   .brand {
-    width: 35%;
+    width: 45%;
     margin-top: 20px;
   }
   .optionsBar {
@@ -352,7 +352,7 @@ input[type=button] {
   }
   .optionsBar__list {
     list-style: none;
-    width: 90%;
+    width: 75%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -361,7 +361,7 @@ input[type=button] {
     font-size: 22px;
   }
   .optionsBar__icons {
-    width: 15%;
+    width: 25%;
     height: auto;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -418,13 +418,17 @@ input[type=button] {
 @media (max-width: 576px) {
   .banner {
     width: 100%;
-    height: 348px;
+    height: 350px;
   }
   .banner__title {
     width: 40%;
     padding-top: 40px;
     margin-left: 25px;
     font-size: 20px;
+  }
+  .banner--final {
+    width: 100%;
+    height: 260px;
   }
 }
 
@@ -456,7 +460,7 @@ input[type=button] {
 }
 
 .btnPrimary:hover {
-  background: #4D4D4D;
+  background: #4d4d4d;
 }
 
 .btnPrimary--background {
@@ -467,7 +471,7 @@ input[type=button] {
 }
 
 .btnPrimary:hover {
-  background: #DDDDDD;
+  background: #dddddd;
 }
 
 .btnPrimary--rating {
@@ -494,13 +498,22 @@ input[type=button] {
 @media (max-width: 576px) {
   .btnPrimary {
     margin-top: 20px;
-    width: 185px;
-    height: 40px;
-    font-size: 18px;
+    width: 255px;
+    height: 50px;
+    font-size: 20px;
   }
   .btnPrimary--rating {
     width: 320px;
     height: 65px;
+  }
+  .btnPrimary--background {
+    width: 320px;
+    height: 65px;
+    margin-top: 70px;
+  }
+  .btnPrimary--small {
+    width: 144px;
+    height: 44px;
   }
 }
 
@@ -578,15 +591,22 @@ input[type=button] {
 @media (max-width: 576px) {
   .about {
     height: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .about__information {
-    width: 50%;
+    width: 90%;
     margin-left: 35px;
     margin-top: 40px;
-    margin-bottom: 50px;
+    margin-bottom: 0px;
   }
   .about__information img {
-    width: 65%;
+    width: 40%;
   }
   .about__information p {
     font-size: 20px;
@@ -596,7 +616,11 @@ input[type=button] {
     font-size: 20px;
   }
   .about__image {
-    width: 60%;
+    width: 100%;
+    margin-top: 50px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
   }
 }
 
@@ -661,7 +685,7 @@ input[type=button] {
     height: 100%;
   }
   .reasons h2 {
-    font-size: 24px;
+    font-size: 22px;
     margin-top: 30px;
     margin-left: 0px;
     text-align: center;
@@ -886,10 +910,10 @@ input[type=button] {
   }
   .information__description h2 {
     margin-top: 50px;
-    font-size: 24px;
+    font-size: 22px;
   }
   .information__description h4 {
-    font-size: 20px;
+    font-size: 18px;
   }
   .information__description p {
     font-size: 20px;
@@ -1005,7 +1029,7 @@ input[type=button] {
             align-items: center;
   }
   .rating__content h2 {
-    font-size: 24px;
+    font-size: 22px;
   }
   .rating__items {
     width: 53%;
@@ -1024,6 +1048,7 @@ input[type=button] {
 
 .interaction {
   margin-top: 20px;
+  margin-bottom: 60px;
 }
 
 .interaction h2 {
@@ -1038,7 +1063,6 @@ input[type=button] {
   color: white;
   margin-left: 100px;
   margin-top: 20px;
-  margin-bottom: 30px;
   width: 80%;
 }
 
@@ -1053,6 +1077,36 @@ input[type=button] {
 .interaction__image img {
   width: 100%;
   height: 100%;
+}
+
+@media (max-width: 576px) {
+  .interaction {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 30px;
+  }
+  .interaction h2 {
+    font-size: 22px;
+    text-align: center;
+  }
+  .interaction h4 {
+    width: 100%;
+    font-size: 18px;
+    text-align: center;
+    margin-left: 0px;
+  }
+  .interaction__image {
+    width: 80%;
+    margin-left: 0px;
+  }
 }
 
 .specification {
@@ -1093,9 +1147,15 @@ input[type=button] {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    margin-top: 0px;
   }
   .specification h2 {
     text-align: center;
+    font-size: 22px;
+  }
+  .specification__table {
+    width: 80%;
+    font-size: 20px;
   }
 }
 
@@ -1122,6 +1182,13 @@ input[type=button] {
 .barbrand img {
   width: 100%;
   height: 100%;
+}
+
+@media (max-width: 576px) {
+  .barbrand__image {
+    width: 30%;
+    height: 35%;
+  }
 }
 
 .newsletter {

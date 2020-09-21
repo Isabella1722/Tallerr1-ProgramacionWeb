@@ -1,25 +1,23 @@
-.interaction{
+.interaction {
     margin-top: 20px;
-    
-
-    h2{
+    margin-bottom: 60px;
+    h2 {
         font-size: $font-size-h2;
         color: $secondary-color;
         width: 100%;
         text-align: center;
     }
 
-    h4{
+    h4 {
         font-size: $font-size-h4;
         color: $secondary-color;
         margin-left: 100px;
         margin-top: 20px;
-        margin-bottom: 30px;
+      
         width: 80%;
- 
     }
 
-    &__image{
+    &__image {
         margin-top: 50px;
         width: 70%;
         height: 70%;
@@ -30,11 +28,31 @@
             height: 100%;
         }
     }
-
-
 }
 
-@media (max-width: 768px) {
-   
+@media (max-width: 576px) {
+    .interaction {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 30px;
+        
+        h2 {
+            font-size: $font-size-h2-big-mobile;
+            text-align: center;
+        }
 
+        h4 {
+            width: 100%;
+            font-size: $font-size-h4-big-mobile;
+            text-align: center;
+            margin-left: 0px;
+            
+        }
+
+        &__image {
+            width: 80%;
+            margin-left: 0px;
+    }
+}
 }

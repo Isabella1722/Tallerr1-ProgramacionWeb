@@ -63,7 +63,7 @@
     }
     
     .brand {
-        width: 35%;
+        width: 45%;
         margin-top: 20px;
     }
     .optionsBar {
@@ -76,7 +76,7 @@
     
         &__list {
             list-style: none;
-            width: 90%;
+            width: 75%;
             display: flex;
         }
         &__list li {
@@ -85,7 +85,7 @@
     
         &__icons {
            
-            width: 15%;
+            width: 25%;
             height: auto;
             display: flex;
             justify-content: space-around;
