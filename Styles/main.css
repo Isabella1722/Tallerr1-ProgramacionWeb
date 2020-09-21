@@ -318,30 +318,7 @@ input[type=button] {
   height: auto;
 }
 
-@media (max-width: 992px) {
-  .brand {
-    width: 20%;
-  }
-  .optionsBar__list {
-    width: 50%;
-  }
-  .optionsBar__list li {
-    font-size: 22px;
-  }
-  .optionsBar__icons {
-    width: 15%;
-  }
-  .optionsBar__icons--search {
-    width: 90%;
-    height: auto;
-  }
-  .optionsBar__icons--shopping {
-    width: 80%;
-    height: auto;
-  }
-}
-
-@media (max-width: 768px) {
+@media (max-width: 576px) {
   .navigationbar {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -438,15 +415,16 @@ input[type=button] {
   background-position: center;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 576px) {
   .banner {
     width: 100%;
     height: 348px;
   }
   .banner__title {
-    width: 30%;
+    width: 40%;
     padding-top: 40px;
-    font-size: 27px;
+    margin-left: 25px;
+    font-size: 20px;
   }
 }
 
@@ -484,18 +462,16 @@ input[type=button] {
 .btnPrimary--background {
   margin-top: 30px;
   width: 355px;
-  height: 75px;
   background: white;
-  border-radius: 25px;
-  text-align: center;
   color: black;
-  font-weight: 600;
-  font-size: 25px;
-  border: none;
 }
 
-.btnPrimary--background:hover {
+.btnPrimary:hover {
   background: #DDDDDD;
+}
+
+.btnPrimary--rating {
+  margin-top: 20px;
 }
 
 .btnPrimary--small {
@@ -515,12 +491,16 @@ input[type=button] {
   margin-bottom: 30px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 576px) {
   .btnPrimary {
     margin-top: 20px;
-    width: 255px;
-    height: 55px;
-    font-size: 20px;
+    width: 185px;
+    height: 40px;
+    font-size: 18px;
+  }
+  .btnPrimary--rating {
+    width: 320px;
+    height: 65px;
   }
 }
 
@@ -595,13 +575,13 @@ input[type=button] {
   height: 100%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 576px) {
   .about {
-    height: 60%;
+    height: 50%;
   }
   .about__information {
-    width: 55%;
-    margin-left: 60px;
+    width: 50%;
+    margin-left: 35px;
     margin-top: 40px;
     margin-bottom: 50px;
   }
@@ -611,20 +591,12 @@ input[type=button] {
   .about__information p {
     font-size: 20px;
   }
-  .about__information ul {
-    margin-top: 40px;
-  }
   .about__information ul li {
     font-weight: 300;
     font-size: 20px;
   }
   .about__image {
     width: 60%;
-    height: auto;
-  }
-  .about__image img {
-    width: 100%;
-    height: 100%;
   }
 }
 
@@ -684,7 +656,7 @@ input[type=button] {
   margin-bottom: 190px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 576px) {
   .reasons {
     height: 100%;
   }
@@ -713,7 +685,7 @@ input[type=button] {
     margin-top: 40px;
   }
   .reasons__items div {
-    width: 60%;
+    width: 80%;
     text-align: center;
     margin-bottom: 70px;
   }
@@ -738,7 +710,7 @@ input[type=button] {
   background-color: black;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 576px) {
   /*
     .row__col--interaction{
         align-items: center;
@@ -869,10 +841,11 @@ input[type=button] {
   color: black;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 576px) {
   .information {
     /* display: flex;
         align-items: center;*/
+    margin-bottom: 60px;
     height: 100%;
   }
   .information__promotiontitle {
@@ -893,6 +866,7 @@ input[type=button] {
         -ms-grid-row-align: center;
         align-self: center;
     width: 100%;
+    height: 30%;
   }
   .information__title {
     height: 70px;
@@ -911,6 +885,7 @@ input[type=button] {
     margin-left: 60px;
   }
   .information__description h2 {
+    margin-top: 50px;
     font-size: 24px;
   }
   .information__description h4 {
@@ -937,17 +912,6 @@ input[type=button] {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  /*
-        &__image {
-         
-            width: 80%;
-            height: 70%;
-
-            img {
-                width: 100%;
-                height: 100%;
-            
-        }}*/
 }
 
 .rating__containerimage {
@@ -962,7 +926,14 @@ input[type=button] {
   height: 100%;
 }
 
+.rating__container {
+  width: 80%;
+}
+
 .rating__content {
+  width: 100%;
+  height: 15%;
+  margin-top: 30px;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -970,9 +941,6 @@ input[type=button] {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 80%;
-  height: 15%;
-  margin-top: 30px;
 }
 
 .rating__content h2 {
@@ -981,7 +949,8 @@ input[type=button] {
 }
 
 .rating__items {
-  width: 45%;
+  width: 50%;
+  margin-top: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -992,6 +961,65 @@ input[type=button] {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.rating__containerbtn {
+  width: 80%;
+  margin-top: 50px;
+}
+
+@media (max-width: 768px) {
+  .rating {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 50px;
+  }
+  .rating__container {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .rating__content {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .rating__content h2 {
+    font-size: 24px;
+  }
+  .rating__items {
+    width: 53%;
+  }
+  .rating__containerbtn {
+    width: 100%;
+    margin-top: 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .interaction {

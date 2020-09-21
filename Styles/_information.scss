@@ -87,12 +87,13 @@
 }
 
 //Big Mobile
-@media (max-width: 768px) {
+@media (max-width: 576px) {
     .information {
         
        /* display: flex;
         align-items: center;*/
-
+        margin-bottom: 60px;
+        
         height: 100%;
         &__promotiontitle {
             width: 100%;
@@ -109,6 +110,7 @@
         &__image {
             align-self: center;
             width: 100%;
+            height: 30%;
         }
 
         &__title {
@@ -129,6 +131,7 @@
             
     
             h2 {
+                margin-top: 50px;
                 font-size:  $font-size-h2-big-mobile;
             }
             h4{

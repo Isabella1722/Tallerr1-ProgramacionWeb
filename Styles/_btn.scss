@@ -17,20 +17,17 @@
     &--background{
     margin-top: 30px;
     width: 355px;
-    height: 75px;
     background:$secondary-color;
-    border-radius: 25px;
-    text-align: center;
     color: $primary-color;
-    font-weight: 600;
-    font-size:$font-size-primary-bottom;
-    border: none;
+    }
 
     &:hover{
         background:#DDDDDD;
     }
+    &--rating{
+    margin-top: 20px;
     }
-
+    
     &--small{
         margin-top: 0;
         width: 144px;
@@ -44,19 +41,27 @@
         border: none;  
     }
 
+
     &--marginBottom{
         margin-bottom: 30px;
     }
+
+
 }
 
 //Big Mobile
-@media (max-width: 768px) {
+@media (max-width: 576px) {
 .btnPrimary {
     margin-top: 20px;
-    width: 255px;
-    height: 55px;
+    width: 185px;
+    height: 40px;
     font-size: $font-size-primary-bottom-big-mobile;
     
 
+    &--rating{
+        width: 320px;
+        height: 65px;
+        }
+  
 }
 }

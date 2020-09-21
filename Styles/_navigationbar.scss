@@ -51,41 +51,8 @@
 }
 
 
-//Tablet
-@media (max-width:992px){
-    .brand {
-        width: 20%;
-    }
-
-    .optionsBar {
-        &__list {
-            width: 50%;
-        }
-        &__list li {
-            font-size: 22px;
-        }
-    
-        &__icons {
-           
-            width: 15%;
-
-            &--search {
-                width: 90%;
-                height: auto;
-            }
-    
-            &--shopping {
-                width: 80%;
-                height: auto;
-            }
-        }
-    }
-    
-    
-}
-
 //Big Mobile
-@media (max-width: 768px){
+@media (max-width: 576px){
     .navigationbar {
         display: flex;
         width: 100%;

@@ -55,12 +55,13 @@
 
 //Big Mobile
 
-@media (max-width: 768px) {
+@media (max-width: 576px) {
     .about {
-        height: 60%;
+        height: 50%;
+
         &__information {
-            width: 55%;
-            margin-left: 60px;
+            width: 50%;
+            margin-left: 35px;
             margin-top: 40px;
             margin-bottom: 50px;
 
@@ -71,10 +72,6 @@
                 font-size: $font-size-h3-big-mobile;
             }
 
-            ul {
-                margin-top: 40px;
-            }
-
             ul li {
                 font-weight: 300;
                 font-size: $font-size-h3-big-mobile;
@@ -83,12 +80,6 @@
 
         &__image {
             width: 60%;
-            height: auto;
-
-            img {
-                width: 100%;
-                height: 100%;
-            }
         }
     }
 }
