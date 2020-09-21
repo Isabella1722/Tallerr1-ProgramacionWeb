@@ -29,16 +29,9 @@
     }
 
     &--small {
-        margin-top: 0;
+        margin-top: 0px;
         width: 144px;
         height: 44px;
-        background: $primary-color;
-        border-radius: 20px;
-        text-align: center;
-        color: $secondary-color;
-        font-weight: 600;
-        font-size: $font-size-small-bottom;
-        border: none;
     }
 
     &--marginBottom {
