@@ -59,7 +59,7 @@
             font-weight: 100;
             color: $primary-color;
         }
-        h4{
+        h4 {
             margin-top: 10px;
             margin-bottom: 0;
             font-size: $font-size-h4;
@@ -81,19 +81,14 @@
             font-weight: 100;
             color: $primary-color;
         }
-
-       
     }
 }
 
 //Big Mobile
 @media (max-width: 576px) {
     .information {
-        
-       /* display: flex;
-        align-items: center;*/
         margin-bottom: 60px;
-        
+
         height: 100%;
         &__promotiontitle {
             width: 100%;
@@ -120,7 +115,6 @@
                 margin-left: 0px;
                 font-size: $font-size-h1-big-mobile;
                 text-align: center;
-               
             }
         }
 
@@ -128,30 +122,21 @@
             width: 80%;
             height: 21%;
             margin-left: 60px;
-            
-    
+
             h2 {
                 margin-top: 50px;
-                font-size:  $font-size-h2-big-mobile;
+                font-size: $font-size-h2-big-mobile;
             }
-            h4{
-               
+            h4 {
                 font-size: $font-size-h4-big-mobile;
-    
             }
             p {
-               
                 font-size: $font-size-p-big-mobile;
-               
             }
-    
+
             h3 {
-            
                 font-size: $font-size-h3-big-mobile;
-    
             }
         }
     }
-
-
 }

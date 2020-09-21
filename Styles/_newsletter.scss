@@ -1,62 +1,61 @@
-.newsletter{
+.newsletter {
     width: 100%;
-    height: 286px;
     display: flex;
-    //flex-direction: row;
 
-    &__image{
-        width: 20%;
+    &__content {
+        width: 40%;
+        height: 100%;
+        align-items: center;
+        //padding: 30px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__image {
+        width: 40%;
         height: 100%;
     }
 
-    &__content{
-
-        width: 25%;
-        height: 100%;
-        align-items: center;
-        padding: 30px;
-
-        h2{
-           
+    &__description {
+        width: 100%;
+        h2 {
             font-size: $font-size-h2;
             font-weight: 600;
             color: $primary-color;
             text-align: start;
-    
+
+            margin-left: 30px;
         }
 
-        h3{
-            margin-top: 15px;
+        h3 {
             font-size: $font-size-h3;
             font-weight: 100;
             color: $primary-color;
             text-align: start;
-    
+            margin-top: 20px;
+            margin-left: 30px;
         }
-
-        
     }
 
-    &__subscription{
-        width: 55%;
+    &__subscription {
+        width: 60%;
         height: 100%;
         padding: 40px;
 
-        h3{
+        h3 {
             margin-top: 15px;
             font-size: $font-size-h3;
             font-weight: 500;
             color: $primary-color;
             text-align: start;
             margin-bottom: 15px;
-    
         }
 
-        input{
-            width:60%;
-            height:44px;
+        input {
+            width: 60%;
+            height: 44px;
             border-radius: 25px;
-            border-color:$primary-color;
+            border-color: $primary-color;
             font-size: 15px;
             padding-left: 30px;
 
@@ -64,13 +63,53 @@
                 color: rgb(90, 90, 90);
                 font-size: 15px;
                 font-family: $primary-font;
-              }
-
-              
+            }
         }
-       
-        
-            
     }
-    
+}
+
+@media (max-width: 576px) {
+    .newsletter {
+        display: flex;
+        flex-direction: column;
+
+        &__content {
+            width: 100%;
+        }
+
+        &__description {
+            width: 43%;
+
+            h2 {
+                font-size: $font-size-h2-big-mobile;
+                margin-left: 20px;
+            }
+
+            h3 {
+                font-size: $font-size-h3-big-mobile;
+                margin-left: 20px;
+            }
+        }
+
+        &__image {
+            width: 50%;
+            height: 100%;
+        }
+
+        &__subscription {
+            width: 100%;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+
+            h3 {
+                margin-top: 0px;
+                font-size: $font-size-h3-big-mobile;
+            }
+
+            input {
+                width: 100%;
+            }
+        }
+    }
 }

@@ -2,8 +2,6 @@
     display: flex;
     padding: 30px;
     width: 100%;
-
-   
 }
 .brand {
     width: 15%;
@@ -24,13 +22,11 @@
     }
     &__list li {
         font-size: 25px;
-        
     }
 
     &__list a {
         text-decoration: none;
     }
- 
 
     &__icons {
         width: 10%;
@@ -50,18 +46,16 @@
     }
 }
 
-
 //Big Mobile
-@media (max-width: 576px){
+@media (max-width: 576px) {
     .navigationbar {
         display: flex;
         width: 100%;
         flex-direction: column;
         align-items: center;
         padding: 0px;
-    
     }
-    
+
     .brand {
         width: 45%;
         margin-top: 20px;
@@ -73,7 +67,7 @@
         height: 28px;
         flex-direction: row;
         margin-top: 20px;
-    
+
         &__list {
             list-style: none;
             width: 75%;
@@ -82,19 +76,18 @@
         &__list li {
             font-size: 22px;
         }
-    
+
         &__icons {
-           
             width: 25%;
             height: auto;
             display: flex;
             justify-content: space-around;
-           
+
             &--search {
                 width: 100%;
                 height: auto;
             }
-    
+
             &--shopping {
                 width: 90%;
                 height: auto;

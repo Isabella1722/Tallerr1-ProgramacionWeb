@@ -9,42 +9,39 @@
 
         &--3 {
             width: 33.3%;
-            // padding: 30px;
-            //height: 100%;
         }
 
         &--bg {
             background-color: $primary-color;
         }
     }
+
+    &--final {
+        display: flex;
+        flex-direction: row;
+    }
 }
 
 @media (max-width: 576px) {
-    /*
-    .row__col--interaction{
-        align-items: center;
-        flex-direction: column;
-        &Width{
-            width: 100%;
-        }
-    }
-*/
     .row {
         display: flex;
         flex-direction: column;
+
         &__col {
-         
             &--2 {
                 width: 100%;
                 align-items: center;
-              
             }
 
             &--bg {
                 width: 100%;
                 align-items: center;
-             
             }
+        }
+
+        &--final {
+            display: flex;
+            flex-direction: row;
         }
     }
 }

@@ -1,52 +1,47 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap");
 
+$primary-color: black;
+$secondary-color: white;
+$primary-font: "Montserrat", sans-serif;
+$font-size-h1: 35px;
+$font-size-h2: 30px;
+$font-size-h3: 25px;
+$font-size-h4: 20px;
+$font-size-p: 20px;
+$font-size-title-banner: 55px;
+$font-size-primary-bottom: 25px;
+$font-size-small-bottom: 20px;
 
-    $primary-color: black;
-    $secondary-color: white;
-    $primary-font: "Montserrat",sans-serif;
-    $font-size-h1: 35px;
-    $font-size-h2: 30px;
-    $font-size-h3: 25px;
-    $font-size-h4: 20px;
-    $font-size-p: 20px;
-    $font-size-title-banner:55px;
-    $font-size-primary-bottom:25px;
-    $font-size-small-bottom:20px;
+//Big mobile
+$font-size-title-big-mobile-banner: 20px;
+$font-size-h1-big-mobile: 25px;
+$font-size-h2-big-mobile: 22px;
+$font-size-h3-big-mobile: 20px;
+$font-size-h4-big-mobile: 18px;
+$font-size-p-big-mobile: 20px;
+$font-size-primary-bottom-big-mobile: 20px;
 
-    //Big mobile
-    $font-size-title-big-mobile-banner:20px;
-    $font-size-h1-big-mobile: 25px;
-    $font-size-h2-big-mobile: 22px;
-    $font-size-h3-big-mobile: 20px;
-    $font-size-h4-big-mobile: 18px;
-    $font-size-p-big-mobile: 20px;
-    $font-size-primary-bottom-big-mobile: 20px;
-
-   /*
+/*
     $font-size-h1-mobile: 35px;
     $font-size-h2-mobile: 30px;
     $font-size-h3-mobile: 18px;
     $font-size-h4-mobile: 20px;*/
 
-
-
-@import 'reset';
-@import '_general';
-@import '_body';
-@import '_navigationbar';
-@import '_container';
-@import '_banner';
-@import '_containerLines';
-@import '_btn';
-@import '_about';
-@import '_reasons';
-@import '_row';
-@import '_information';
-@import '_rating';
-@import '_interaction';
-@import '_specification';
-@import '_barbrand';
-@import '_newsletter';
-@import '_finalcontent';
-
-
+@import "reset";
+@import "_general";
+@import "_body";
+@import "_navigationbar";
+@import "_container";
+@import "_banner";
+@import "_containerLines";
+@import "_btn";
+@import "_about";
+@import "_reasons";
+@import "_row";
+@import "_information";
+@import "_rating";
+@import "_interaction";
+@import "_specification";
+@import "_barbrand";
+@import "_newsletter";
+@import "_finalcontent";
