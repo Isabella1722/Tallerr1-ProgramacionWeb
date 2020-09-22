@@ -460,7 +460,7 @@ input[type=button] {
 }
 
 .btnPrimary:hover {
-  background: #4d4d4d;
+  background: #3b3b3b;
 }
 
 .btnPrimary--background {
@@ -470,12 +470,19 @@ input[type=button] {
   color: black;
 }
 
-.btnPrimary:hover {
+.btnPrimary--background:hover {
   background: #dddddd;
 }
 
 .btnPrimary--rating {
   margin-top: 20px;
+}
+
+.btnPrimary--carrousel {
+  margin-top: 20px;
+  border-radius: 0px;
+  width: 100%;
+  height: 75px;
 }
 
 .btnPrimary--small {
@@ -1158,6 +1165,93 @@ input[type=button] {
     width: 80%;
     font-size: 20px;
   }
+}
+
+.carrousel {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.carrousel__title {
+  height: 50px;
+  margin-top: 20px;
+  margin-left: 55px;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.carrousel__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.carrousel__content__contentstripe {
+  width: 70%;
+}
+
+.carrousel__stripe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 30px;
+  -webkit-transition: -webkit-transform 0.6s ease;
+  transition: -webkit-transform 0.6s ease;
+  transition: transform 0.6s ease;
+  transition: transform 0.6s ease, -webkit-transform 0.6s ease;
+}
+
+.carrousel__item {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 20px;
+}
+
+.carrousel__left {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  z-index: 2;
+}
+
+.carrousel__right {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  z-index: 2;
+}
+
+.carrousel .lipstick {
+  width: 33%;
+  border: 3px solid black;
+}
+
+.carrousel .lipstick h3 {
+  font-size: 25px;
+  text-align: center;
 }
 
 .barbrand {
