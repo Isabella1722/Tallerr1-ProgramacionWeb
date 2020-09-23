@@ -1,6 +1,7 @@
 
 //Carrousel
 const carrouselRight = document.querySelector('.carrousel__right');
+const carrouselLeft = document.querySelector('.carrousel__left');
 const carrouselStripe = document.querySelector('.carrousel__stripe');
 let current = 0;
 
@@ -9,9 +10,19 @@ carrouselRight.addEventListener('click',function() {
     if(current >= carrouselStripe.children.length) {
         current = 0;
     }
-    const width = carrouselRight.clientWidth;
+    const width = carrouselStripe.clientWidth;
     carrouselStripe.style.transform = 'translate(-' + (width * current) + 'px, 0px)';  
 });
+
+carrouselLeft.addEventListener('click',function() {
+  current--;
+  if(current<=0){
+    current = 0;
+  }
+  const width = carrouselStripe.clientWidth;
+  carrouselStripe.style.transform = 'translate(+' + (width * current) + 'px, 0px)';  
+});
+
 
 
 //Slider

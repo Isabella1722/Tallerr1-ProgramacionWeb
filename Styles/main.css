@@ -1085,14 +1085,14 @@ input[type=button] {
 
 .interaction__slider {
   position: relative;
+  width: 70%;
+  margin-left: 100px;
+  margin-top: 20px;
+  font-size: 0px;
 }
 
 .interaction__image {
-  margin-top: 50px;
-  width: 70%;
-  height: 70%;
-  margin-left: 100px;
-  margin-top: 20px;
+  width: 100%;
   /*
         img {
             width: 100%;
@@ -1220,14 +1220,14 @@ input[type=button] {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  overflow: hidden;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
-.carrousel__content__contentstripe {
-  width: 70%;
+.carrousel__contentstripe {
+  width: 60%;
+  overflow: hidden;
 }
 
 .carrousel__stripe {
@@ -1238,7 +1238,6 @@ input[type=button] {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  padding: 30px;
   -webkit-transition: -webkit-transform 0.6s ease;
   transition: -webkit-transform 0.6s ease;
   transition: transform 0.6s ease;
@@ -1257,6 +1256,8 @@ input[type=button] {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   padding: 20px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 .carrousel__left {

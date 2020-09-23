@@ -13,19 +13,20 @@
     &__content {
         display: flex;
         width: 100%;
-        overflow: hidden;
+        
         justify-content: center;
 
-        &__contentstripe {
-            //display: flex;
-            width: 70%;
-        }
+        
+    }
+    &__contentstripe {
+        //display: flex;
+        width: 60%;
+        overflow: hidden;
     }
 
     &__stripe {
         display: flex;
         flex-direction: row;
-        padding: 30px;
         transition: transform 0.6s ease;
         
     }
@@ -36,6 +37,7 @@
         flex-direction: row;
         justify-content: space-around;
         padding: 20px;
+        flex-shrink: 0;
     }
 
     
