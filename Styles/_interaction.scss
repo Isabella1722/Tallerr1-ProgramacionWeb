@@ -21,9 +21,9 @@
     &__slider {
         position: relative;
         width: 70%;
-        margin-left: 100px;
         margin-top: 20px;
         font-size: 0px;
+        align-items: center;
     }
     &__image {
         width: 100%;
@@ -45,8 +45,9 @@
         }*/
     }
 
-    &__input {
+    &__input{
         width: 400px;
+        margin-top: 20px;
     }
 }
 
@@ -60,6 +61,7 @@
         h2 {
             font-size: $font-size-h2-big-mobile;
             text-align: center;
+            
         }
 
         h4 {
@@ -67,11 +69,21 @@
             font-size: $font-size-h4-big-mobile;
             text-align: center;
             margin-left: 0px;
+            padding: 0px 40px 0px 40px;
         }
 
-        &__image {
-            width: 80%;
-            margin-left: 0px;
+        &__slider {
+            position: relative;
+            width: 70%;
+            align-items: center;
+            
         }
+
+        &__input{
+            width: 300px;
+            
+        }
+
+       
     }
 }

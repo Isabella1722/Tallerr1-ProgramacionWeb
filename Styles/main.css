@@ -296,6 +296,7 @@ input[type=button] {
 
 .optionsBar__list a {
   text-decoration: none;
+  color: black;
 }
 
 .optionsBar__icons {
@@ -1040,7 +1041,7 @@ input[type=button] {
     font-size: 22px;
   }
   .rating__items {
-    width: 53%;
+    width: 50%;
   }
   .rating__containerbtn {
     width: 100%;
@@ -1086,9 +1087,11 @@ input[type=button] {
 .interaction__slider {
   position: relative;
   width: 70%;
-  margin-left: 100px;
   margin-top: 20px;
   font-size: 0px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .interaction__image {
@@ -1114,6 +1117,7 @@ input[type=button] {
 
 .interaction__input {
   width: 400px;
+  margin-top: 20px;
 }
 
 @media (max-width: 576px) {
@@ -1139,10 +1143,17 @@ input[type=button] {
     font-size: 18px;
     text-align: center;
     margin-left: 0px;
+    padding: 0px 40px 0px 40px;
   }
-  .interaction__image {
-    width: 80%;
-    margin-left: 0px;
+  .interaction__slider {
+    position: relative;
+    width: 70%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .interaction__input {
+    width: 300px;
   }
 }
 
@@ -1424,6 +1435,7 @@ input[type=button] {
   }
   .newsletter__content {
     width: 100%;
+    border-bottom: 2px solid black;
   }
   .newsletter__description {
     width: 43%;
@@ -1507,21 +1519,22 @@ input[type=button] {
 
 @media (max-width: 576px) {
   .finalcontent {
-    height: 20%;
+    height: 30%;
+    padding: 15px;
   }
   .finalcontent__links {
     padding: 10px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
   .finalcontent__links a {
     color: white;
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 100;
     margin-bottom: 10px;
   }
   .finalcontent__links h4 {
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 100;
     margin-bottom: 10px;
   }

@@ -33,21 +33,21 @@
 
 @media (max-width: 576px) {
     .finalcontent {
-        height: 20%;
-
+        height: 30%;
+        padding: 15px;
         &__links {
             padding: 10px;
-            margin-top: 20px;
-            margin-bottom: 20px;
+            margin-top: 0px;
+            margin-bottom: 0px;
 
             a {
                 color: $secondary-color;
-                font-size: $font-size-h4-big-mobile;
+                font-size: $font-size-h4-footer;
                 font-weight: 100;
                 margin-bottom: 10px;
             }
             h4 {
-                font-size: $font-size-h4-big-mobile;
+                font-size: $font-size-h4-footer;
                 font-weight: 100;
                 margin-bottom: 10px;
             }
