@@ -1057,6 +1057,16 @@ input[type=button] {
 .interaction {
   margin-top: 20px;
   margin-bottom: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .interaction h2 {
@@ -1069,9 +1079,12 @@ input[type=button] {
 .interaction h4 {
   font-size: 20px;
   color: white;
-  margin-left: 100px;
   margin-top: 20px;
   width: 80%;
+}
+
+.interaction__slider {
+  position: relative;
 }
 
 .interaction__image {
@@ -1080,11 +1093,27 @@ input[type=button] {
   height: 70%;
   margin-left: 100px;
   margin-top: 20px;
+  /*
+        img {
+            width: 100%;
+            height: 100%;
+           
+        }*/
 }
 
-.interaction__image img {
-  width: 100%;
+.interaction__image:last-child {
+  position: absolute;
+  left: 0;
+  width: 0%;
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: left;
+     object-position: left;
+}
+
+.interaction__input {
+  width: 400px;
 }
 
 @media (max-width: 576px) {
