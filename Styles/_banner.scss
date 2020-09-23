@@ -16,6 +16,7 @@
         font-size: $font-size-title-banner;
         text-transform: uppercase;
         color: $secondary-color;
+        
     }
 
     &--final {
@@ -38,7 +39,7 @@
 
         &__title {
             width: 40%;
-            padding-top: 40px;
+            padding-top: 50px;
             margin-left: 25px;
             font-size: $font-size-title-big-mobile-banner;
         }
