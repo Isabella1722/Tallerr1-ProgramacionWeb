@@ -292,6 +292,21 @@ input[type=button] {
 .optionsBar__list a {
   text-decoration: none;
   color: black;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(black));
+  background-image: linear-gradient(black);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  -webkit-transition: background-size 0.3s;
+  transition: background-size 0.3s;
+}
+
+.optionsBar__list a:hover {
+  background-size: 100% 2px;
+}
+
+.optionsBar__list a:focus {
+  background-size: 100% 2px;
 }
 
 .optionsBar__icons {
