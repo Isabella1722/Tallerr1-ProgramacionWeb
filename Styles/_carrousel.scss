@@ -6,7 +6,7 @@
     &__title {
         height: 50px;
         margin-top: 20px;
-        margin-left: 55px;
+        text-align: center;
         font-size: $font-size-h2;
         font-weight: 500;
     }
@@ -62,8 +62,6 @@
     .carrousel {
         &__title {
             font-size: $font-size-h2-big-mobile;
-            text-align:center;
-            margin-left: 0px;
         }
 
         &__contentstripe {

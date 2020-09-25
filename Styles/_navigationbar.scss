@@ -5,6 +5,7 @@
 }
 .brand {
     width: 15%;
+    margin-left: 20px;
 }
 .optionsBar {
     display: flex;
@@ -73,6 +74,7 @@
     .brand {
         width: 45%;
         margin-top: 20px;
+        margin-left: 0px;
     }
     .optionsBar {
         display: flex;
@@ -91,6 +93,7 @@
             font-size: 22px;
         }
 
+       
         &__icons {
             width: 22%;
             height: auto;
