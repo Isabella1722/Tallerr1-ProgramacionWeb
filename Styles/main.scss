@@ -8,6 +8,7 @@ $font-size-h2: 30px;
 $font-size-h3: 25px;
 $font-size-h4: 20px;
 $font-size-p: 20px;
+$font-size-p-secondary: 15px;
 $font-size-title-banner: 55px;
 $font-size-primary-bottom: 25px;
 $font-size-small-bottom: 20px;
@@ -23,6 +24,8 @@ $font-size-p-big-mobile: 20px;
 $font-size-primary-bottom-big-mobile: 20px;
 $font-size-small-bottom-big-mobile: 15px;
 
+
+//Index
 @import "reset";
 @import "_general";
 @import "_body";
@@ -43,3 +46,6 @@ $font-size-small-bottom-big-mobile: 15px;
 @import "_newsletter";
 @import "_finalcontent";
 
+//Products
+@import "_shop";
+@import "_product";

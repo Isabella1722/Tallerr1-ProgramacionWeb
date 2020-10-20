@@ -44,7 +44,7 @@
     }
 
     &__icons {
-        width: 10%;
+        width: 20%;
         height: auto;
         display: flex;
         justify-content: space-around;
@@ -56,6 +56,11 @@
 
         &--shopping {
             width: 90%;
+            height: auto;
+        }
+
+        &--user {
+            width: 100%;
             height: auto;
         }
     }
@@ -86,7 +91,7 @@
 
         &__list {
             list-style: none;
-            width: 75%;
+            width: 70%;
             display: flex;
         }
         &__list li {
@@ -95,7 +100,7 @@
 
        
         &__icons {
-            width: 22%;
+            width: 30%;
             height: auto;
             display: flex;
             justify-content: space-around;
@@ -107,6 +112,11 @@
 
             &--shopping {
                 width: 90%;
+                height: auto;
+            }
+
+            &--user {
+                width: 100%;
                 height: auto;
             }
         }
