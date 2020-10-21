@@ -54,10 +54,9 @@
         input {
             width: 60%;
             height: 44px;
-            border-radius: 25px;
-            border-color: $primary-color;
             font-size: 15px;
-            padding-left: 30px;
+            border:none;
+            border-bottom: 2px solid rgb(0, 0, 0);
 
             &::placeholder {
                 color: rgb(90, 90, 90);

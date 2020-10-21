@@ -49,3 +49,9 @@ window.setInterval(function(){
 },5000);
 
 
+//Botones
+var btnViewProducts = document.querySelector(".btnPrimary");
+
+btnViewProducts.addEventListener("click", function () {
+  document.location.href = "./Html/products.html";
+});

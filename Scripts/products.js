@@ -23,6 +23,42 @@ const products = [
 
     },
 
+    {
+        title:'holis',
+        img:'../Images/LipHydratingCoco.jpg',
+        brand:'Coco ',
+        type:'La',
+        color:'Ro',
+        price:'$150',
+
+    },
+    {
+        title:'holis',
+        img:'../Images/LipHydratingCoco.jpg',
+        brand:'Coco ',
+        type:'La',
+        color:'Ro',
+        price:'$150',
+
+    }, 
+     {
+        title:'holis',
+        img:'../Images/LipHydratingCoco.jpg',
+        brand:'Coco ',
+        type:'La',
+        color:'Ro',
+        price:'$150',
+
+    },
+    {
+        title:'holis',
+        img:'../Images/LipHydratingCoco.jpg',
+        brand:'Coco ',
+        type:'La',
+        color:'Ro',
+        price:'$150',
+
+    },
 
 
 
@@ -33,7 +69,7 @@ const productsList = document.querySelector('.productslist');
 products.forEach (function(elem){
     const newProduct= document.createElement('article');
 
-    newProduct.classList.add('.product');
+    newProduct.classList.add('product');
     newProduct.innerHTML = `<img class="product__img" src="${elem.img}" alt="product">
     <h3 class="product__title">${elem.title}</h3>
     <p class="product__brand">${elem.brand}</p>
