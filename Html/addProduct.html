@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+    <title>Beauty Lips</title>
+
+    <link rel="stylesheet" href="../Styles/main.css">
+    <link rel="shortcut icon" type="image/png" href="/Images/Favicon.png" />
+</head>
+
+<body>
+    <header class="navigationbar">
+
+
+
+        <img class="brand" src="../Images/Brand.png" alt="BeautyLips">
+
+        <div class="optionsBar">
+
+            <ul class="optionsBar__list">
+                <li><a href="/index.html">Inicio</a></li>
+                <li><a href="/Html/products.html">Productos</a></li>
+                <li><a href="/Html/brand.html">Nosotros</a></li>
+
+
+
+            </ul>
+
+            <div class="optionsBar__icons">
+
+                <a href="#"><img class="optionsBar__icons optionsBar__icons--search" src="../Images/IconSearch.png"></a>
+                <a href="#"><img class="optionsBar__icons optionsBar__icons--shopping"
+                        src="../Images/IconShopping.png"></a>
+                <a href="#"><img class="optionsBar__icons optionsBar__icons--user" src="../Images/user.png"></a>
+
+            </div>
+
+
+
+        </div>
+
+
+    </header>
+    <section class="banner banner--admin">
+
+        <h1 class="banner--admin__title">Administrador</h1>
+
+    </section>
+
+
+    <section class="profileoptions profileoptions--addproduct">
+        <h2 class="profileoptions--addproduct__title">Bienvenido Administrador</h2>
+        <h3 class="profileoptions--addproduct__subtitle">Agregar productos</h3>
+    </section>
+
+
+
+
+    <section class="row">
+
+        <div class="row__col row__col--2">
+
+
+                <form class="form" action="">
+                    <h3 class="form__title">Información del producto</h3>
+
+                    <label class="form__label">Nombre
+                        <input type="text" placeholder="Escribe el nombre">
+                    </label>
+
+                    <label class="form__label">Categoría 
+                        <select name="typeproduct" id="">
+                            <option value="predefined">Seleccione la categoría</option>
+                            <option value="lipstick">Labiales</option>
+                            <option value="liquidlipstick">Labiales líquidos</option>
+                            <option value="lipgloss">Brillos labiales</option>
+                        
+                        </select>
+                    </label>
+
+                    <label class="form__label">Color
+                        <select name="typeproduct" id="">
+                            <option value="predefined">Seleccione el color</option>
+                            <option value="beige">Beige</option>
+                            <option value="pink">Rosado</option>
+                            <option value="red">Rojo</option>
+                            <option value="magenta">Magenta</option>
+                        </select>
+                    </label>
+
+                    <label class="form__label">Marca
+                        <select name="brand" id="">
+                            <option value="predefined">Seleccione la marca</option>
+                            <option value="cocochanel">Coco Chanel</option>
+                            <option value="dior">Dior</option>
+                            <option value="fentybeauty">Fenty Beauty</option>
+                            <option value="nars">Nars</option>
+                        </select>
+                    </label>
+
+
+                    <label class="form__label">Imagen
+                        <input type="text" placeholder="url imagen">
+                    </label>
+
+                    <label class="form__label">Precio
+                        <input type="number" placeholder="Escribe el precio">
+                    </label>
+
+                   
+
+                </form>
+
+          
+        </div>
+
+        <div class="row__col row__col--2">
+
+            <section class="form form--second">
+
+                <label class="form__label">Sube la imagen del producto
+                </label>
+
+                <div class="form--second__loadimage">
+
+                    <img class="form--second__image" src="../Images/landscape.png" alt="landscape">
+                    <h3 class="form--second__info" >Arrastra y suelta la imagen aquí o da click en el icono para agregar</h3>
+                </div>
+                <button class="btnPrimary btnPrimary--saveproduct">Guardar</button>
+
+
+            </section>
+        </div>
+    </section>
+
+
+    <footer class="finalcontent">
+
+        <section class="row row--final">
+            <div class="row__col row__col--3">
+
+                <section class="finalcontent__links">
+                    <a href="#">Sobre nosotros</a>
+                    <a href="#">Contáctenos</a>
+                    <h4>Calle 40 # 82-32 B/ Limonar</h4>
+                    <h4>3247857965</h4>
+                </section>
+
+            </div>
+
+            <div class="row__col row__col--3">
+
+                <section class="finalcontent__links">
+                    <a href="#">Menciones legales</a>
+                    <a href="#">Protección de datos</a>
+                    <a href="#">Seguimiento del pedido</a>
+
+                </section>
+
+            </div>
+
+            <div class="row__col row__col--3">
+
+                <section class="finalcontent__links">
+                    <h4>Síguenos en redes</h4>
+                    <h4>@beautyLips</h4>
+                    <div class="finalcontent__links--social">
+                        <a href="#"><img src="../Images/IconInstagram.png"></a>
+                        <a href="#"><img src="../Images/IconFacebook.png"></a>
+                        <a href="#"><img src="../Images/IconTwitter.png"></a>
+                    </div>
+
+                </section>
+
+            </div>
+        </section>
+
+    </footer>
+</body>
+
+</html>

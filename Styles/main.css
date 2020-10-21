@@ -483,6 +483,27 @@ input[type=button] {
   color: black;
 }
 
+.banner--admin {
+  width: 100%;
+  height: 600px;
+  margin-top: 20px;
+  background-image: url(../Images/BannerAdmin.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.banner--admin__title {
+  width: 40%;
+  height: 40%;
+  margin-left: 256px;
+  padding-top: 239px;
+  font-weight: 700;
+  font-size: 55px;
+  text-transform: uppercase;
+  color: white;
+}
+
 @media (max-width: 576px) {
   .banner {
     width: 100%;
@@ -570,6 +591,11 @@ input[type=button] {
   height: 50px;
   padding: 0px;
   margin-top: 20px;
+}
+
+.btnPrimary--saveproduct {
+  width: 250px;
+  height: 50px;
 }
 
 @media (max-width: 576px) {
@@ -1759,5 +1785,175 @@ input[type=button] {
   margin-top: 5px;
   margin-left: 30px;
   font-size: 15px;
+}
+
+.profileoptions {
+  width: 100%;
+  height: 100%;
+}
+
+.profileoptions__title {
+  font-weight: 600;
+  font-size: 30px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.profileoptions__subtitle {
+  font-weight: 300;
+  font-size: 25px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.profileoptions__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  text-align: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 100px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.profileoptions__items h3 {
+  font-weight: 600;
+  font-size: 25px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.profileoptions__items a {
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+  color: black;
+  margin-top: 10px;
+}
+
+.profileoptions__items div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 20px;
+}
+
+.profileoptions--addproduct__title {
+  font-weight: 300;
+  font-size: 30px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.profileoptions--addproduct__subtitle {
+  font-weight: 600;
+  font-size: 25px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 500px;
+  padding: 50px;
+  margin-left: 115px;
+}
+
+.form__title {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.form__label {
+  font-weight: 500;
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 20px;
+}
+
+.form input {
+  width: 100%;
+  height: 44px;
+  font-size: 20px;
+  border: none;
+  border-bottom: 2px solid black;
+}
+
+.form input::-webkit-input-placeholder {
+  color: #5a5a5a;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.form input:-ms-input-placeholder {
+  color: #5a5a5a;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.form input::-ms-input-placeholder {
+  color: #5a5a5a;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.form input::placeholder {
+  color: #5a5a5a;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.form--second {
+  width: 100%;
+  padding: 0px;
+  margin-top: 80px;
+  margin-left: 0px;
+}
+
+.form--second__loadimage {
+  margin-top: 50px;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  width: 475px;
+  height: 305px;
+  border-radius: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form--second__image {
+  padding: 44px;
+}
+
+.form--second__info {
+  font-size: 15px;
+  color: gray;
+  padding: 10px;
 }
 /*# sourceMappingURL=main.css.map */

@@ -2,6 +2,7 @@
 
 $primary-color: black;
 $secondary-color: white;
+$thirdly-color: #A1A1A1;
 $primary-font: "Montserrat", sans-serif;
 $font-size-h1: 35px;
 $font-size-h2: 30px;
@@ -49,3 +50,8 @@ $font-size-small-bottom-big-mobile: 15px;
 //Products
 @import "_shop";
 @import "_product";
+
+
+
+@import "_profileoptions";
+@import "_form";
