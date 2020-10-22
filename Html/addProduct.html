@@ -63,11 +63,11 @@
         <div class="row__col row__col--2">
 
 
-                <form class="form" action="">
+                <form class="form">
                     <h3 class="form__title">Información del producto</h3>
 
                     <label class="form__label">Nombre
-                        <input type="text" placeholder="Escribe el nombre">
+                        <input name="namep" type="text" placeholder="Escribe el nombre">
                     </label>
 
                     <label class="form__label">Categoría 
@@ -101,11 +101,11 @@
                     </label>
 
 
-                    <label class="form__label">Imagen
-                        <input type="text" placeholder="url imagen">
+                    <label name="image" class="form__label">Imagen
+                        <input type="url" placeholder="url imagen">
                     </label>
 
-                    <label class="form__label">Precio
+                    <label name="price" class="form__label">Precio
                         <input type="number" placeholder="Escribe el precio">
                     </label>
 
@@ -178,6 +178,9 @@
         </section>
 
     </footer>
+
+
+    <script src="../Scripts/formProduct.js"></script>
 </body>
 
 </html>
