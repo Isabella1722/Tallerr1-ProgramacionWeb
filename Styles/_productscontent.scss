@@ -1,0 +1,23 @@
+.productscontent {
+
+
+    &__title{
+        font-weight: 300;
+        font-size: $font-size-h2;
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    &__subtitleimportant{
+        font-weight: 600;
+        font-size: $font-size-h3;
+        text-align: center;
+        margin-top: 10px;
+    }
+    &__subtitle{
+        font-weight: 300;
+        font-size: $font-size-h4;
+        text-align: center;
+        margin-top: 20px;
+    }
+}

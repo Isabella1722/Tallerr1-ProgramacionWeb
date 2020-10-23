@@ -8,14 +8,13 @@
 
     <link rel="stylesheet" href="../Styles/main.css">
     <link rel="shortcut icon" type="image/png" href="/Images/Favicon.png" />
-
 </head>
 
 <body>
-
     <header class="navigationbar">
 
 
+        
 
         <img class="brand" src="../Images/Brand.png" alt="BeautyLips">
 
@@ -53,32 +52,26 @@
 
 
 
-    <section class="profileoptions">
-
-        <h2 class="profileoptions__title">Bienvenido Administrador</h2>
-        <h3 class="profileoptions__subtitle">¿Qué deseas realizar?</h3>
-
-        <div class="profileoptions__items">
-            <div>
-                <img src="../Images/IconProduct.png" alt="IconProduct">
-                <h3>Productos</h3>
-                <a href="../Html/productsAdmin.html">Ver lista de productos</a>
-                <a href="../Html/addProduct.html">Agregar un producto</a>
-
-            </div>
 
 
-            <div>
-                <img src="../Images/IconOrders.png" alt="IconOrders">
-                <h3>Pedidos</h3>
-                <a href="#">Ver lista de pedidos</a>
-
-            </div>
-        </div>
 
 
+
+
+
+    <section class="productscontent">
+
+        <h2 class="productscontent__title"lass>Bienvenido Administrador</h2>
+        <h3 class="productscontent__subtitleimportant">Lista de productos</h3>
+        <h3 class="productscontent__subtitle">Puedes eliminar un producto dándole click en el ícono equis</h3>
+        <h3 class="productscontent__subtitle">Puedes editar un producto dándole click en botón editar</h3>
+
+        <section class="productslistadmin"> </section>
+       
 
     </section>
+
+
 
     <footer class="finalcontent">
 
@@ -123,6 +116,12 @@
 
     </footer>
 
+
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
+    <script src="../Scripts/firebaseconfig.js"></script>
+    <script src="../Scripts/productsAdmin.js"></script>
+    
 </body>
 
 </html>

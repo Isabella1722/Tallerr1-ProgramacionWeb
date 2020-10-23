@@ -1,43 +1,93 @@
-.product{
-  
+.product {
     box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.25));
     margin-bottom: 45px;
 
-
-    &__img{
+    &__img {
         width: 280px;
         height: 300px;
         //background-color: rebeccapurple;
         object-fit: contain;
         padding: 10px;
-    
     }
-&__name{
+    &__name {
+        margin-top: 20px;
+        font-size: $font-size-h4;
+        text-align: center;
+    }
+    &__brand {
+        margin-top: 10px;
+        margin-left: 30px;
+        font-size: $font-size-p-secondary;
+    }
+    &__type {
+        margin-top: 5px;
+        margin-left: 30px;
+        font-size: $font-size-p-secondary;
+    }
+    &__color {
+        margin-top: 5px;
+        margin-left: 30px;
+        font-size: $font-size-p-secondary;
+    }
+    &__price {
+        margin-top: 5px;
+        margin-left: 30px;
+        font-size: $font-size-p-secondary;
+    }
 
-    margin-top: 20px;
-    font-size: $font-size-h4;
-    text-align: center;
-}
-&__brand{
-    margin-top: 10px;
-    margin-left: 30px;
-    font-size:$font-size-p-secondary;
+    &__delete {
+        width: 28px;
+        width: 28px;
+        display: flex;
+        margin-left: 238px;
+        margin-top: 10px;
+    }
+    &--admin {
+        box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.25));
+        margin-bottom: 45px;
 
-}
-&__type{
-    margin-top: 5px;
-    margin-left: 30px;
-    font-size:$font-size-p-secondary;
-}
-&__color{
-    margin-top: 5px;
-    margin-left: 30px;
-    font-size:$font-size-p-secondary;
-}
-&__price{
-    margin-top: 5px;
-    margin-left: 30px;
-    font-size:$font-size-p-secondary;
-}
+       
+
+        &__img {
+            width: 280px;
+            height: 300px;
+            object-fit: contain;
+            padding: 10px;
+        }
+        &__name {
+            margin-top: 20px;
+            font-size: $font-size-h4;
+            text-align: center;
+        }
+        &__brand {
+            margin-top: 10px;
+            margin-left: 30px;
+            font-size: $font-size-p-secondary;
+        }
+        &__type {
+            margin-top: 5px;
+            margin-left: 30px;
+            font-size: $font-size-p-secondary;
+        }
+        &__color {
+            margin-top: 5px;
+            margin-left: 30px;
+            font-size: $font-size-p-secondary;
+        }
+        &__price {
+            margin-top: 5px;
+            margin-left: 30px;
+            font-size: $font-size-p-secondary;
+        }
+    }
 }
 
+.productslistadmin {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    //margin-top: 80px;
+    //margin-bottom: 50px;
+    padding: 70px 80px 80px 80px;
+}
