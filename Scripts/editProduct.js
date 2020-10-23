@@ -1,18 +1,41 @@
 
 const db = firebase.firestore();
 const productsRef = db.collection('products');
-
-
+let selectItem = null;
+const storage = window.localStorage;
+const selectItemtorage = storage.getItem("selectItemtorage");
+selectItem = selectItemtorage;
+console.log(selectItem);
 
 
 //form
 const form = document.querySelector('.form');
 console.log(form);
 
+//Con esto se trae la información del elemento al que le dimos editar anteriormente
+productsRef.doc(selectItem).get().then(function(doc) {
+
+    if (doc.exists) {
+        elem = doc.data();
+        console.log("Document data:", doc.data());
+    } else {
+        // doc.data() will be undefined in this case
+        console.log("No such document!");
+    }
+    form.namep.value = elem.name;
+    form.image.value = elem.img;
+    form.brand.value = elem.brand;
+    form.typeproduct.value = elem.type;
+    form.color.value = elem.color;
+    form.price.value = elem.price;
+}).catch(function(error) {
+    console.log("Error getting document:", error);
+});
+
 form.addEventListener('submit', function (event) {
     event.preventDefault();
 
-    const newProduct = {
+    const editProduct = {
         name: form.namep.value,
         img: form.image.value,
         brand: form.brand.value,
@@ -21,12 +44,9 @@ form.addEventListener('submit', function (event) {
         price: form.price.value
     }
 
-
-
     //parte de editar
-    /*
+    
     function handleThen(docRef) {
-        form.name.value = '';
         form.namep.value = '';
         form.image.value = '';
         form.brand.value = '';
@@ -43,36 +63,10 @@ form.addEventListener('submit', function (event) {
 
     if (selectItem) {
         //si existe selectItem quiere decir que es porque va a editar
-        productsRef.doc(selectItem.id).set(newProduct)
+        productsRef.doc(selectItem).set(editProduct)
             .then(handleThen)
             .catch(handleCatch);
-    } else {
-        //sino es porque agregará un nuevo producto
-        productsRef.add(newProduct)
-            .then(handleThen)
-            .catch(handleCatch);
-
     }
-
-
-   */
-
-
-    //subir a la base de datos
-    productsRef.add(newProduct).then(function (docRef) {
-        console.log("Document written with ID: ", docRef.id);
-        //getProducts();
-        form.name.value = '';
-        form.namep.value = '';
-        form.image.value = '';
-        form.brand.value = '';
-        form.typeproduct.value = '';
-        form.color.value = '';
-        form.price.value = '';
-    })
-        .catch(function (error) {
-            console.error("Error adding document: ", error);
-        });
 
 });
 

@@ -53,5 +53,5 @@ window.setInterval(function(){
 var btnViewProducts = document.querySelector(".btnPrimary");
 
 btnViewProducts.addEventListener("click", function () {
-  document.location.href = "./Html/products.html";
+  window.location.href = "./Html/products.html";
 });

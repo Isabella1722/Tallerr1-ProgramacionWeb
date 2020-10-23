@@ -1,7 +1,8 @@
 const db = firebase.firestore();
 const productsRef = db.collection('products');
 const productsList = document.querySelector('.productslistadmin');
-//let selectItem = null;
+let selectItem = null;
+const storage = window.localStorage;
 
 function renderProducts(list) {
     productsList.innerHTML = '';
@@ -38,15 +39,19 @@ function renderProducts(list) {
         //Edit
         const editBtn = newProduct.querySelector('.btnPrimary--edit');
         editBtn.addEventListener('click', function(){
-            /*
-            form.namep.value= elem.namep;
+            
+           /* form.namep.value= elem.namep;
             form.image.value= elem.image;
             form.brand.value= elem.brand;
             form.typeproduct.value= elem.typeproduct;
             form.color.value= elem.color;
             form.price.value= elem.price;
-            selectItem = elem;*/
-            document.location.href = "/Html/editProduct.html";
+            selectItem = elem;
+            storage.setItem("selectItemtorage", selectItem);*/
+            console.log(elem.id);
+            storage.setItem("selectItemtorage", elem.id);
+            window.location.href = "/Html/editProduct.html";
+
         });
 
 
