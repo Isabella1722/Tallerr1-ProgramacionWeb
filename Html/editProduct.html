@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="../Styles/main.css">
     <link rel="shortcut icon" type="image/png" href="/Images/Favicon.png" />
 </head>
+
 <body>
     <header class="navigationbar">
 
@@ -48,88 +50,75 @@
     </section>
 
 
-    <section class="profileoptions profileoptions--addproduct">
-        <h2 class="profileoptions--addproduct__title">Bienvenido Administrador</h2>
-        <h3 class="profileoptions--addproduct__subtitle">Editar productos</h3>
+    <section class="profileoptions profileoptions--secondary">
+        <h2 class="profileoptions--secondary__title">Bienvenido Administrador</h2>
+        <h3 class="profileoptions--secondary__subtitle">Editar productos</h3>
     </section>
 
-    <section class="row">
-
-        <div class="row__col row__col--2">
 
 
-                <form class="form">
-                    <h3 class="form__title">Información del producto</h3>
-
-                    <label class="form__label">Nombre
-                        <input name="namep" type="text" placeholder="Escribe el nombre">
-                    </label>
-
-                    <label class="form__label">Categoría 
-                        <select name="typeproduct" id="">
-                            <option value="predefined">Seleccione la categoría</option>
-                            <option value="lipstick">Labiales</option>
-                            <option value="liquidlipstick">Labiales líquidos</option>
-                            <option value="lipgloss">Brillos labiales</option>
-                        
-                        </select>
-                    </label>
-
-                    <label class="form__label">Color
-                        <select name="color" id="">
-                            <option value="predefined">Seleccione el color</option>
-                            <option value="beige">Beige</option>
-                            <option value="pink">Rosado</option>
-                            <option value="red">Rojo</option>
-                            <option value="magenta">Magenta</option>
-                        </select>
-                    </label>
-
-                    <label class="form__label">Marca
-                        <select name="brand" id="">
-                            <option value="predefined">Seleccione la marca</option>
-                            <option value="cocochanel">Coco Chanel</option>
-                            <option value="dior">Dior</option>
-                            <option value="fentybeauty">Fenty Beauty</option>
-                            <option value="nars">Nars</option>
-                        </select>
-                    </label>
+    <section class="formContent">
 
 
-                    <label class="form__label">Imagen
-                        <input name="image" type="url" placeholder="url imagen">
-                    </label>
+        <form class="form">
+            <h3 class="form__title">Información del producto</h3>
 
-                    <label class="form__label">Precio
-                        <input name="price" type="number" placeholder="Escribe el precio">
-                    </label>
+            <label class="form__label">Nombre
+                <input name="namep" type="text" placeholder="Escribe el nombre">
+            </label>
 
-                    <button class="btnPrimary btnPrimary--saveproduct">Guardar</button>
+            <label class="form__label">Categoría
+                <select name="typeproduct" id="">
+                    <option value="predefined">Seleccione la categoría</option>
+                    <option value="lipstick">Labiales</option>
+                    <option value="liquidlipstick">Labiales líquidos</option>
+                    <option value="lipgloss">Brillos labiales</option>
 
-                </form>
+                </select>
+            </label>
 
-          
-        </div>
+            <label class="form__label">Color
+                <select name="color" id="">
+                    <option value="predefined">Seleccione el color</option>
+                    <option value="beige">Beige</option>
+                    <option value="pink">Rosado</option>
+                    <option value="red">Rojo</option>
+                    <option value="magenta">Magenta</option>
+                </select>
+            </label>
 
-        <div class="row__col row__col--2">
-
-            <section class="form form--second">
-
-                <label class="form__label">Sube la imagen del producto
-                </label>
-
-                <div class="form--second__loadimage">
-
-                    <img class="form--second__image" src="../Images/landscape.png" alt="landscape">
-                    <h3 class="form--second__info" >Arrastra y suelta la imagen aquí o da click en el icono para agregar</h3>
-                </div>
-               
+            <label class="form__label">Marca
+                <select name="brand" id="">
+                    <option value="predefined">Seleccione la marca</option>
+                    <option value="cocochanel">Coco Chanel</option>
+                    <option value="dior">Dior</option>
+                    <option value="fentybeauty">Fenty Beauty</option>
+                    <option value="nars">Nars</option>
+                </select>
+            </label>
 
 
-            </section>
-        </div>
+            <label class="form__label">Imagen
+                <input name="image" type="url" placeholder="url imagen">
+            </label>
+
+            <label class="form__label">Precio
+                <input name="price" type="number" placeholder="Escribe el precio">
+            </label>
+
+
+            <label class="form__label">Sube la imagen del producto
+            </label>
+
+            <div class="form__loadimage">
+
+                <img class="form__image" src="../Images/landscape.png" alt="landscape">
+                <h3 class="form__info">Arrastra y suelta la imagen aquí o da click en el icono para agregar</h3>
+            </div>
+            <button class="btnPrimary btnPrimary--saveproduct">Guardar</button>
+
+        </form>
     </section>
-
 
     <footer class="finalcontent">
 
@@ -177,6 +166,7 @@
     <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
     <script src="../Scripts/firebaseconfig.js"></script>
     <script src="../Scripts/editProduct.js"></script>
-    
+
 </body>
+
 </html>

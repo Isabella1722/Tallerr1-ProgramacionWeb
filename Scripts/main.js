@@ -50,7 +50,7 @@ window.setInterval(function(){
 
 
 //Botones
-var btnViewProducts = document.querySelector(".btnPrimary");
+const btnViewProducts = document.querySelector(".btnPrimary");
 
 btnViewProducts.addEventListener("click", function () {
   window.location.href = "./Html/products.html";

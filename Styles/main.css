@@ -504,6 +504,27 @@ input[type=button] {
   color: white;
 }
 
+.banner--user {
+  width: 100%;
+  height: 600px;
+  margin-top: 20px;
+  background-image: url(../Images/BannerUser.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.banner--user__title {
+  width: 40%;
+  height: 40%;
+  margin-left: 256px;
+  padding-top: 99px;
+  font-weight: 700;
+  font-size: 55px;
+  text-transform: uppercase;
+  color: white;
+}
+
 @media (max-width: 576px) {
   .banner {
     width: 100%;
@@ -614,6 +635,11 @@ input[type=button] {
   height: 50px;
   padding: 0px;
   margin-top: 20px;
+}
+
+.btnPrimary--login {
+  width: 250px;
+  height: 50px;
 }
 
 @media (max-width: 576px) {
@@ -1932,14 +1958,14 @@ input[type=button] {
   margin-top: 20px;
 }
 
-.profileoptions--addproduct__title {
+.profileoptions--secondary__title {
   font-weight: 300;
   font-size: 30px;
   text-align: center;
   margin-top: 50px;
 }
 
-.profileoptions--addproduct__subtitle {
+.profileoptions--secondary__subtitle {
   font-weight: 600;
   font-size: 25px;
   text-align: center;
@@ -1954,9 +1980,42 @@ input[type=button] {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 500px;
+  width: 50%;
   padding: 50px;
-  margin-left: 115px;
+  margin-bottom: 100px;
+  /*&--second{
+
+        width: 100%;
+        padding: 0px;
+        margin-top: 80px;
+        margin-left: 0px;
+        &__loadimage{
+
+            margin-top: 50px;
+            box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.25));
+            width: 475px;
+            height: 305px;
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+           
+            
+        
+        }
+
+        &__image{
+
+            padding: 44px;
+            
+           
+        }
+
+        &__info{
+            font-size:$font-size-p-secondary;
+            color: gray;
+            padding: 10px;
+        }
+    }*/
 }
 
 .form__title {
@@ -2009,15 +2068,8 @@ input[type=button] {
   font-family: "Montserrat", sans-serif;
 }
 
-.form--second {
-  width: 100%;
-  padding: 0px;
-  margin-top: 80px;
-  margin-left: 0px;
-}
-
-.form--second__loadimage {
-  margin-top: 50px;
+.form__loadimage {
+  margin-top: 16px;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   width: 475px;
@@ -2031,16 +2083,44 @@ input[type=button] {
           align-items: center;
 }
 
-.form--second__image {
+.form__image {
   padding: 44px;
+  width: 440px;
 }
 
-.form--second__info {
+.form__info {
   font-size: 15px;
   color: gray;
   padding: 10px;
 }
 
+.form--user {
+  width: 40%;
+}
+
+.form__link {
+  margin-top: 20px;
+  font-size: 20px;
+  color: black;
+  margin-left: 15px;
+}
+
+.formContent {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/*
+.select{
+    font-family: 'Montserrat';
+    margin-top: 10px;
+    height: 37px;
+}*/
 .story {
   width: 100%;
   padding: 80px 60px 0px 100px;

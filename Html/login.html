@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
     <title>Beauty Lips</title>
+
     <link rel="stylesheet" href="../Styles/main.css">
     <link rel="shortcut icon" type="image/png" href="/Images/Favicon.png" />
 </head>
-
 <body>
     <header class="navigationbar">
 
@@ -20,9 +19,8 @@
 
             <ul class="optionsBar__list">
                 <li><a href="../index.html">Inicio</a></li>
-                <li><a href="../Html/products.html">Productos</a></li>
-                <li><a href="../Html/brand.html">Nosotros</a></li>
-
+                <li><a href="./Html/products.html">Productos</a></li>
+                <li><a href="./Html/brand.html">Nosotros</a></li>
 
 
             </ul>
@@ -42,34 +40,48 @@
 
 
     </header>
-    <section class="banner banner--products">
 
-        <h1 class="banner--products__title">Productos</h1>
+
+
+    <section class="banner banner--user">
+
+        <h1 class="banner--user__title">Inicio sesión</h1>
 
     </section>
 
+    <section class="profileoptions profileoptions--secondary">
+        <h2 class="profileoptions--secondary__title">Bienvenid@ a Beuaty Lips</h2>
+        <h3 class="profileoptions--secondary__subtitle">Inicio de sesión</h3>
+    </section>
 
-    <section class="shop">
-        <aside class="menu">
 
-            <div class="menu__title">
-                <h1>Labios</h1>
-            </div>
+    <section class="formContent">
 
-            <h2>Filtrar producto</h2>
+   
+      
+        <section class="form form--user">
 
-        </aside>
-   <!-- -->
-        <section class="productslist">
-         
-
+  
+            <h3 class="form__title">Información del usuario</h3>
+    
+            <label class="form__label">Correo
+                <input name="mail" type="text" placeholder="Escribe el nombre">
+            </label>
+    
+            <label class="form__label">Contraseña
+                <input name="password" type="password" placeholder="Escribe la Contraseña">
+            </label>
+           
+            
+    
+            <button class="btnPrimary btnPrimary--login">Iniciar sesión</button>
+            <a class="form__link" href="#">Registrarme</a>
         </section>
-
+    
+      
     </section>
-
-
-
-
+    
+    
     <footer class="finalcontent">
 
         <section class="row row--final">
@@ -113,13 +125,6 @@
 
     </footer>
 
-
-
-    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
-    <script src="../Scripts/firebaseconfig.js"></script>
-    <script src="../Scripts/products.js"></script>
-
+    <script src="../Scripts/login.js"></script>
 </body>
-
 </html>

@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
     <title>Beauty Lips</title>
+
     <link rel="stylesheet" href="../Styles/main.css">
     <link rel="shortcut icon" type="image/png" href="/Images/Favicon.png" />
 </head>
-
 <body>
     <header class="navigationbar">
 
@@ -21,7 +20,7 @@
             <ul class="optionsBar__list">
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="../Html/products.html">Productos</a></li>
-                <li><a href="../Html/brand.html">Nosotros</a></li>
+                <li><a href="#">Pedidos</a></li>
 
 
 
@@ -42,33 +41,40 @@
 
 
     </header>
-    <section class="banner banner--products">
+    <section class="banner banner--user">
 
-        <h1 class="banner--products__title">Productos</h1>
+        <h1 class="banner--user__title">Usuario</h1>
 
     </section>
 
 
-    <section class="shop">
-        <aside class="menu">
 
-            <div class="menu__title">
-                <h1>Labios</h1>
+    <section class="profileoptions">
+
+        <h2 class="profileoptions__title">Bienvenido *Pepito Perez*</h2>
+        <h3 class="profileoptions__subtitle">¿Qué deseas realizar?</h3>
+
+        <div class="profileoptions__items">
+            <div>
+                <img src="../Images/IconShop.png" alt="IconShop">
+                <h3>Productos</h3>
+                <a href="#">Comprar</a>
+                <a href="#">Ver carrito</a>
+
             </div>
 
-            <h2>Filtrar producto</h2>
 
-        </aside>
-   <!-- -->
-        <section class="productslist">
-         
+            <div>
+                <img src="../Images/IconOrdersUser.png" alt="IconOrdersUser">
+                <h3>Pedidos</h3>
+                <a href="#">Ver pedidos</a>
 
-        </section>
+            </div>
+        </div>
+
+
 
     </section>
-
-
-
 
     <footer class="finalcontent">
 
@@ -112,14 +118,5 @@
         </section>
 
     </footer>
-
-
-
-    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
-    <script src="../Scripts/firebaseconfig.js"></script>
-    <script src="../Scripts/products.js"></script>
-
 </body>
-
 </html>
