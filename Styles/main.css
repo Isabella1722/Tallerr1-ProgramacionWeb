@@ -642,6 +642,13 @@ input[type=button] {
   height: 50px;
 }
 
+.btnPrimary--viewList {
+  width: 190px;
+  height: 44px;
+  margin-top: 10px;
+  font-size: 20px;
+}
+
 @media (max-width: 576px) {
   .btnPrimary {
     margin-top: 20px;
@@ -2376,5 +2383,80 @@ input[type=button] {
   font-size: 20px;
   text-align: center;
   margin-top: 20px;
+}
+
+.modalContainer {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal {
+  width: 40%;
+  height: 50%;
+  background: white;
+  text-align: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  position: relative;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+  border-radius: 10px;
+}
+
+.modal__close {
+  -webkit-transform: translateY(-200%);
+          transform: translateY(-200%);
+}
+
+.modal img {
+  height: 140px;
+  width: 140px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.modal__text h4 {
+  font-size: 20px;
+  padding: 17px 75px 24px 75px;
+  font-weight: 300;
+}
+
+.modal h3 {
+  font-size: 25px;
+  font-weight: 500;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.close {
+  position: absolute;
+  top: 11px;
+  right: 17px;
+  font-size: 20px;
+  display: inline-block;
+  color: gray;
+  cursor: pointer;
 }
 /*# sourceMappingURL=main.css.map */

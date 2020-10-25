@@ -2,6 +2,13 @@
 const db = firebase.firestore();
 const productsRef = db.collection('products');
 
+const saveBtn = document.querySelector('.btnPrimary--saveproduct');
+const closeBtn = document.querySelector('.close');
+const modal = document.querySelector('.modal');
+const modalC = document.querySelector('.modalContainer');
+const viewBtn = document.querySelector('.btnPrimary--viewList');
+
+
 //form
 const form = document.querySelector('.formAdd');
 console.log(form);
@@ -30,12 +37,50 @@ form.addEventListener('submit', function (event) {
         form.color.value = '';
         form.price.value = '';
     })
-    .catch(function (error) {
-        console.error("Error adding document: ", error);
-    });
+        .catch(function (error) {
+            console.error("Error adding document: ", error);
+        });
 
+        modalC.style.opacity = "1";
+        modalC.style.visibility = "visible";
+        modal.classList.toggle("modal__close");
 });
 
 
+/*
+saveBtn.addEventListener("click", function (e) {
 
+    e.preventDefault();
+    modalC.style.opacity = "1";
+    modalC.style.visibility = "visible";
+    modal.classList.toggle("modal__close");
+    
+});*/
 
+closeBtn.addEventListener("click", function () {
+    modal.classList.toggle("modal__close");
+
+    setTimeout(function () {
+        modalC.style.opacity = "0";
+        modalC.style.visibility = "hidden";
+    }, 850);
+
+});
+
+window.addEventListener("click", function (e) {
+
+    console.log(e.target);
+    if (e.target == modalC) {
+        modal.classList.toggle("modal__close");
+
+        setTimeout(function () {
+            modalC.style.opacity = "0";
+            modalC.style.visibility = "hidden";
+        }, 850);
+    }
+});
+
+viewBtn.addEventListener("click", function () {
+
+    window.location.href = "/Html/productsAdmin.html";
+});

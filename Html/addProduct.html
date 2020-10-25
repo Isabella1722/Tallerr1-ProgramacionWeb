@@ -60,118 +60,135 @@
 
     <section class="formContent">
 
-   
-    <form class="form formAdd">
-        <h3 class="form__title">Información del producto</h3>
 
-        <label class="form__label">Nombre
-            <input name="namep" type="text" placeholder="Escribe el nombre">
-        </label>
+        <form class="form formAdd">
+            <h3 class="form__title">Información del producto</h3>
 
-        <label class="form__label">Categoría
-            <select name="typeproduct" id="">
-                <option value="predefined">Seleccione la categoría</option>
-                <option value="lipstick">Labiales</option>
-                <option value="liquidlipstick">Labiales líquidos</option>
-                <option value="lipgloss">Brillos labiales</option>
+            <label class="form__label">Nombre
+                <input name="namep" type="text" placeholder="Escribe el nombre">
+            </label>
 
-            </select>
-        </label>
+            <label class="form__label">Categoría
+                <select name="typeproduct" id="">
+                    <option value="predefined">Seleccione la categoría</option>
+                    <option value="lipstick">Labiales</option>
+                    <option value="liquidlipstick">Labiales líquidos</option>
+                    <option value="lipgloss">Brillos labiales</option>
 
-        <label class="form__label">Color
-            <select name="color" id="">
-                <option value="predefined">Seleccione el color</option>
-                <option value="beige">Beige</option>
-                <option value="pink">Rosado</option>
-                <option value="red">Rojo</option>
-                <option value="magenta">Magenta</option>
-            </select>
-        </label>
+                </select>
+            </label>
 
-        <label class="form__label">Marca
-            <select name="brand" id="">
-                <option value="predefined">Seleccione la marca</option>
-                <option value="cocochanel">Coco Chanel</option>
-                <option value="dior">Dior</option>
-                <option value="fentybeauty">Fenty Beauty</option>
-                <option value="nars">Nars</option>
-            </select>
-        </label>
+            <label class="form__label">Color
+                <select name="color" id="">
+                    <option value="predefined">Seleccione el color</option>
+                    <option value="beige">Beige</option>
+                    <option value="pink">Rosado</option>
+                    <option value="red">Rojo</option>
+                    <option value="magenta">Magenta</option>
+                </select>
+            </label>
 
-
-        <label class="form__label">Imagen
-            <input name="image" type="url" placeholder="url imagen">
-        </label>
-
-        <label class="form__label">Precio
-            <input name="price" type="number" placeholder="Escribe el precio">
-        </label>
-
-        <label class="form__label">Sube la imagen del producto
-        </label>
+            <label class="form__label">Marca
+                <select name="brand" id="">
+                    <option value="predefined">Seleccione la marca</option>
+                    <option value="cocochanel">Coco Chanel</option>
+                    <option value="dior">Dior</option>
+                    <option value="fentybeauty">Fenty Beauty</option>
+                    <option value="nars">Nars</option>
+                </select>
+            </label>
 
 
+            <label class="form__label">Imagen
+                <input name="image" type="url" placeholder="url imagen">
+            </label>
 
-        <div class="form__loadimage">
-            <img class="form__image" src="../Images/landscape.png" alt="landscape">
-            <h3 class="form__info">Arrastra y suelta la imagen aquí o da click en el icono para agregar</h3>
+            <label class="form__label">Precio
+                <input name="price" type="number" placeholder="Escribe el precio">
+            </label>
+
+            <label class="form__label">Sube la imagen del producto
+            </label>
+
+
+
+            <div class="form__loadimage">
+                <img class="form__image" src="../Images/landscape.png" alt="landscape">
+                <h3 class="form__info">Arrastra y suelta la imagen aquí o da click en el icono para agregar</h3>
+            </div>
+
+
+            <button class="btnPrimary btnPrimary--saveproduct">Guardar</button>
+
+
+        </form>
+
+
+        <div class="modalContainer">
+
+            <div class="modal modal__close">
+                <p class="close">X</p>
+                <h3>Producto agregado</h3>
+                <img src="../Images/check.png" alt="">
+                <div class="modal__text">
+                    
+                    <h4>¡El producto que has agregado, se ha guardo exitosamente en la base de datos! </h4>
+
+                </div>
+                <button class="btnPrimary btnPrimary--viewList">Ver lista</button>
+
+            </div>
         </div>
-        
-
-        <button class="btnPrimary btnPrimary--saveproduct">Guardar</button>
+    </section>
 
 
-    </form>
-</section>
+    <footer class="finalcontent">
 
-       
-        <footer class="finalcontent">
+        <section class="row row--final">
+            <div class="row__col row__col--3">
 
-            <section class="row row--final">
-                <div class="row__col row__col--3">
+                <section class="finalcontent__links">
+                    <a href="#">Sobre nosotros</a>
+                    <a href="#">Contáctenos</a>
+                    <h4>Calle 40 # 82-32 B/ Limonar</h4>
+                    <h4>3247857965</h4>
+                </section>
 
-                    <section class="finalcontent__links">
-                        <a href="#">Sobre nosotros</a>
-                        <a href="#">Contáctenos</a>
-                        <h4>Calle 40 # 82-32 B/ Limonar</h4>
-                        <h4>3247857965</h4>
-                    </section>
+            </div>
 
-                </div>
+            <div class="row__col row__col--3">
 
-                <div class="row__col row__col--3">
+                <section class="finalcontent__links">
+                    <a href="#">Menciones legales</a>
+                    <a href="#">Protección de datos</a>
+                    <a href="#">Seguimiento del pedido</a>
 
-                    <section class="finalcontent__links">
-                        <a href="#">Menciones legales</a>
-                        <a href="#">Protección de datos</a>
-                        <a href="#">Seguimiento del pedido</a>
+                </section>
 
-                    </section>
+            </div>
 
-                </div>
+            <div class="row__col row__col--3">
 
-                <div class="row__col row__col--3">
+                <section class="finalcontent__links">
+                    <h4>Síguenos en redes</h4>
+                    <h4>@beautyLips</h4>
+                    <div class="finalcontent__links--social">
+                        <a href="#"><img src="../Images/IconInstagram.png"></a>
+                        <a href="#"><img src="../Images/IconFacebook.png"></a>
+                        <a href="#"><img src="../Images/IconTwitter.png"></a>
+                    </div>
 
-                    <section class="finalcontent__links">
-                        <h4>Síguenos en redes</h4>
-                        <h4>@beautyLips</h4>
-                        <div class="finalcontent__links--social">
-                            <a href="#"><img src="../Images/IconInstagram.png"></a>
-                            <a href="#"><img src="../Images/IconFacebook.png"></a>
-                            <a href="#"><img src="../Images/IconTwitter.png"></a>
-                        </div>
+                </section>
 
-                    </section>
+            </div>
+        </section>
 
-                </div>
-            </section>
+    </footer>
 
-        </footer>
-
-        <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
-        <script src="../Scripts/firebaseconfig.js"></script>
-        <script src="../Scripts/addProduct.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
+    <script src="../Scripts/firebaseconfig.js"></script>
+    <script src="../Scripts/addProduct.js"></script>
 
 </body>
 
