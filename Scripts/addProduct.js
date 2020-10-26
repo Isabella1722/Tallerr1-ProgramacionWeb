@@ -16,13 +16,28 @@ console.log(form);
 form.addEventListener('submit', function (event) {
     event.preventDefault();
 
+
+    //image
+    var storageRef = firebase.storage().ref();
+
+    // Create a reference to 'mountains.jpg'
+    var newImageRef = storageRef.child(`products/${Math.floor(Math.random() * 123152194192)}.jpg`);
+
+    var file = form.imageFile.files[0]; // use the Blob or File API
+    newImageRef.put(file).then(function (snapshot) {
+        console.log(snapshot)
+        console.log('Uploaded a blob or file!');
+    });
+    
     const newProduct = {
         name: form.namep.value,
         img: form.image.value,
         brand: form.brand.value,
         type: form.typeproduct.value,
         color: form.color.value,
-        price: form.price.value
+        price: form.price.value,
+        description: form.description.value,
+        ingredients: form.ingredients.value
     }
 
     //subir a la base de datos
@@ -36,14 +51,16 @@ form.addEventListener('submit', function (event) {
         form.typeproduct.value = '';
         form.color.value = '';
         form.price.value = '';
+        form.description.value = '';
+        form.ingredients.value = '';
     })
         .catch(function (error) {
             console.error("Error adding document: ", error);
         });
 
-        modalC.style.opacity = "1";
-        modalC.style.visibility = "visible";
-        modal.classList.toggle("modal__close");
+    modalC.style.opacity = "1";
+    modalC.style.visibility = "visible";
+    modal.classList.toggle("modal__close");
 });
 
 

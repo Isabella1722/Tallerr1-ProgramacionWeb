@@ -107,16 +107,21 @@
                 <input name="price" type="number" placeholder="Escribe el precio">
             </label>
 
-            <label class="form__label">Sube la imagen del producto
+            <label class="form__label ">Descripción
+                <textarea name="description" rows="5" cols="40" placeholder="Escribe aquí la descripción"></textarea>
             </label>
 
+            <label class="form__label ">Ingredientes
+                <textarea name="ingredients" rows="5" cols="40" placeholder="Escribe los ingredientes"></textarea>
+            </label>
+            <label class="form__label">Sube la imagen del producto
+                <input type="file" name="imageFile">
+            </label>
+
+            
 
 
-            <div class="form__loadimage">
-                <img class="form__image" src="../Images/landscape.png" alt="landscape">
-                <h3 class="form__info">Arrastra y suelta la imagen aquí o da click en el icono para agregar</h3>
-            </div>
-
+           
 
             <button class="btnPrimary btnPrimary--saveproduct">Guardar</button>
 
@@ -187,6 +192,7 @@
 
     <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-storage.js"></script>
     <script src="../Scripts/firebaseconfig.js"></script>
     <script src="../Scripts/addProduct.js"></script>
 

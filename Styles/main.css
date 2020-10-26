@@ -1990,6 +1990,25 @@ input[type=button] {
   width: 50%;
   padding: 50px;
   margin-bottom: 100px;
+  /*
+    &__loadimage{
+
+        margin-top: 16px;
+        box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.25));
+        width: 475px;
+        height: 305px;
+        border-radius: 25px;
+        display: flex;
+        align-items: center;
+       
+        
+    
+    }*/
+  /*
+    &--user{
+        width: 40%;
+
+    }*/
   /*&--second{
 
         width: 100%;
@@ -2075,19 +2094,38 @@ input[type=button] {
   font-family: "Montserrat", sans-serif;
 }
 
-.form__loadimage {
-  margin-top: 16px;
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  width: 475px;
-  height: 305px;
-  border-radius: 25px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.form textarea {
+  font-weight: 300;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.form textarea::-webkit-input-placeholder {
+  font-weight: 400;
+  color: #5a5a5a;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.form textarea:-ms-input-placeholder {
+  font-weight: 400;
+  color: #5a5a5a;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.form textarea::-ms-input-placeholder {
+  font-weight: 400;
+  color: #5a5a5a;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.form textarea::placeholder {
+  font-weight: 400;
+  color: #5a5a5a;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
 }
 
 .form__image {
@@ -2101,15 +2139,17 @@ input[type=button] {
   padding: 10px;
 }
 
-.form--user {
-  width: 40%;
-}
-
 .form__link {
   margin-top: 20px;
   font-size: 20px;
   color: black;
   margin-left: 15px;
+}
+
+.form__error {
+  color: red;
+  font-weight: 600;
+  font-size: 20px;
 }
 
 .formContent {
@@ -2128,6 +2168,14 @@ input[type=button] {
     margin-top: 10px;
     height: 37px;
 }*/
+.login {
+  width: 40%;
+}
+
+.hidden {
+  display: none;
+}
+
 .story {
   width: 100%;
   padding: 80px 60px 0px 100px;

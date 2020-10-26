@@ -16,8 +16,10 @@
         display: flex;
         flex-direction: column;
         font-size: $font-size-h4;
+
     }
 
+    
     input {
         width: 100%;
         height: 44px;
@@ -32,6 +34,18 @@
         }
     }
 
+ 
+    textarea{
+        font-weight: 300;
+        font-size:$font-size-p;
+        font-family: $primary-font;
+        &::placeholder {
+            font-weight: 400;
+            color: rgb(90, 90, 90);
+            font-size:  $font-size-p;
+            font-family: $primary-font;
+        }
+    }/*
     &__loadimage{
 
         margin-top: 16px;
@@ -44,7 +58,7 @@
        
         
     
-    }
+    }*/
 
     &__image{
 
@@ -59,17 +73,24 @@
         color: gray;
         padding: 10px;
     }
-
+/*
     &--user{
         width: 40%;
 
-    }
+    }*/
     &__link{
         margin-top: 20px;
         font-size: $font-size-h4;
         color: $primary-color;
         margin-left: 15px;
     }
+
+
+    &__error {
+        color: red;
+        font-weight: 600;
+        font-size: $font-size-h4;
+      }
     /*&--second{
 
         width: 100%;
@@ -115,3 +136,10 @@
     margin-top: 10px;
     height: 37px;
 }*/
+
+.login{
+    width: 40%;
+}
+.hidden {
+    display: none;
+  }

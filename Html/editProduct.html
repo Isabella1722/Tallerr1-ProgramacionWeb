@@ -106,15 +106,17 @@
                 <input name="price" type="number" placeholder="Escribe el precio">
             </label>
 
-
-            <label class="form__label">Sube la imagen del producto
+            <label class="form__label ">Descripción
+                <textarea name="description" rows="5" cols="40" placeholder="Escribe aquí la descripción"></textarea>
             </label>
 
-            <div class="form__loadimage">
+            <label class="form__label ">Ingredientes
+                <textarea name="ingredients" rows="5" cols="40" placeholder="Escribe los ingredientes"></textarea>
+            </label>
 
-                <img class="form__image" src="../Images/landscape.png" alt="landscape">
-                <h3 class="form__info">Arrastra y suelta la imagen aquí o da click en el icono para agregar</h3>
-            </div>
+            <label class="form__label">Sube la imagen del producto
+                <input type="file" name="imageFile">
+            </label>
             <button class="btnPrimary btnPrimary--saveproduct">Guardar</button>
 
         </form>

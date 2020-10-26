@@ -28,6 +28,11 @@ productsRef.doc(selectItem).get().then(function(doc) {
     form.typeproduct.value = elem.type;
     form.color.value = elem.color;
     form.price.value = elem.price;
+    form.description.value = elem.description;
+    form.ingredients.value = elem.ingredients;
+
+   // form.imageFile.value = elem.imageFile;
+
 }).catch(function(error) {
     console.log("Error getting document:", error);
 });
@@ -41,7 +46,10 @@ form.addEventListener('submit', function (event) {
         brand: form.brand.value,
         type: form.typeproduct.value,
         color: form.color.value,
-        price: form.price.value
+        price: form.price.value,
+        description: form.description.value,
+        ingredients: form.ingredients.value
+        //imageFile: form.imageFile.value
     }
 
     //parte de editar
@@ -53,6 +61,9 @@ form.addEventListener('submit', function (event) {
         form.typeproduct.value = '';
         form.color.value = '';
         form.price.value = '';
+        form.description.value = '';
+        form.ingredients.value = '';
+       // form.imageFile.value = '';
         selectItem = null;
     }
 
