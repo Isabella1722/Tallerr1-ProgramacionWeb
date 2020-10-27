@@ -525,6 +525,27 @@ input[type=button] {
   color: white;
 }
 
+.banner--register {
+  width: 100%;
+  height: 600px;
+  margin-top: 20px;
+  background-image: url(../Images/BannerUser.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.banner--register__title {
+  width: 40%;
+  height: 40%;
+  margin-left: 106px;
+  padding-top: 60px;
+  font-weight: 700;
+  font-size: 55px;
+  text-transform: uppercase;
+  color: white;
+}
+
 @media (max-width: 576px) {
   .banner {
     width: 100%;
@@ -2147,9 +2168,28 @@ input[type=button] {
 }
 
 .form__error {
-  color: red;
-  font-weight: 600;
-  font-size: 20px;
+  margin-top: 20px;
+  background-color: #FFE3E6;
+  height: 50px;
+  width: 350px;
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.form__error p {
+  font-weight: 300;
+  font-size: 15px;
+  color: black;
+  width: 200px;
+  text-align: center;
 }
 
 .formContent {
@@ -2169,6 +2209,10 @@ input[type=button] {
     height: 37px;
 }*/
 .login {
+  width: 40%;
+}
+
+.register {
   width: 40%;
 }
 

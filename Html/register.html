@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="../Styles/main.css">
     <link rel="shortcut icon" type="image/png" href="/Images/Favicon.png" />
 </head>
+
 <body>
     <header class="navigationbar">
 
@@ -41,47 +43,71 @@
 
 
     </header>
-    <section class="banner banner--user">
+    <section class="banner banner--register">
 
-        <h1 class="banner--user__title">Usuario</h1>
+        <h1 class="banner--register__title">Registro de usuario</h1>
 
     </section>
 
-    
-    <section class="form register">
+    <section class="profileoptions profileoptions--secondary">
+        <h2 class="profileoptions--secondary__title">Bienvenid@ a Beuaty Lips</h2>
+        <h3 class="profileoptions--secondary__subtitle">Registro de usuario</h3>
+    </section>
 
-  
-        <h3 class="form__title">Información del usuario</h3>
+   
 
-        <label class="form__label">Correo
-            <input name="email"required  type="email" placeholder="Escribe el nombre">
-        </label>
-
-        <label class="form__label">Contraseña
-            <input name="password"required type="password" placeholder="Escribe la Contraseña">
-        </label>
-
-        <label class="form__label">Dirección
-            <input name="address" required  type="text" placeholder="Escribe tu dirección">
-        </label>
-
-        <label class="form__label">Barrio
-            <input name="neighborhood" required  type="text" placeholder="Escribe tu barrio">
-        </label>
-
-        <label class="form__label">Ciudad
-            <select name="city" id="">
-                <option value="predefined">Seleccione tu ciudad</option>
-                <option value="bogota">Bogotá</option>
-                <option value="barranquilla">Barranquilla</option>
-                <option value="cali">Cali</option>
-                <option value="medellin">Medellín</option>
-            </select>
-        </label>
+    <section class="formContent">
+        <form class="form register">
 
 
-        <button type="submit" class="btnPrimary btnPrimary--login">Registrarme</button>
- 
+            <h3 class="form__title">Información del usuario</h3>
+
+            <label class="form__label">Nombre
+                <input required name="nameUser" type="text" placeholder="Escribe tu nombre">
+            </label>
+
+            <label class="form__label">Apellido
+                <input required name="lastName" type="text" placeholder="Escribe tu apellido">
+            </label>
+
+            <label class="form__label">Celular
+                <input required name="phone" type="number" placeholder="Escribe tu celular">
+            </label>
+
+            <label class="form__label">Dirección
+                <input required name="address" type="text" placeholder="Escribe tu dirección">
+            </label>
+
+            <label class="form__label">Barrio
+                <input required name="neighborhood" type="text" placeholder="Escribe tu barrio">
+            </label>
+
+            <label class="form__label">Ciudad
+                <select name="city" id="">
+                    <option value="predefined">Seleccione tu ciudad</option>
+                    <option value="bogota">Bogotá</option>
+                    <option value="barranquilla">Barranquilla</option>
+                    <option value="cali">Cali</option>
+                    <option value="medellin">Medellín</option>
+                </select>
+            </label>
+            <label class="form__label">Correo
+                <input required name="email" type="email" placeholder="Escribe tu correo">
+            </label>
+
+            <label class="form__label">Contraseña
+                <input required name="password" type="password" placeholder="Escribe tu Contraseña">
+            </label>
+
+            <div class="form__error hidden">
+                <p >¡Ya existe un usuario registrado con este correo! </p>
+            </div>
+            
+
+            <button type="submit" class="btnPrimary btnPrimary--login">Registrarme</button>
+
+        </form>
+
     </section>
 
     <footer class="finalcontent">
@@ -126,5 +152,12 @@
         </section>
 
     </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
+    <script src="../Scripts/firebaseconfig.js"></script>
+    <script src="../Scripts/register.js"></script>
 </body>
+
 </html>
