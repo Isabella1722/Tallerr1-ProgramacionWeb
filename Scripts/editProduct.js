@@ -7,6 +7,11 @@ const selectItemtorage = storage.getItem("selectItemtorage");
 selectItem = selectItemtorage;
 console.log(selectItem);
 
+//modal
+const closeBtn = document.querySelector('.close');
+const modal = document.querySelector('.modal');
+const modalC = document.querySelector('.modalContainer');
+const viewBtn = document.querySelector('.btnPrimary--viewList');
 
 //form
 const form = document.querySelector('.form');
@@ -79,8 +84,27 @@ form.addEventListener('submit', function (event) {
             .catch(handleCatch);
     }
 
+    modalC.style.opacity = "1";
+    modalC.style.visibility = "visible";
+    modal.classList.toggle("modal__close");
 });
 
 
+window.addEventListener("click", function (e) {
 
+    console.log(e.target);
+    if (e.target == modalC) {
+        modal.classList.toggle("modal__close");
+
+        setTimeout(function () {
+            modalC.style.opacity = "0";
+            modalC.style.visibility = "hidden";
+        }, 850);
+    }
+});
+
+viewBtn.addEventListener("click", function () {
+
+    window.location.href = "/Html/productsAdmin.html";
+});
 

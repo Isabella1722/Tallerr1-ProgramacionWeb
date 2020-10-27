@@ -13,7 +13,8 @@ if(user) {
     usersRef.doc(user.uid).get().then(function (doc) {
       if(doc.exists) {
         const data = doc.data();
-        authProfileSpan.innerText = data.nameUser;
+        console.log(doc.data());
+        authProfileSpan.innerText = data.name;
       }
      
     });
@@ -24,4 +25,6 @@ if(user) {
 logout.addEventListener('click', function(event) {
     event.preventDefault();
     firebase.auth().signOut();
+    //authProfileSpan.innerText = '';
+    window.location.href = "../index.html";
   });

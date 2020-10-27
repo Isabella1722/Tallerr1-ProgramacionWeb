@@ -2017,6 +2017,18 @@ input[type=button] {
   margin-top: 10px;
 }
 
+.spanProfile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 10px;
+  font-weight: 500;
+  font-size: 25px;
+}
+
 .form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2202,6 +2214,31 @@ input[type=button] {
 }
 
 .form__error p {
+  font-weight: 300;
+  font-size: 15px;
+  color: black;
+  width: 200px;
+  text-align: center;
+}
+
+.form__errorC {
+  margin-top: 20px;
+  background-color: #FFE3E6;
+  height: 50px;
+  width: 350px;
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.form__errorC p {
   font-weight: 300;
   font-size: 15px;
   color: black;

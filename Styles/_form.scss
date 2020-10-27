@@ -105,6 +105,26 @@
         }
         
       }
+
+      &__errorC {
+        margin-top: 20px;
+        background-color: #FFE3E6;
+        height: 50px;
+        width: 350px;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        p{
+            font-weight: 300;
+            font-size: 15px;
+            color: black;
+            width: 200px;
+            text-align: center;
+            
+        }
+        
+      }
     /*&--second{
 
         width: 100%;
@@ -160,4 +180,5 @@
 }
 .hidden {
     display: none;
-  }
+}
+

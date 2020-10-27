@@ -13,6 +13,8 @@ const viewBtn = document.querySelector('.btnPrimary--viewList');
 const form = document.querySelector('.formAdd');
 console.log(form);
 
+console.log(form.color.options[0].text);
+
 form.addEventListener('submit', function (event) {
     event.preventDefault();
 
@@ -57,7 +59,6 @@ form.addEventListener('submit', function (event) {
         .catch(function (error) {
             console.error("Error adding document: ", error);
         });
-
     modalC.style.opacity = "1";
     modalC.style.visibility = "visible";
     modal.classList.toggle("modal__close");

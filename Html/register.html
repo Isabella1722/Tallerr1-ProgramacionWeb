@@ -99,14 +99,39 @@
                 <input required name="password" type="password" placeholder="Escribe tu Contraseña">
             </label>
 
+            <label class="form__label">Confirmar contraseña
+                <input required name="confirmPassword" type="password" placeholder="Escribe tu Contraseña">
+            </label>
+
             <div class="form__error hidden">
                 <p >¡Ya existe un usuario registrado con este correo! </p>
+            </div>
+
+            <div class="form__errorC hidden">
+                <p >¡Las contraseñas no coinciden! </p>
             </div>
             
 
             <button type="submit" class="btnPrimary btnPrimary--login">Registrarme</button>
 
         </form>
+
+
+        <div class="modalContainer">
+
+            <div class="modal modal__close">
+                <p class="close">X</p>
+                <h3>Registro usuario</h3>
+                <img src="../Images/check.png" alt="">
+                <div class="modal__text">
+                    
+                    <h4>¡Has sido registrado exitosamente en nuestra plataforma, disfruta de tu compra! </h4>
+
+                </div>
+                <button class="btnPrimary btnPrimary--viewList">Ver mi perfil</button>
+
+            </div>
+        </div>
 
     </section>
 
