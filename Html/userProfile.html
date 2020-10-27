@@ -51,8 +51,14 @@
 
     <section class="profileoptions">
 
-        <h2 class="profileoptions__title">Bienvenido *Pepito Perez*</h2>
+        <h2 class="profileoptions__title">Bienvenido</h2>
+        <span class="spanProfile"></span>
         <h3 class="profileoptions__subtitle">¿Qué deseas realizar?</h3>
+        <div class="profileoptions__logout">
+            <img src="../Images/logout.png" alt="logout">
+            <a class="logout" href="#">Cerrar sesión</a>
+        </div>
+       
 
         <div class="profileoptions__items">
             <div>
@@ -118,5 +124,10 @@
         </section>
 
     </footer>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
+    <script src="../Scripts/firebaseconfig.js"></script>
+    <script src="../Scripts/auth.js"></script>
 </body>
 </html>

@@ -17,6 +17,21 @@
         margin-top: 10px;
     }
 
+    &__logout{
+
+        margin-left: 1251px;
+        width: 200px;
+        display: flex;
+        align-items: center;
+        a{
+            margin-left: 15px;
+            font-size: $font-size-p;
+            color: black;
+        }
+     
+       
+
+    }
     &__items{
 
         display: flex;
@@ -53,6 +68,7 @@
     }
 
 
+    
     &--secondary{
 
         &__title{
