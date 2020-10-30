@@ -9,11 +9,13 @@ const modalC = document.querySelector('.modalContainer');
 const viewBtn = document.querySelector('.btnPrimary--viewList');
 
 
+
 //form
 const form = document.querySelector('.formAdd');
 console.log(form);
+//console.log(form.color.options[0].text);
 
-console.log(form.color.options[0].text);
+
 
 form.addEventListener('submit', function (event) {
     event.preventDefault();
@@ -46,7 +48,7 @@ form.addEventListener('submit', function (event) {
     productsRef.add(newProduct).then(function (docRef) {
         console.log("Document written with ID: ", docRef.id);
         //getProducts();
-        form.name.value = '';
+        //form.name.value = '';
         form.namep.value = '';
         form.image.value = '';
         form.brand.value = '';
