@@ -20,6 +20,8 @@ function renderProducts(list) {
         <p class="product__type">${elem.type}</p>
         <p class="product__color">${elem.color}</p>
         <p class="product__price">${elem.price}</p>
+        <img class="product__icon" src="../Images/star.svg" alt="star"> 
+        <span class="product__popularity">${elem.popularity}</span>
         <button class="btnPrimary btnPrimary--edit">Editar</button>`;
 
 

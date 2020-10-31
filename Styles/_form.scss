@@ -17,6 +17,11 @@
         flex-direction: column;
         font-size: $font-size-h4;
 
+        &--secondary{
+            margin-left: 60px;
+            width: 70%;
+    
+         }
     }
 
     
@@ -125,12 +130,14 @@
         }
         
       }
+
+     
     /*&--second{
 
         width: 100%;
         padding: 0px;
         margin-top: 80px;
-        margin-left: 0px;
+        
         &__loadimage{
 
             margin-top: 50px;
@@ -182,3 +189,17 @@
     display: none;
 }
 
+.selectType{
+    margin-top: 10px;
+}
+
+.selectColor{
+    margin-top: 10px;
+}
+.selectBrand{
+    margin-top: 10px;
+}
+
+.selectSort{
+    margin-top: 10px;
+}

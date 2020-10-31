@@ -56,8 +56,56 @@
                 <h1>Labios</h1>
             </div>
 
-            <h2>Filtrar producto</h2>
+            <h2>Filtrar productos</h2>
 
+           
+            <label class="form__label form__label--secondary">Categoría
+                <select class="selectType" name="typeproduct" id="">
+                    <option selected="selected" value="predefined">Seleccione la categoría</option>
+                    <option value="Labiales">Labiales</option>
+                    <option value="Labiales líquidos">Labiales líquidos</option>
+                    <option value="Brillos labiales">Brillos labiales</option>
+
+                </select>
+            </label>
+
+            <label class="form__label form__label--secondary">Color
+                <select class="selectColor" name="color" id="">
+                    <option selected="selected" value="predefined">Seleccione el color</option>
+                    <option value="Beige">Beige</option>
+                    <option value="Rosado">Rosado</option>
+                    <option value="Rojo">Rojo</option>
+                    <option value="Magenta">Magenta</option>
+                </select>
+            </label>
+
+            <label class="form__label form__label--secondary">Marca
+                <select class="selectBrand" name="brand" id="">
+                    <option selected="selected" value="predefined">Seleccione la marca</option>
+                    <option value="Coco Chanel">Coco Chanel</option>
+                    <option value="Dior">Dior</option>
+                    <option value="Fenty Beauty">Fenty Beauty</option>
+                    <option value="Nars">Nars</option>
+                </select>
+            </label>
+
+
+            <h2>Ordenar productos</h2>
+
+            <label class="form__label form__label--secondary">Ordernar por:
+                <select class="selectSort" name="sort" id="">
+                    <option selected="selected" value="predefined">Seleccione el orden</option>
+                    <option value="sortAlphabetA">A-Z</option>
+                    <option value="sortAlphabetZ">Z-A</option>
+                    <option value="sortPopularity">Popularidad</option>
+                    <option value="sortLess">Precio de menor a mayor</option>
+                    <option value="sortHigher">Precio de mayor a menor</option>
+                    
+                   
+                </select>
+            </label>
+
+            
         </aside>
    <!-- -->
         <section class="productslist">

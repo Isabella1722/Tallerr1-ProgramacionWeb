@@ -69,7 +69,7 @@
             </label>
 
             <label class="form__label">Categoría
-                <select name="typeproduct" id="">
+                <select class="selectType" name="typeproduct" id="">
                     <option selected="selected" value="predefined">Seleccione la categoría</option>
                     <option value="Labiales">Labiales</option>
                     <option value="Labiales líquidos">Labiales líquidos</option>
@@ -79,7 +79,7 @@
             </label>
 
             <label class="form__label">Color
-                <select  name="color" id="">
+                <select  class="selectColor" name="color" id="">
                     <option selected="selected" value="predefined">Seleccione el color</option>
                     <option value="Beige">Beige</option>
                     <option value="Rosado">Rosado</option>
@@ -89,7 +89,7 @@
             </label>
 
             <label class="form__label">Marca
-                <select  name="brand" id="">
+                <select  class="selectBrand" name="brand" id="">
                     <option selected="selected" value="predefined">Seleccione la marca</option>
                     <option value="Coco Chanel">Coco Chanel</option>
                     <option value="Dior">Dior</option>
@@ -98,6 +98,7 @@
                 </select>
             </label>
 
+           
 
             <label class="form__label">Imagen
                 <input name="image" type="url" placeholder="url imagen">
@@ -105,6 +106,10 @@
 
             <label class="form__label">Precio
                 <input name="price" type="number" placeholder="Escribe el precio">
+            </label>
+
+            <label class="form__label">Popularidad
+                <input name="popularity" type="number" placeholder="Escribe la popularidad" min="1" max="5">
             </label>
 
             <label class="form__label ">Descripción

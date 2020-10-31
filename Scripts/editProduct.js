@@ -33,6 +33,7 @@ productsRef.doc(selectItem).get().then(function(doc) {
     form.typeproduct.value = elem.type;
     form.color.value = elem.color;
     form.price.value = elem.price;
+    form.popularity.value = elem.popularity;
     form.description.value = elem.description;
     form.ingredients.value = elem.ingredients;
 
@@ -52,6 +53,7 @@ form.addEventListener('submit', function (event) {
         type: form.typeproduct.value,
         color: form.color.value,
         price: form.price.value,
+        popularity: form.popularity.value,
         description: form.description.value,
         ingredients: form.ingredients.value
         //imageFile: form.imageFile.value
@@ -66,6 +68,7 @@ form.addEventListener('submit', function (event) {
         form.typeproduct.value = '';
         form.color.value = '';
         form.price.value = '';
+        form.popularity.value = '';
         form.description.value = '';
         form.ingredients.value = '';
        // form.imageFile.value = '';
