@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+    <title>Beauty Lips</title>
+    <link rel="stylesheet" href="../Styles/main.css">
+    <link rel="shortcut icon" type="image/png" href="/Images/Favicon.png" />
+</head>
+
+<body>
+    <header class="navigationbar">
+
+
+
+        <img class="brand" src="../Images/Brand.png" alt="BeautyLips">
+
+        <div class="optionsBar">
+
+            <ul class="optionsBar__list">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../Html/products.html">Productos</a></li>
+                <li><a href="../Html/brand.html">Nosotros</a></li>
+
+
+
+            </ul>
+
+            <div class="optionsBar__icons">
+
+                <a href="#"><img class="optionsBar__icons optionsBar__icons--search" src="../Images/IconSearch.png"></a>
+                <a href="#"><img class="optionsBar__icons optionsBar__icons--shopping"
+                        src="../Images/IconShopping.png"></a>
+                <a href="#"><img class="optionsBar__icons optionsBar__icons--user" src="../Images/user.png"></a>
+
+            </div>
+
+
+
+        </div>
+
+
+    </header>
+    <section class="banner banner--productsView">
+
+        <h1 class="banner--productsView__title">Producto</h1>
+
+    </section>
+
+
+    <section class="row">
+
+        <div class="row__col row__col--2">
+            <aside class="gallery hidden">
+
+                <div class="gallery__items">
+                    <img class="productImg" src="../Images/LipstickPromo.jpg" alt="">
+                    <img class="colorImg"
+                        src="../Images/rouge-coco-ultra-hydrating-lip-colour-444-gabrielle-0-12oz--basic-texture-172444-8802151202846.jpg"
+                        alt="">
+                    <img class="lipsImg"
+                        src="../Images/rouge-coco-ultra-hydrating-lip-colour-444-gabrielle-0-12oz--application-visual-a-172444-8800844644382.jpg"
+                        alt="">
+
+                </div>
+                <div class="gallery__view">
+                    <img class="productImg" src="../Images/LipstickPromo.jpg" alt="">
+                </div>
+            </aside>
+
+
+        </div>
+
+        <div class="row__col row__col--2">
+            <section class="productsInfo hidden">
+                <h2 class="productsInfo__title">Rouge Allure Velvet</h2>
+                <h4 class="productsInfo__type">Labial</h4>
+                <h4 class="productsInfo__brand">Marca</h4>
+                <h4 class="productsInfo__color">Rojo</h4>
+                <h4>Popularidad: <span class="productsInfo__popularity">1</span></h4>
+                <h3 class="productsInfo__price">$150.000</h3>
+
+                <a href="#">Ver detalles</a>
+
+
+                <div class="productsInfo__items">
+
+                    <div>
+                        <img src="../Images/delivery.svg" alt="delivery">
+                        <h4>Envío gratis a todo el país</h4>
+                    </div>
+
+                    <div>
+                        <img src="../Images/pay.svg" alt="pay">
+                        <h4>Pago seguro con tu tarjeta</h4>
+                    </div>
+                </div>
+
+                <button class="btnPrimary btnPrimary--add">Agregar al carrito</button>
+            </section>
+
+        </div>
+
+
+
+    </section>
+
+
+
+    <footer class="finalcontent">
+
+        <section class="row row--final">
+            <div class="row__col row__col--3">
+
+                <section class="finalcontent__links">
+                    <a href="#">Sobre nosotros</a>
+                    <a href="#">Contáctenos</a>
+                    <h4>Calle 40 # 82-32 B/ Limonar</h4>
+                    <h4>3247857965</h4>
+                </section>
+
+            </div>
+
+            <div class="row__col row__col--3">
+
+                <section class="finalcontent__links">
+                    <a href="#">Menciones legales</a>
+                    <a href="#">Protección de datos</a>
+                    <a href="#">Seguimiento del pedido</a>
+
+                </section>
+
+            </div>
+
+            <div class="row__col row__col--3">
+
+                <section class="finalcontent__links">
+                    <h4>Síguenos en redes</h4>
+                    <h4>@beautyLips</h4>
+                    <div class="finalcontent__links--social">
+                        <a href="#"><img src="../Images/IconInstagram.png"></a>
+                        <a href="#"><img src="../Images/IconFacebook.png"></a>
+                        <a href="#"><img src="../Images/IconTwitter.png"></a>
+                    </div>
+
+                </section>
+
+            </div>
+        </section>
+
+    </footer>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
+    <script src="../Scripts/firebaseconfig.js"></script>
+    <script src="../Scripts/productView.js"></script>
+</body>
+
+</html>
