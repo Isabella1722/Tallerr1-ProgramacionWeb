@@ -8,7 +8,10 @@ const modal = document.querySelector('.modal');
 const modalC = document.querySelector('.modalContainer');
 const viewBtn = document.querySelector('.btnPrimary--viewList');
 
+var storageRef = firebase.storage().ref();
 
+//arreglo de los inputs
+var imagePaths = [];
 
 //form
 const form = document.querySelector('.formAdd');
@@ -20,19 +23,6 @@ console.log(form);
 form.addEventListener('submit', function (event) {
     event.preventDefault();
 
-
-    //image
-    var storageRef = firebase.storage().ref();
-
-    // Create a reference to 'mountains.jpg'
-    var newImageRef = storageRef.child(`products/${Math.floor(Math.random() * 123152194192)}.jpg`);
-
-    var file = form.imageFile.files[0]; // use the Blob or File API
-    newImageRef.put(file).then(function (snapshot) {
-        console.log(snapshot)
-        console.log('Uploaded a blob or file!');
-    });
-    
     const newProduct = {
         name: form.namep.value,
         img: form.image.value,
@@ -42,7 +32,8 @@ form.addEventListener('submit', function (event) {
         price: form.price.value,
         popularity: form.popularity.value,
         description: form.description.value,
-        ingredients: form.ingredients.value
+        ingredients: form.ingredients.value,
+        storageImgs: imagePaths,
     }
 
     //subir a la base de datos
@@ -68,16 +59,26 @@ form.addEventListener('submit', function (event) {
     modal.classList.toggle("modal__close");
 });
 
+//INPUT FILE***********************************
+const images = form.querySelectorAll('.form__imginput');
 
-/*
-saveBtn.addEventListener("click", function (e) {
-
-    e.preventDefault();
-    modalC.style.opacity = "1";
-    modalC.style.visibility = "visible";
-    modal.classList.toggle("modal__close");
+images.forEach(function(input, index){
     
-});*/
+    input.addEventListener('change', function(){
+        console.log("holis");
+        // Create a reference 
+        var newImageRef = storageRef.child(`products/${Math.floor(Math.random() * 123152194192)}.jpg`);
+      
+        var file = input.files[0]; // use the Blob or File API
+        newImageRef.put(file).then(function (snapshot) {
+            console.log(snapshot)
+            console.log('Uploaded a blob or file!');
+            imagePaths[index] = snapshot.metadata.fullPath;
+        });
+      });
+});
+
+
 
 closeBtn.addEventListener("click", function () {
     modal.classList.toggle("modal__close");
@@ -106,3 +107,6 @@ viewBtn.addEventListener("click", function () {
 
     window.location.href = "/Html/productsAdmin.html";
 });
+
+
+     

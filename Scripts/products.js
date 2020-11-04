@@ -1,6 +1,7 @@
 const db = firebase.firestore();
 const productsRef = db.collection('products');
 const productsList = document.querySelector('.productslist');
+var storageRef = firebase.storage().ref();
 
 function renderProducts(list) {
     productsList.innerHTML = '';
@@ -24,6 +25,18 @@ function renderProducts(list) {
         <span class="product__popularity">${elem.popularity}</span>
         <button class="btnPrimary btnPrimary--shop">Comprar</button>`;
 
+
+
+        if (elem.storageImgs && elem.storageImgs.length >0) {
+            console.log(elem.storageImgs);
+            storageRef.child(elem.storageImgs[0]).getDownloadURL().then(function (url) {
+                // Or inserted into an <img> element:
+                var img = newProduct.querySelector('.product__img');
+                img.src = url;
+            }).catch(function (error) {
+                // Handle any errors
+            });
+        }
         productsList.appendChild(newProduct);
     });
 }

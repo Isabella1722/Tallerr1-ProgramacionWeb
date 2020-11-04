@@ -2,6 +2,9 @@
 const authProfileSpan = document.querySelector('.spanProfile');
 const logout = document.querySelector('.logout');
 
+//var userInfo;
+
+
 firebase.auth().onAuthStateChanged(function(user) {
 console.log(user);
 if(user) {
@@ -14,7 +17,10 @@ if(user) {
       if(doc.exists) {
         const data = doc.data();
         console.log(doc.data());
+        //userInfo=data;
         authProfileSpan.innerText = data.name;
+
+  
       }
      
     });
