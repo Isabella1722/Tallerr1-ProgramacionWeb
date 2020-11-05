@@ -25,7 +25,7 @@ form.addEventListener('submit', function (event) {
 
     const newProduct = {
         name: form.namep.value,
-        img: form.image.value,
+       img: form.image.value,
         brand: form.brand.value,
         type: form.typeproduct.value,
         color: form.color.value,

@@ -2,7 +2,7 @@
 const authProfileSpan = document.querySelector('.spanProfile');
 const logout = document.querySelector('.logout');
 
-//var userInfo;
+var userInfo;
 
 
 firebase.auth().onAuthStateChanged(function(user) {
@@ -17,9 +17,12 @@ if(user) {
       if(doc.exists) {
         const data = doc.data();
         console.log(doc.data());
-        //userInfo=data;
+        userInfo=data;
         authProfileSpan.innerText = data.name;
 
+        if(data.admin){
+          window.location.href = '/Html/admin.html';
+        }
   
       }
      
@@ -29,6 +32,7 @@ if(user) {
 
 // cerrar sesión
 logout.addEventListener('click', function(event) {
+  console.log("hh");
     event.preventDefault();
     firebase.auth().signOut();
     //authProfileSpan.innerText = '';

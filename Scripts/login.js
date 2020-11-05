@@ -9,7 +9,11 @@ login.addEventListener('submit', function (event) {
   firebase.auth().signInWithEmailAndPassword(email, password)
   .then(function () {
 
-    window.location.href = '/Html/userProfile.html';
+      //window.location.href = '/Html/admin.html';
+   
+      window.location.href = '/Html/userProfile.html';
+    
+    
 
   })
   .catch(function(error) {
@@ -20,3 +24,4 @@ login.addEventListener('submit', function (event) {
     // ...
   });
 });
+
