@@ -57,37 +57,32 @@ function getProducts() {
 getProducts();
 
 
-/*
-//form
-const form = document.querySelector('.form');
-console.log(form);
 
-form.addEventListener('submit', function (event) {
-    event.preventDefault();
 
-    const newProduct = {
-        name: form.namep.value,
-        img: form.image.value,
-        brand: form.brand.value,
-        type: form.typeproduct.value,
-        color: form.color.value,
-        price: form.price.value
-    }
+//modal carrito
+const modal = document.querySelector('.modal--vertical');
+const modalC = document.querySelector('.modalContainer--vertical');
+const shopBtn = document.querySelector('.btnPrimary--viewList');
+const cartBtn = document.querySelector('.optionsBar__icons--shopping');
 
-    //subir a la base de datos
-    productsRef.add(newProduct).then(function (docRef) {
-        console.log("Document written with ID: ", docRef.id);
-        getProducts();
-        form.name.value='';
-        form.namep.value='';
-        form.image.value='';
-        form.brand.value='';
-        form.typeproduct.value='';
-        form.color.value='';
-        form.price.value='';
-    })
-        .catch(function (error) {
-            console.error("Error adding document: ", error);
-        });
+cartBtn.addEventListener("click", function () {
+  modalC.style.opacity = "1";
+  modalC.style.visibility = "visible";
+  modal.classList.toggle("modal__close--vertical");
 
-});*/
+});
+
+
+
+window.addEventListener("click", function (e) {
+
+  console.log(e.target);
+  if (e.target == modalC) {
+    modal.classList.toggle("modal__close--vertical");
+
+    setTimeout(function () {
+      modalC.style.opacity = "0";
+      modalC.style.visibility = "hidden";
+    }, 850);
+  }
+});
