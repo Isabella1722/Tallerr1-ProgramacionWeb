@@ -7,6 +7,11 @@ const selectItemtorage = storage.getItem("selectItemtorage");
 selectItem = selectItemtorage;
 console.log(selectItem);
 
+var storageRef = firebase.storage().ref();
+
+//arreglo de los inputs
+var imagePaths = [];
+
 //modal
 const closeBtn = document.querySelector('.close');
 const modal = document.querySelector('.modal');
@@ -28,7 +33,7 @@ productsRef.doc(selectItem).get().then(function(doc) {
         console.log("No such document!");
     }
     form.namep.value = elem.name;
-    form.image.value = elem.img;
+    //form.image.value = elem.img;
     form.brand.value = elem.brand;
     form.typeproduct.value = elem.type;
     form.color.value = elem.color;
@@ -42,20 +47,38 @@ productsRef.doc(selectItem).get().then(function(doc) {
 }).catch(function(error) {
     console.log("Error getting document:", error);
 });
+//INPUT FILE***********************************
+const images = form.querySelectorAll('.form__imginput');
 
+images.forEach(function(input, index){
+    
+    input.addEventListener('change', function(){
+        console.log("holis");
+        // Create a reference 
+        var newImageRef = storageRef.child(`products/${Math.floor(Math.random() * 123152194192)}.jpg`);
+      
+        var file = input.files[0]; // use the Blob or File API
+        newImageRef.put(file).then(function (snapshot) {
+            console.log(snapshot)
+            console.log('Uploaded a blob or file!');
+            imagePaths[index] = snapshot.metadata.fullPath;
+        });
+      });
+});
 form.addEventListener('submit', function (event) {
     event.preventDefault();
 
     const editProduct = {
         name: form.namep.value,
-        img: form.image.value,
+        //img: form.image.value,
         brand: form.brand.value,
         type: form.typeproduct.value,
         color: form.color.value,
         price: form.price.value,
         popularity: form.popularity.value,
         description: form.description.value,
-        ingredients: form.ingredients.value
+        ingredients: form.ingredients.value,
+        storageImgs: imagePaths
         //imageFile: form.imageFile.value
     }
 
@@ -63,7 +86,7 @@ form.addEventListener('submit', function (event) {
     
     function handleThen(docRef) {
         form.namep.value = '';
-        form.image.value = '';
+       // form.image.value = '';
         form.brand.value = '';
         form.typeproduct.value = '';
         form.color.value = '';

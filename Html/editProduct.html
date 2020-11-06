@@ -96,10 +96,10 @@
                     <option value="Nars">Nars</option>
                 </select>
             </label>
-            
-            <label class="form__label">Imagen
+              <!-- <label class="form__label">Imagen
                 <input name="image" type="url" placeholder="url imagen">
-            </label>
+            </label>  -->
+        
 
             <label class="form__label">Precio
                 <input name="price" type="number" placeholder="Escribe el precio">
@@ -117,8 +117,16 @@
                 <textarea name="ingredients" rows="5" cols="40" placeholder="Escribe los ingredientes"></textarea>
             </label>
 
-            <label class="form__label">Sube la imagen del producto
-                <input type="file" name="imageFile">
+            <label class="form__label">Sube la imagen principal
+                <input type="file" class="form__imginput">
+            </label>
+
+            <label class="form__label">Sube la imagen del color
+                <input type="file" class="form__imginput">
+            </label>
+
+            <label class="form__label">Sube la imagen de labios
+                <input type="file" class="form__imginput">
             </label>
             <button class="btnPrimary btnPrimary--saveproduct">Guardar</button>
 
@@ -186,6 +194,7 @@
     </footer>
     <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-storage.js"></script>
     <script src="../Scripts/firebaseconfig.js"></script>
     <script src="../Scripts/editProduct.js"></script>
 

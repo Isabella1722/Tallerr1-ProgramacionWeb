@@ -25,12 +25,12 @@ form.addEventListener('submit', function (event) {
 
     const newProduct = {
         name: form.namep.value,
-       img: form.image.value,
+       //img: form.image.value,
         brand: form.brand.value,
         type: form.typeproduct.value,
         color: form.color.value,
-        price: form.price.value,
-        popularity: form.popularity.value,
+        price: Number(form.price.value),
+        popularity: Number(form.popularity.value),
         description: form.description.value,
         ingredients: form.ingredients.value,
         storageImgs: imagePaths,
@@ -42,7 +42,7 @@ form.addEventListener('submit', function (event) {
         //getProducts();
         //form.name.value = '';
         form.namep.value = '';
-        form.image.value = '';
+        //form.image.value = '';
         form.brand.value = '';
         form.typeproduct.value = '';
         form.color.value = '';

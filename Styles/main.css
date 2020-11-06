@@ -1847,6 +1847,9 @@ input[type=button] {
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   margin-bottom: 45px;
+}
+
+.product a {
   text-decoration: none;
   color: black;
 }
@@ -1912,6 +1915,11 @@ input[type=button] {
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   margin-bottom: 45px;
+  text-decoration: none;
+  color: black;
+}
+
+.product--admin a {
   text-decoration: none;
   color: black;
 }
