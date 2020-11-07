@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+    <title>Beauty Lips</title>
+    <link rel="stylesheet" href="../Styles/main.css">
+    <link rel="shortcut icon" type="image/png" href="/Images/Favicon.png" />
+</head>
+
+<body>
+    <header class="navigationbar">
+
+
+
+        <img class="brand" src="../Images/Brand.png" alt="BeautyLips">
+
+        <div class="optionsBar">
+
+            <ul class="optionsBar__list">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../Html/products.html">Productos</a></li>
+                <li><a href="../Html/brand.html">Nosotros</a></li>
+
+
+
+            </ul>
+
+            <div class="optionsBar__icons">
+
+                <a href="#"><img class="optionsBar__icons optionsBar__icons--search" src="../Images/IconSearch.png"></a>
+                <a href="#"><img class="optionsBar__icons optionsBar__icons--shopping"
+                        src="../Images/IconShopping.png"></a>
+                <a href="../Html/login.html"><img class="optionsBar__icons optionsBar__icons--user"
+                        src="../Images/user.png"></a>
+
+            </div>
+
+
+
+        </div>
+
+
+    </header>
+    <section class="banner banner--order">
+
+        <h1 class="banner--order__title">Pedido</h1>
+
+    </section>
+
+    <section>
+
+        <h2 class="profileoptions__title">¡Hola!</h2>
+        <span class="spanProfile">Pepito</span>
+
+    </section>
+
+    <section class="row">
+
+        <div class="row__col row__col--2">
+
+            <section class="order">
+                <h3 class="order__title">Productos seleccionados</h3>
+
+                <div class="orderProduct">
+
+                    <img class="orderProduct__img" src="../Images/LipstickPromo.jpg" alt="product">
+                    <div class="orderProduct__info">
+                        <img class="orderProduct__delete" src="../Images/delete.png" alt="delete">
+                        <h3 class="orderProduct__title">Rouge Allure Velvet</h3>
+                        <h4 class="orderProduct__brand">Coco Chanel</h4>
+                        <h4 class="orderProduct__type">Labial</h4>
+                        <h4 class="orderProduct__color">Rojo</h4>
+                        <h3 class="orderProduct__text">Precio: <span class="orderProduct__price">$180.000</span></h3>
+                        <div class="orderProduct__content">
+                            <h3 class="orderProduct__text">Cantidad: </h3>
+                            <img class="orderProduct__less" src="../Images/less.svg" alt="less">
+                            <h4 class="orderProduct__amount">2</h4>
+                            <img class="orderProduct__add" src="../Images/add.svg" alt="add">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="orderProduct">
+
+                    <img class="orderProduct__img" src="../Images/LipstickPromo.jpg" alt="product">
+                    <div class="orderProduct__info">
+                        <img class="orderProduct__delete" src="../Images/delete.png" alt="delete">
+                        <h3 class="orderProduct__title">Rouge Allure Velvet</h3>
+                        <h4 class="orderProduct__brand">Coco Chanel</h4>
+                        <h4 class="orderProduct__type">Labial</h4>
+                        <h4 class="orderProduct__color">Rojo</h4>
+                        <h3 class="orderProduct__text">Precio: <span class="orderProduct__price">$180.000</span></h3>
+                        <div class="orderProduct__content">
+                            <h3 class="orderProduct__text">Cantidad: </h3>
+                            <img class="orderProduct__less" src="../Images/less.svg" alt="less">
+                            <h4 class="orderProduct__amount">2</h4>
+                            <img class="orderProduct__add" src="../Images/add.svg" alt="add">
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+            </section>
+
+        </div>
+
+        <div class="row__col row__col--2">
+            <section class="order__receipt">
+                <h3 class="order__title order__title--receipt">Resumen del pedido</h3>
+                <div class="order__info">
+                    <h4 class="order__subtitle">Cantidad de productos:<span class="order__totalProducts"> 2</span></h4>
+                    <h4 class="order__subtitle">Subtotal:<span class="order__subtotal"> $20000</span></h4>
+                    <h4 class="order__subtitle">Envío: Gratis</h4>
+                </div>
+                <h4 class="order__subtitle">Total de compra:<span class="order__total"> $20000</span></h4>
+
+                <div class="politics"> 
+                <h3 class="politics__title">Política de protección de datos</h3>
+                <p class="politics__text">
+                    Sus datos personales serán utilizados para apoyar su experiencia a lo largo de esta compra, 
+                    para gestionar el acceso a su cuenta, y para otros fines descritos en nuestra Política de privacidad. 
+                    Los Pedidos por la pagina Web podrán ser despachados en los próximos 2 a 3 días hábiles a partir del 
+                    momento de la compra, el tiempo de entrega será manejado por la transportadora.</p>
+                </div>
+
+            </section>
+
+        </div>
+    </section>
+
+    <h3 class="order__title">Realizar pago</h3>
+
+    <section class="formContent">
+        <form class="form formOrder">
+            <h3 class="form__title">Información de usuario</h3>
+
+            <label class="form__label">Nombre
+                <input class="input" name="namep" type="text" placeholder="Escribe tu nombre">
+            </label>
+
+            <label class="form__label">Dirección
+                <input  class="input"name="address" type="text" placeholder="Escribe tu dirección">
+            </label>
+
+            <h3 class="form__title form__title--order">Información de tarjeta</h3>
+            <label class="form__label">Número de tarjeta
+                <input class="input" name="numberCard" type="number" placeholder="Escribe el número">
+            </label>
+
+            <label class="form__label">Fecha de expiración
+                <input name="date" type="date" >
+            </label>
+
+            <label class="form__label">Código de seguridad
+                <input class="input" name="address" type="text" placeholder="Escribe el código">
+            </label>
+
+
+
+            <button class="btnPrimary btnPrimary--saveproduct">Pagar</button>
+
+
+        </form>
+
+    </section>
+
+
+
+    <footer class="finalcontent">
+
+        <section class="row row--final">
+            <div class="row__col row__col--3">
+
+                <section class="finalcontent__links">
+                    <a href="#">Sobre nosotros</a>
+                    <a href="#">Contáctenos</a>
+                    <h4>Calle 40 # 82-32 B/ Limonar</h4>
+                    <h4>3247857965</h4>
+                </section>
+
+            </div>
+
+            <div class="row__col row__col--3">
+
+                <section class="finalcontent__links">
+                    <a href="#">Menciones legales</a>
+                    <a href="#">Protección de datos</a>
+                    <a href="#">Seguimiento del pedido</a>
+
+                </section>
+
+            </div>
+
+            <div class="row__col row__col--3">
+
+                <section class="finalcontent__links">
+                    <h4>Síguenos en redes</h4>
+                    <h4>@beautyLips</h4>
+                    <div class="finalcontent__links--social">
+                        <a href="#"><img src="../Images/IconInstagram.png"></a>
+                        <a href="#"><img src="../Images/IconFacebook.png"></a>
+                        <a href="#"><img src="../Images/IconTwitter.png"></a>
+                    </div>
+
+                </section>
+
+            </div>
+        </section>
+
+    </footer>
+</body>
+
+</html>

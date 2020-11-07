@@ -30,7 +30,9 @@ function renderProducts(list) {
         
         <img class="product__delete"src="../Images/delete.png" alt="delete">
         <a href="${url}">
+        
         <img class="product__img" src="${elem.img}" alt="product">
+        <div> 
         <h3 class="product__name">${elem.name}</h3>
         <p class="product__brand">${elem.brand}</p>
         <p class="product__type">${elem.type}</p>
@@ -38,6 +40,7 @@ function renderProducts(list) {
         <p class="product__price">${elem.price}</p>
         <img class="product__icon" src="../Images/star.svg" alt="star"> 
         <span class="product__popularity">${elem.popularity}</span>
+        </div> 
         </a>
         <button class="btnPrimary btnPrimary--edit">Editar</button>`
             ;

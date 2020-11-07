@@ -1,23 +1,33 @@
 .productscontent {
-
-
-    &__title{
+    &__title {
         font-weight: 300;
         font-size: $font-size-h2;
         text-align: center;
         margin-top: 50px;
     }
 
-    &__subtitleimportant{
+    &__subtitleimportant {
         font-weight: 600;
         font-size: $font-size-h3;
         text-align: center;
         margin-top: 10px;
     }
-    &__subtitle{
+    &__subtitle {
         font-weight: 300;
         font-size: $font-size-h4;
         text-align: center;
         margin-top: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .productscontent {
+        &__subtitle {
+            font-weight: 300;
+            font-size: 22px;
+            text-align: center;
+            margin-top: $font-size-h2-big-mobile;
+            padding: 0px 63px 0px 63px;
+        }
     }
 }

@@ -74,8 +74,8 @@ form.addEventListener('submit', function (event) {
         brand: form.brand.value,
         type: form.typeproduct.value,
         color: form.color.value,
-        price: form.price.value,
-        popularity: form.popularity.value,
+        price: Number(form.price.value),
+        popularity: Number(form.popularity.value),
         description: form.description.value,
         ingredients: form.ingredients.value,
         storageImgs: imagePaths

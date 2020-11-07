@@ -112,3 +112,20 @@
     color: gray;
     cursor: pointer;
 }
+
+//Big Mobile
+
+@media (max-width: 576px) {
+    .modal {
+        width: 80%;
+        height: 40%;
+
+        &--vertical {
+            width: 90%;
+        }
+    }
+
+    .close{
+        font-size: 30px;
+    }
+}

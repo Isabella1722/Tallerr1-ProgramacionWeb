@@ -94,3 +94,25 @@
     font-weight: 500;
     font-size: 25px;
 }
+//Big Mobile
+
+@media (max-width: 576px) {
+    .profileoptions{
+
+        &__items{
+            padding: 24px;
+            div {
+    
+                margin-top: 30px;
+                margin-bottom: 30px;
+
+            }
+
+            a {
+              font-size: 26px;
+            }
+        }
+
+      
+    }
+}
