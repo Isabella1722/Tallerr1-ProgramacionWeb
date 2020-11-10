@@ -16,7 +16,7 @@ function renderProducts(list) {
 
     newProduct.innerHTML = `
     <a href="${url}">
-    <img class="product__img" src="${elem.img}" alt="product">
+    <img class="product__img" src="" alt="product">
     <div> 
     <h3 class="product__name">${elem.name}</h3>
     <p class="product__brand">${elem.brand}</p>
@@ -45,19 +45,21 @@ function renderProducts(list) {
   });
 }
 
+
+let objectsList = [];
 //función para traer los datos
 function getProducts() {
   productsRef.get().then((querySnapshot) => {
-    const objects = [];
+     objectsList = [];
     querySnapshot.forEach((doc) => {
       const obj = doc.data();
       obj.id = doc.id;
-      objects.push(obj);
+      objectsList.push(obj);
       console.log(`${doc.id} =>${doc.data()}`);
     });
-    renderProducts(objects);
-    orderProducts();
-    filter();
+    renderProducts(objectsList);
+   // orderProducts();
+   
   });
 }
 getProducts();
@@ -99,7 +101,7 @@ window.addEventListener("click", function (e) {
 
 
 
-
+/*
 
 const selectSort = document.querySelector('.selectSort');
 selectSort.style.fontFamily = "Montserrat";
@@ -207,116 +209,51 @@ function orderProducts() {
         break;
     }
 
-    /*if(sort == 'sortAlphabetA'){
-      productsRef.orderBy('name').get()
-      .then(function(querySnapshot) {
-        const objects = [];
-        querySnapshot.forEach(function(doc) {
-          const obj = doc.data();
-          obj.id = doc.id;
-          objects.push(obj);
-          // doc.data() is never undefined for query doc snapshots
-          console.log(doc.id, " => ", doc.data());
-          renderProducts(objects);
-        });
-      })
-      .catch(function(error) {
-        console.log("Error getting documents: ", error);
-      });
-    }else if(sort == 'sortAlphabetZ'){
-      productsRef.orderBy('name','desc').get()
-      .then(function(querySnapshot) {
-        const objects = [];
-        querySnapshot.forEach(function(doc) {
-          const obj = doc.data();
-          obj.id = doc.id;
-          objects.push(obj);
-          // doc.data() is never undefined for query doc snapshots
-          console.log(doc.id, " => ", doc.data());
-          renderProducts(objects);
-        });
-      })
-      .catch(function(error) {
-        console.log("Error getting documents: ", error);
-      });
-    }else if(sort == 'sortPopularity'){
-      productsRef.orderBy('popularity','desc').get()
-      .then(function(querySnapshot) {
-        const objects = [];
-        querySnapshot.forEach(function(doc) {
-          const obj = doc.data();
-          obj.id = doc.id;
-          objects.push(obj);
-          // doc.data() is never undefined for query doc snapshots
-          console.log(doc.id, " => ", doc.data());
-          renderProducts(objects);
-        });
-      })
-      .catch(function(error) {
-        console.log("Error getting documents: ", error);
-      });
-    }else if(sort == 'sortLess'){
-      productsRef.orderBy('price').get()
-      .then(function(querySnapshot) {
-        const objects = [];
-        querySnapshot.forEach(function(doc) {
-          const obj = doc.data();
-          obj.id = doc.id;
-          objects.push(obj);
-          // doc.data() is never undefined for query doc snapshots
-          console.log(doc.id, " => ", doc.data());
-          renderProducts(objects);
-        });
-      })
-      .catch(function(error) {
-        console.log("Error getting documents: ", error);
-      });
-    }else if(sort == 'sortHigher'){
-      productsRef.orderBy('price','desc').get()
-      .then(function(querySnapshot) {
-        const objects = [];
-        querySnapshot.forEach(function(doc) {
-          const obj = doc.data();
-          obj.id = doc.id;
-          objects.push(obj);
-          // doc.data() is never undefined for query doc snapshots
-          console.log(doc.id, " => ", doc.data());
-          renderProducts(objects);
-        });
-      })
-      .catch(function(error) {
-        console.log("Error getting documents: ", error);
-      });
-    }*/
-
   });
-}
+}*/
 
-const selectType2 = document.querySelector('.selectType');
+const filterForm =document.querySelector('.filterform');
+filterForm.addEventListener('input', function() {
 
-function filter() {
+  let copy = objectsList.slice();
 
+  const order = filterForm.sort.value;
+  console.log(order);
 
-  var selectType;
-  selectType = selectType2.value;
-  selectType2.addEventListener('input', function () {
-    console.log("hssssss");
-    if (selectType == 'Labiales') {
-      productsRef.where("type", "==", "Labiales").get()
-        .then(function (querySnapshot) {
-          const objects = [];
-          querySnapshot.forEach(function (doc) {
-            const obj = doc.data();
-            obj.id = doc.id;
-            objects.push(obj);
-            // doc.data() is never undefined for query doc snapshots
-            console.log(doc.id, " => ", doc.data());
-            renderProducts(objects);
-          });
-        })
-        .catch(function (error) {
-          console.log("Error getting documents: ", error);
-        });
-    }
-  });
-}
+ // renderProducts(objectsList);
+  
+  switch(order){
+    case 'sortLess':
+      copy.sort(function(a, b){
+        return a.price - b.price;
+      });
+      break;
+    case 'sortHigher':
+      copy.sort(function(a, b){
+        return b.price - a.price;
+      });
+      break;
+
+      case 'sortAlphabetA':
+      copy.sort(function(a, b){
+       return a.name - b.name;
+       
+      });
+      break;
+    case 'sortAlphabetZ':
+      copy.sort(function(a, b){
+       // return b.name.toLowerCase () - a.name.toLowerCase ();
+        return b.name - a.name;
+      });
+      break;
+
+      case 'sortPopularity':
+      copy.sort(function(a, b){
+        return b.popularity - a.popularity;
+      });
+      break;
+
+  }
+
+  renderProducts(copy);
+});

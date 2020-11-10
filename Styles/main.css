@@ -2110,6 +2110,41 @@ input[type=button] {
   font-size: 15px;
 }
 
+.selectType {
+  margin-top: 10px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.selectColor {
+  margin-top: 10px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.selectBrand {
+  margin-top: 10px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.selectFilterType {
+  margin-top: 10px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.selectFilterColor {
+  margin-top: 10px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.selectFilterBrand {
+  margin-top: 10px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.selectSort {
+  margin-top: 10px;
+  font-family: "Montserrat", sans-serif;
+}
+
 .productslistadmin {
   width: 100%;
   display: -webkit-box;
@@ -2183,6 +2218,69 @@ input[type=button] {
   }
   .product--admin__price {
     font-size: 20px;
+  }
+  .selectType {
+    margin-top: 10px;
+    height: 50px;
+    width: 254px;
+    font-size: 20px;
+  }
+  .selectType option {
+    font-size: 12px;
+  }
+  .selectColor {
+    margin-top: 10px;
+    height: 50px;
+    width: 254px;
+    font-size: 20px;
+  }
+  .selectColor option {
+    font-size: 12px;
+  }
+  .selectBrand {
+    margin-top: 10px;
+    height: 50px;
+    width: 254px;
+    font-size: 20px;
+  }
+  .selectBrand option {
+    font-size: 12px;
+  }
+  .selectFilterType {
+    margin-top: 10px;
+    height: 50px;
+    width: 254px;
+    font-size: 20px;
+  }
+  .selectFilterType option {
+    font-size: 12px;
+  }
+  .selectFilterColor {
+    margin-top: 10px;
+    height: 50px;
+    width: 254px;
+    font-size: 20px;
+  }
+  .selectFilterColor option {
+    font-size: 12px;
+  }
+  .selectFilterBrand {
+    margin-top: 10px;
+    height: 50px;
+    width: 254px;
+    font-size: 20px;
+  }
+  .selectFilterBrand option {
+    font-size: 12px;
+  }
+  .selectSort {
+    margin-top: 10px;
+    height: 50px;
+    width: 254px;
+    font-size: 20px;
+  }
+  .selectSort option {
+    font-size: 12px;
   }
 }
 
@@ -2555,22 +2653,6 @@ input[type=button] {
 
 .hidden {
   display: none;
-}
-
-.selectType {
-  margin-top: 10px;
-}
-
-.selectColor {
-  margin-top: 10px;
-}
-
-.selectBrand {
-  margin-top: 10px;
-}
-
-.selectSort {
-  margin-top: 10px;
 }
 
 @media (max-width: 576px) {

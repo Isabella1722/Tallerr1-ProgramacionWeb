@@ -59,7 +59,7 @@ btnViewProducts.addEventListener("click", function () {
 //modal carrito
 const modal = document.querySelector('.modal--vertical');
 const modalC = document.querySelector('.modalContainer--vertical');
-const shopBtn = document.querySelector('.btnPrimary--viewList');
+const shopBtn = document.querySelector('.btnPrimary--goLogin');
 const cartBtn = document.querySelector('.optionsBar__icons--shopping');
 
 cartBtn.addEventListener("click", function () {

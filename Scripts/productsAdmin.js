@@ -31,7 +31,7 @@ function renderProducts(list) {
         <img class="product__delete"src="../Images/delete.png" alt="delete">
         <a href="${url}">
         
-        <img class="product__img" src="${elem.img}" alt="product">
+        <img class="product__img" src="" alt="product">
         <div> 
         <h3 class="product__name">${elem.name}</h3>
         <p class="product__brand">${elem.brand}</p>
