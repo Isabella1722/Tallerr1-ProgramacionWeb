@@ -218,7 +218,7 @@ filterForm.addEventListener('input', function() {
   let copy = objectsList.slice();
 
   const order = filterForm.sort.value;
-  console.log(order);
+  //console.log(order);
 
  // renderProducts(objectsList);
   
@@ -253,6 +253,25 @@ filterForm.addEventListener('input', function() {
       });
       break;
 
+  }
+
+  //filtros
+  const typeFilter = filterForm.typeproduct.value;
+  console.log(typeFilter);
+  if(typeFilter != '') {
+
+   
+    copy = copy.filter(function(elem){
+      /*
+      if(typeFilter==='lipstick'&& elem.type.includes('Labiales líquidos')){
+        return true;
+      }*/
+
+      if(elem.type.toLowerCase().includes(typeFilter)) {
+        return true;
+      }
+      return false;
+    })
   }
 
   renderProducts(copy);

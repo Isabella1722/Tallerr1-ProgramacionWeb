@@ -2110,6 +2110,21 @@ input[type=button] {
   font-size: 15px;
 }
 
+.optionsType {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 60px;
+}
+
+.optionsType label {
+  margin-top: 20px;
+}
+
 .selectType {
   margin-top: 10px;
   font-family: "Montserrat", sans-serif;
