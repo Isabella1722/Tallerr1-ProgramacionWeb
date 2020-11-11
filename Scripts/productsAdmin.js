@@ -34,9 +34,9 @@ function renderProducts(list) {
         <img class="product__img" src="" alt="product">
         <div> 
         <h3 class="product__name">${elem.name}</h3>
-        <p class="product__brand">${elem.brand}</p>
-        <p class="product__type">${elem.type}</p>
-        <p class="product__color">${elem.color}</p>
+        <p class="product__brand">${translateBrand(elem.brand)}</p>
+        <p class="product__type">${translateTypes(elem.type)}</p>
+        <p class="product__color">${translateColor(elem.color)}</p>
         <p class="product__price">${elem.price}</p>
         <img class="product__icon" src="../Images/star.svg" alt="star"> 
         <span class="product__popularity">${elem.popularity}</span>
@@ -128,3 +128,28 @@ getProducts();
 
 
 
+function translateTypes (type) {
+    switch(type){
+      case 'lipstick': return 'Labial';
+      case 'liquidlipsticks': return 'Labial líquido';
+      case 'lipgloss': return 'Brillo labial';
+    }
+  }
+
+  function translateColor (color) {
+    switch(color){
+      case 'beige': return 'Beige';
+      case 'pink': return 'Rosado';
+      case 'red': return 'Rojo';
+      case 'magenta': return 'Magenta';
+    }
+  }
+  
+  function translateBrand (brand) {
+    switch(brand){
+      case 'cocochanel': return 'Coco Chanel';
+      case 'dior': return 'Dior';
+      case 'fentybeauty': return 'Fenty Beauty';
+      case 'nars': return 'Nars';
+    }
+  }

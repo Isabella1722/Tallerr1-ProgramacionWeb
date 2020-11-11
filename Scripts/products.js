@@ -19,9 +19,9 @@ function renderProducts(list) {
     <img class="product__img" src="" alt="product">
     <div> 
     <h3 class="product__name">${elem.name}</h3>
-    <p class="product__brand">${elem.brand}</p>
-    <p class="product__type">${elem.type}</p>
-    <p class="product__color">${elem.color}</p>
+    <p class="product__brand">${translateBrand(elem.brand)}</p>
+    <p class="product__type">${translateTypes(elem.type)}</p>
+    <p class="product__color">${translateColor(elem.color)}</p>
     <p class="product__price">${elem.price}</p>
     <img class="product__icon" src="../Images/star.svg" alt="star"> 
     <span class="product__popularity">${elem.popularity}</span>
@@ -236,14 +236,15 @@ filterForm.addEventListener('input', function() {
 
       case 'sortAlphabetA':
       copy.sort(function(a, b){
-       return a.name - b.name;
+       return a.name.localeCompare(b.name);
        
       });
       break;
     case 'sortAlphabetZ':
       copy.sort(function(a, b){
        // return b.name.toLowerCase () - a.name.toLowerCase ();
-        return b.name - a.name;
+       // return b.name - a.name;
+        return b.name.localeCompare(a.name);
       });
       break;
 
@@ -255,24 +256,78 @@ filterForm.addEventListener('input', function() {
 
   }
 
-  //filtros
+  //filters
+  //type
   const typeFilter = filterForm.typeproduct.value;
-  console.log(typeFilter);
+  //console.log(typeFilter);
   if(typeFilter != '') {
 
-   
     copy = copy.filter(function(elem){
-      /*
-      if(typeFilter==='lipstick'&& elem.type.includes('Labiales líquidos')){
-        return true;
-      }*/
 
-      if(elem.type.toLowerCase().includes(typeFilter)) {
+      if(typeFilter==elem.type){
         return true;
       }
+
+      return false;
+    })
+  }
+
+  //color
+  const colorFilter = filterForm.color.value;
+  //console.log(colorFilter);
+  if(colorFilter != '') {
+
+    copy = copy.filter(function(elem){
+
+      if(colorFilter==elem.color){
+        return true;
+      }
+
+      return false;
+    })
+  }
+
+  //brand
+
+const brandFilter = filterForm.brand.value;
+  //console.log(colorFilter);
+  if(brandFilter != '') {
+
+    copy = copy.filter(function(elem){
+
+      if(brandFilter==elem.brand){
+        return true;
+      }
+
       return false;
     })
   }
 
   renderProducts(copy);
 });
+
+function translateTypes (type) {
+  switch(type){
+    case 'lipstick': return 'Labial';
+    case 'liquidlipsticks': return 'Labial líquido';
+    case 'lipgloss': return 'Brillo labial';
+  }
+}
+
+function translateColor (color) {
+  switch(color){
+    case 'beige': return 'Beige';
+    case 'pink': return 'Rosado';
+    case 'red': return 'Rojo';
+    case 'magenta': return 'Magenta';
+  }
+}
+
+function translateBrand (brand) {
+  switch(brand){
+    case 'cocochanel': return 'Coco Chanel';
+    case 'dior': return 'Dior';
+    case 'fentybeauty': return 'Fenty Beauty';
+    case 'nars': return 'Nars';
+  }
+}

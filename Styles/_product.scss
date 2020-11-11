@@ -107,7 +107,16 @@
     }
 }
 
-.optionsType{
+.optionsContainer{
+    display: flex;
+    flex-direction: column;
+    margin-left: 60px;
+    label{
+    margin-top: 20px;
+    }
+}
+
+.optionsColor{
     display: flex;
     flex-direction: column;
     margin-left: 60px;

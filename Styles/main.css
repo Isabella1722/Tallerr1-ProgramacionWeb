@@ -2110,7 +2110,7 @@ input[type=button] {
   font-size: 15px;
 }
 
-.optionsType {
+.optionsContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2121,7 +2121,22 @@ input[type=button] {
   margin-left: 60px;
 }
 
-.optionsType label {
+.optionsContainer label {
+  margin-top: 20px;
+}
+
+.optionsColor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 60px;
+}
+
+.optionsColor label {
   margin-top: 20px;
 }
 
