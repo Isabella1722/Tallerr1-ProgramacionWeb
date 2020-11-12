@@ -2,247 +2,239 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
-    <title>Beauty Lips</title>
-    <link rel="stylesheet" href="../Styles/main.css">
-    <link rel="shortcut icon" type="image/png" href="/Images/Favicon.png" />
+  <meta charset="UTF-8">
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+  <title>Beauty Lips</title>
+  <link rel="stylesheet" href="../Styles/main.css">
+  <link rel="shortcut icon" type="image/png" href="/Images/Favicon.png" />
 </head>
 
 <body>
-    <header class="navigationbar">
+  <header class="navigationbar">
 
 
 
-        <img class="brand" src="../Images/Brand.png" alt="BeautyLips">
+    <img class="brand" src="../Images/Brand.png" alt="BeautyLips">
 
-        <div class="optionsBar">
+    <div class="optionsBar">
 
-            <ul class="optionsBar__list">
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="../Html/products.html">Productos</a></li>
-                <li><a href="../Html/brand.html">Nosotros</a></li>
-
-
-
-            </ul>
-
-            <div class="optionsBar__icons">
-
-                <a href="#"><img class="optionsBar__icons optionsBar__icons--search" src="../Images/IconSearch.png"></a>
-                <a href="../Html/cart.html"><img class="optionsBar__icons optionsBar__icons--shopping"
-                        src="../Images/IconShopping.png"></a>
-                <a href="../Html/login.html"><img class="optionsBar__icons optionsBar__icons--user" src="../Images/user.png"></a>
-
-            </div>
+      <ul class="optionsBar__list">
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="../Html/products.html">Productos</a></li>
+        <li><a href="../Html/brand.html">Nosotros</a></li>
 
 
 
+      </ul>
+
+      <div class="optionsBar__icons">
+
+        <a href="#"><img class="optionsBar__icons optionsBar__icons--search" src="../Images/IconSearch.png"></a>
+        <a href="../Html/cart.html"><img class="optionsBar__icons optionsBar__icons--shopping"
+            src="../Images/IconShopping.png"></a>
+        <a href="../Html/login.html"><img class="optionsBar__icons optionsBar__icons--user"
+            src="../Images/user.png"></a>
+
+      </div>
+
+
+
+    </div>
+
+
+  </header>
+  <section class="banner banner--products">
+
+    <h1 class="banner--products__title">Productos</h1>
+
+  </section>
+
+
+
+
+  <section class="shop">
+    <aside class="menu">
+
+      <div class="menu__title">
+        <h1>Labios</h1>
+      </div>
+
+      <h2>Filtrar productos</h2>
+
+
+      <form class="filterform">
+
+        <label class="form__label form__label--secondary">Categoría </label>
+
+        <div class="optionsContainer">
+          <label>
+            <input type="radio" name="typeproduct" value="" checked>
+            Todos
+          </label>
+          <label>
+            <input type="radio" name="typeproduct" value="lipstick">
+            Labiales
+          </label>
+          <label>
+            <input type="radio" name="typeproduct" value="liquidlipsticks">
+            Labiales líquidos
+          </label>
+          <label>
+            <input type="radio" name="typeproduct" value="lipgloss">
+            Brillos líquidos
+          </label>
         </div>
 
 
-    </header>
-    <section class="banner banner--products">
+        <label class="form__label form__label--secondary">Color </label>
 
-        <h1 class="banner--products__title">Productos</h1>
+        <div class="optionsContainer">
+          <label>
+            <input type="radio" name="color" value="" checked>
+            Todos
+          </label>
+          <label>
+            <input type="radio" name="color" value="beige">
+            Beige
+          </label>
+          <label>
+            <input type="radio" name="color" value="pink">
+            Rosado
+          </label>
+          <label>
+            <input type="radio" name="color" value="red">
+            Rojo
+          </label>
+
+          <label>
+            <input type="radio" name="color" value="magenta">
+            Magenta
+          </label>
+        </div>
+
+
+        <label class="form__label form__label--secondary">Marca </label>
+        <div class="optionsContainer">
+          <label>
+            <input type="radio" name="brand" value="" checked>
+            Todos
+          </label>
+          <label>
+            <input type="radio" name="brand" value="cocochanel">
+            Coco Chanel
+          </label>
+          <label>
+            <input type="radio" name="brand" value="dior">
+            Dior
+          </label>
+          <label>
+            <input type="radio" name="brand" value="fentybeauty">
+            Fenty Beauty
+          </label>
+
+          <label>
+            <input type="radio" name="brand" value="nars">
+            Nars
+          </label>
+        </div>
+
+        <h2>Ordenar productos</h2>
+
+        <label class="form__label form__label--secondary">Ordernar por:
+          <select class="selectSort" name="sort" id="">
+            <option selected="selected" value="predefined">Seleccione el orden</option>
+            <option value="sortAlphabetA">A-Z</option>
+            <option value="sortAlphabetZ">Z-A</option>
+            <option value="sortPopularity">Popularidad</option>
+            <option value="sortLess">Precio de menor a mayor</option>
+            <option value="sortHigher">Precio de mayor a menor</option>
+
+
+          </select>
+        </label>
+
+      </form>
+
+
+    </aside>
+    <!-- -->
+    <section class="productslist">
+
 
     </section>
 
-    
-   
+  </section>
 
-    <section class="shop">
-        <aside class="menu">
+  <div class="modalContainer">
 
-            <div class="menu__title">
-                <h1>Labios</h1>
-            </div>
+    <div class="modal modal__close">
+      <p class="close">X</p>
+      <h3>Producto agregado al carrito</h3>
+      <img src="../Images/check.png" alt="">
+      <div class="modal__text">
 
-            <h2>Filtrar productos</h2>
+        <h4>¡El producto que seleccionaste se ha agregado a tu carrito de compra! </h4>
 
+      </div>
+      <button class="btnPrimary btnPrimary--viewCart">Ver Carrito</button>
 
-           <form class="filterform">
-            
-            <label class="form__label form__label--secondary">Categoría </label>
-
-            <div class="optionsContainer"> 
-            <label>
-                <input type="radio" name="typeproduct" value="" checked>
-                Todos
-              </label>
-              <label>
-                <input type="radio" name="typeproduct" value="lipstick">
-                Labiales
-              </label>
-              <label>
-                <input type="radio" name="typeproduct" value="liquidlipsticks">
-                Labiales líquidos
-              </label>
-              <label>
-                <input type="radio" name="typeproduct" value="lipgloss">
-                Brillos líquidos
-              </label>
-            </div>
+    </div>
+  </div>
 
 
-            <label class="form__label form__label--secondary">Color </label>
+  <footer class="finalcontent">
 
-            <div class="optionsContainer"> 
-                <label>
-                    <input type="radio" name="color" value="" checked>
-                    Todos
-                  </label>
-                  <label>
-                    <input type="radio" name="color" value="beige">
-                    Beige
-                  </label>
-                  <label>
-                    <input type="radio" name="color" value="pink">
-                    Rosado
-                  </label>
-                  <label>
-                    <input type="radio" name="color" value="red">
-                    Rojo
-                  </label>
+    <section class="row row--final">
+      <div class="row__col row__col--3">
 
-                  <label>
-                    <input type="radio" name="color" value="magenta">
-                    Magenta
-                  </label>
-                </div>
+        <section class="finalcontent__links">
+          <a href="#">Sobre nosotros</a>
+          <a href="#">Contáctenos</a>
+          <h4>Calle 40 # 82-32 B/ Limonar</h4>
+          <h4>3247857965</h4>
+        </section>
 
+      </div>
 
-                <label class="form__label form__label--secondary">Marca </label>
-                <div class="optionsContainer"> 
-                    <label>
-                        <input type="radio" name="brand" value="" checked>
-                        Todos
-                      </label>
-                      <label>
-                        <input type="radio" name="brand" value="cocochanel">
-                        Coco Chanel
-                      </label>
-                      <label>
-                        <input type="radio" name="brand" value="dior">
-                        Dior
-                      </label>
-                      <label>
-                        <input type="radio" name="brand" value="fentybeauty">
-                        Fenty Beauty
-                      </label>
-    
-                      <label>
-                        <input type="radio" name="brand" value="nars">
-                        Nars
-                      </label>
-                    </div>
- <!-- 
-            <label class="form__label form__label--secondary">Categoría
-                liquidlipsticks
-                <select class="selectFilterType" name="typeproduct" id="">
-                    <option selected="selected" value="predefined">Seleccione la categoría</option>
-                    <option value="Labiales">Labiales</option>
-                    <option value="Labiales líquidos">Labiales líquidos</option>
-                    <option value="Brillos labiales">Brillos labiales</option>
+      <div class="row__col row__col--3">
 
-                </select>
-            </label>
-
-            <label class="form__label form__label--secondary">Color
-                <select class="selectFilterColor" name="color" id="">
-                    <option selected="selected" value="predefined">Seleccione el color</option>
-                    <option value="Beige">Beige</option>
-                    <option value="Rosado">Rosado</option>
-                    <option value="Rojo">Rojo</option>
-                    <option value="Magenta">Magenta</option>
-                </select>
-            </label>-->
-
-         
-
-
-            <h2>Ordenar productos</h2>
-
-            <label class="form__label form__label--secondary">Ordernar por:
-                <select class="selectSort" name="sort" id="">
-                    <option selected="selected" value="predefined">Seleccione el orden</option>
-                    <option value="sortAlphabetA">A-Z</option>
-                    <option value="sortAlphabetZ">Z-A</option>
-                    <option value="sortPopularity">Popularidad</option>
-                    <option value="sortLess">Precio de menor a mayor</option>
-                    <option value="sortHigher">Precio de mayor a menor</option>
-                    
-                   
-                </select>
-            </label>
-
-        </form>
-
-
-        </aside>
-   <!-- -->
-        <section class="productslist">
-         
+        <section class="finalcontent__links">
+          <a href="#">Menciones legales</a>
+          <a href="#">Protección de datos</a>
+          <a href="#">Seguimiento del pedido</a>
 
         </section>
 
+      </div>
+
+      <div class="row__col row__col--3">
+
+        <section class="finalcontent__links">
+          <h4>Síguenos en redes</h4>
+          <h4>@beautyLips</h4>
+          <div class="finalcontent__links--social">
+            <a href="#"><img src="../Images/IconInstagram.png"></a>
+            <a href="#"><img src="../Images/IconFacebook.png"></a>
+            <a href="#"><img src="../Images/IconTwitter.png"></a>
+          </div>
+
+        </section>
+
+      </div>
     </section>
 
+  </footer>
 
 
 
-    <footer class="finalcontent">
-
-        <section class="row row--final">
-            <div class="row__col row__col--3">
-
-                <section class="finalcontent__links">
-                    <a href="#">Sobre nosotros</a>
-                    <a href="#">Contáctenos</a>
-                    <h4>Calle 40 # 82-32 B/ Limonar</h4>
-                    <h4>3247857965</h4>
-                </section>
-
-            </div>
-
-            <div class="row__col row__col--3">
-
-                <section class="finalcontent__links">
-                    <a href="#">Menciones legales</a>
-                    <a href="#">Protección de datos</a>
-                    <a href="#">Seguimiento del pedido</a>
-
-                </section>
-
-            </div>
-
-            <div class="row__col row__col--3">
-
-                <section class="finalcontent__links">
-                    <h4>Síguenos en redes</h4>
-                    <h4>@beautyLips</h4>
-                    <div class="finalcontent__links--social">
-                        <a href="#"><img src="../Images/IconInstagram.png"></a>
-                        <a href="#"><img src="../Images/IconFacebook.png"></a>
-                        <a href="#"><img src="../Images/IconTwitter.png"></a>
-                    </div>
-
-                </section>
-
-            </div>
-        </section>
-
-    </footer>
-
-
-
-    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-storage.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
-    <script src="../Scripts/firebaseconfig.js"></script>
-    <script src="../Scripts/products.js"></script>
-     <!-- <script src="../Scripts/cart.js"></script>-->  
+  <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-storage.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
+  <!--   <script src="../Scripts/auth.js"></script>-->
+  <script src="../Scripts/firebaseconfig.js"></script>
+  <script src="../Scripts/products.js"></script>
+  <!-- <script src="../Scripts/cart.js"></script>-->
 
 </body>
 

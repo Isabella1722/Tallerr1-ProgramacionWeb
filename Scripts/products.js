@@ -4,7 +4,7 @@ const productsList = document.querySelector('.productslist');
 var storageRef = firebase.storage().ref();
 
 ///////
-//const cartRef = db.collection('cart');
+const cartRef = db.collection('cart');
 
 function renderProducts(list) {
   productsList.innerHTML = '';
@@ -33,52 +33,31 @@ function renderProducts(list) {
     <button class="btnPrimary btnPrimary--shop">Comprar</button>`;
 
 
-    ////////
-    //const addBtn = newProduct.querySelector('.btnPrimary--shop');
+    // add colection cart to firestore
+    const addBtn = newProduct.querySelector('.btnPrimary--shop');
 
-    //addBtn.addEventListener('click', function () {
+    addBtn.addEventListener('click', function () {
 
-      /* const choosenProduct = {
-         name: elem.namep,
-         brand: elem.brand,
-         type: elem.typeproduct,
-         color: elem.color,
-         price: Number(elem.price),
-         storageImgs: elem.storageImgs[0],
-     }
-      //subir a la base de datos
-      db.collection("cities").add({
-        name: "Tokyo",
-        country: "Japan"
-      })
-        .then(function (docRef) {
-          console.log("Document written with ID: ", docRef.id);
-        })
-        .catch(function (error) {
-          console.error("Error adding document: ", error);
-        });*/
-
-      /*cartRef.add(
-        {name: elem.namep,
+      const newShop = {
+        name: elem.name,
         brand: elem.brand,
-        type: elem.typeproduct,
-        color: elem.color,
         price: Number(elem.price),
-        storageImgs: elem.storageImgs[0]}).then(function (docRef) {
-          console.log("Document written with ID: ", docRef.id);
+        image: elem.storageImgs[0],
+      };
+
+      cartRef.add(newShop).then(function (docRef) {
+        console.log("Document written with ID: ", docRef.id);
+      }).catch(function (error) {
+        console.error("Error adding document: ", error);
+      });
+
+      modalC.style.opacity = "1";
+      modalC.style.visibility = "visible";
+      modal.classList.toggle("modal__close");
+    });
 
 
-        })
-        .catch(function (error) {
-          console.error("Error adding document: ", error);
-        });
-
-
-    });  */
-    /////////////
-
-  
-
+    //storage for imag
     if (elem.storageImgs && elem.storageImgs.length > 0) {
       console.log(elem.storageImgs);
       storageRef.child(elem.storageImgs[0]).getDownloadURL().then(function (url) {
@@ -379,3 +358,40 @@ function translateBrand(brand) {
     case 'nars': return 'Nars';
   }
 }
+//modal
+const modal = document.querySelector('.modal');
+const modalC = document.querySelector('.modalContainer');
+const viewCartBtn = document.querySelector('.btnPrimary--viewCart');
+const closeBtn = document.querySelector('.close');
+
+
+closeBtn.addEventListener("click", function () {
+  modal.classList.toggle("modal__close");
+
+  setTimeout(function () {
+      modalC.style.opacity = "0";
+      modalC.style.visibility = "hidden";
+  }, 850);
+
+});
+
+window.addEventListener("click", function (e) {
+
+  console.log(e.target);
+  if (e.target == modalC) {
+      modal.classList.toggle("modal__close");
+
+      setTimeout(function () {
+          modalC.style.opacity = "0";
+          modalC.style.visibility = "hidden";
+      }, 850);
+  }
+});
+
+viewCartBtn.addEventListener("click", function () {
+
+  window.location.href = "/Html/cart.html";
+});
+
+
+   
