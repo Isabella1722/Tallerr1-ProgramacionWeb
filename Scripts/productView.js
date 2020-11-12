@@ -24,26 +24,55 @@ window.addEventListener('load', function () {
       const name = document.querySelector('.productsInfo__title');
       name.innerText = product.name;
 
+      const imgPrincipal = document.querySelector('.imgPrincipal');
+      const img1 = document.querySelector('.productImg');
+      const img2 = document.querySelector('.colorImg');
+      const img3 = document.querySelector('.lipsImg');
 
-      storageRef.child(product.storageImgs[0]).getDownloadURL().then(function (url) {
+      if (product.storageImgs && product.storageImgs.length > 0) {
+        storageRef.child(product.storageImgs[0]).getDownloadURL().then(function (url) {
+            img1.src = url;
+            imgPrincipal.src =url;
+        }).catch(function (error) {
+            // Handle any errors
+        });
+
+        storageRef.child(product.storageImgs[1]).getDownloadURL().then(function (url) {
+            img2.src = url;
+        }).catch(function (error) {
+            // Handle any errors
+        });
+
+        storageRef.child(product.storageImgs[2]).getDownloadURL().then(function (url) {
+            img3.src = url;
+        }).catch(function (error) {
+            // Handle any errors
+        });
+    }
+     /* storageRef.child(product.storageImgs[0]).getDownloadURL().then(function (url) {
         // Or inserted into an <img> element:
         var img = document.querySelector('.imgPrincipal');
         img.src = url;
     }).catch(function (error) {
         // Handle any errors
-    });
+    });*/
 
   
 
-      document.querySelector('.imgPrincipal').setAttribute('src', product.img);
+    /*
+      document.querySelector('.imgPrincipal').setAttribute('src', product.img1);
+      document.querySelector('.productImg').setAttribute('src', product.img1);
+      document.querySelector('.colorImg').setAttribute('src', product.img2);
+      document.querySelector('.lipsImg').setAttribute('src', product.img3);*/
+
       document.querySelector('.productsInfo__price').innerText = product.price;
-      document.querySelector('.productsInfo__type').innerText = product.type;
-      document.querySelector('.productsInfo__brand').innerText = product.brand;
-      document.querySelector('.productsInfo__color').innerText = product.color;
+      document.querySelector('.productsInfo__type').innerText = translateTypes(product.type);
+      document.querySelector('.productsInfo__brand').innerText = translateBrand(product.brand);
+      document.querySelector('.productsInfo__color').innerText =translateColor(product.color);
       document.querySelector('.description__text').innerText = product.description;
       document.querySelector('.ingredients__text').innerText = product.ingredients;
-      document.querySelector('.gallery').classList.remove('hidden');
-      document.querySelector('.productsInfo').classList.remove('hidden');
+     // document.querySelector('.gallery').classList.remove('hidden');
+      //document.querySelector('.productsInfo').classList.remove('hidden');
     })
 
   console.log(uid);
@@ -92,3 +121,30 @@ window.addEventListener("click", function (e) {
     }, 850);
   }
 });
+
+function translateTypes (type) {
+  switch(type){
+    case 'lipstick': return 'Labial';
+    case 'liquidlipsticks': return 'Labial líquido';
+    case 'lipgloss': return 'Brillo labial';
+  }
+}
+
+function translateColor (color) {
+  switch(color){
+    case 'beige': return 'Beige';
+    case 'pink': return 'Rosado';
+    case 'red': return 'Rojo';
+    case 'magenta': return 'Magenta';
+  }
+}
+
+function translateBrand (brand) {
+  switch(brand){
+    case 'cocochanel': return 'Coco Chanel';
+    case 'dior': return 'Dior';
+    case 'fentybeauty': return 'Fenty Beauty';
+    case 'nars': return 'Nars';
+  }
+
+}

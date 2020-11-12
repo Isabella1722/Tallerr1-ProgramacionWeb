@@ -90,6 +90,27 @@
         padding: 0px;
         margin-top: 20px;
     }
+
+    &--pay {
+        width: 310px;
+        height: 55px;
+        padding: 0px;
+        margin-top: 20px;
+    }
+
+    &--then {
+        width: 310px;
+        height: 55px;
+        padding: 0px;
+        margin-top: 20px;
+        background:$secondary-color ;
+        color:  $primary-color;
+        border: 2px solid black;
+        &:hover {
+            background: $primary-color;
+            color: $secondary-color;
+        }
+    }
 }
 
 //Big Mobile

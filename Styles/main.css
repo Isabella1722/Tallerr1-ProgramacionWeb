@@ -776,6 +776,28 @@ input[type=button] {
   margin-top: 20px;
 }
 
+.btnPrimary--pay {
+  width: 310px;
+  height: 55px;
+  padding: 0px;
+  margin-top: 20px;
+}
+
+.btnPrimary--then {
+  width: 310px;
+  height: 55px;
+  padding: 0px;
+  margin-top: 20px;
+  background: white;
+  color: black;
+  border: 2px solid black;
+}
+
+.btnPrimary--then:hover {
+  background: black;
+  color: white;
+}
+
 @media (max-width: 576px) {
   .btnPrimary {
     margin-top: 20px;
@@ -3061,6 +3083,27 @@ input[type=button] {
           align-items: center;
 }
 
+.modalContainer--full {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .modal {
   width: 40%;
   height: 50%;
@@ -3114,12 +3157,52 @@ input[type=button] {
   margin-bottom: 20px;
 }
 
+.modal--full {
+  width: 50%;
+  height: 100%;
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  position: relative;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+  border-radius: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal--full h3 {
+  font-size: 25px;
+  font-weight: 500;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 .modal__close {
   -webkit-transform: translateY(-200%);
           transform: translateY(-200%);
 }
 
 .modal__close--vertical {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.modal__close--full {
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
 }
@@ -3139,6 +3222,12 @@ input[type=button] {
 }
 
 .modal__text--vertical h4 {
+  font-size: 20px;
+  padding: 17px 75px 24px 75px;
+  font-weight: 300;
+}
+
+.modal__text--full h4 {
   font-size: 20px;
   padding: 17px 75px 24px 75px;
   font-weight: 300;
@@ -3335,6 +3424,26 @@ input[type=button] {
   font-weight: 300;
 }
 
+/*
+.preloader {
+    width: 70px;
+    height: 70px;
+    border: 10px solid #eee;
+    border-top: 10px solid rgb(22, 22, 22);
+    border-radius: 50%;
+    animation-name: girar;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  @keyframes girar {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }*/
 .order {
   width: 100%;
 }
@@ -3506,5 +3615,22 @@ input[type=button] {
   font-size: 18px;
   font-weight: 300;
   margin-top: 10px;
+}
+
+.buttonsContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.requirement__title {
+  font-size: 25px;
+  font-weight: 300;
+  margin-top: 50px;
+  text-align: center;
 }
 /*# sourceMappingURL=main.css.map */

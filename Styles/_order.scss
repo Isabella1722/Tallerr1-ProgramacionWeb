@@ -46,6 +46,8 @@
         font-weight: 300;
         margin-top: 20px;
     }
+
+   
 }
 
 .orderProduct {
@@ -132,6 +134,8 @@
         margin-left: 10px;
         
     }
+
+    
 }
 
 .politics{
@@ -148,4 +152,16 @@
         font-weight: 300;
         margin-top: 10px;
     }
+}
+
+.buttonsContent{
+    display: flex;
+    flex-direction: column;
+}
+
+.requirement__title{
+    font-size: $font-size-h3;
+    font-weight: 300;
+    margin-top: 50px;
+    text-align: center;
 }

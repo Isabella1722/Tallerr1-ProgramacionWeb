@@ -3,6 +3,9 @@ const productsRef = db.collection('products');
 const productsList = document.querySelector('.productslist');
 var storageRef = firebase.storage().ref();
 
+///////
+//const cartRef = db.collection('cart');
+
 function renderProducts(list) {
   productsList.innerHTML = '';
 
@@ -30,6 +33,51 @@ function renderProducts(list) {
     <button class="btnPrimary btnPrimary--shop">Comprar</button>`;
 
 
+    ////////
+    //const addBtn = newProduct.querySelector('.btnPrimary--shop');
+
+    //addBtn.addEventListener('click', function () {
+
+      /* const choosenProduct = {
+         name: elem.namep,
+         brand: elem.brand,
+         type: elem.typeproduct,
+         color: elem.color,
+         price: Number(elem.price),
+         storageImgs: elem.storageImgs[0],
+     }
+      //subir a la base de datos
+      db.collection("cities").add({
+        name: "Tokyo",
+        country: "Japan"
+      })
+        .then(function (docRef) {
+          console.log("Document written with ID: ", docRef.id);
+        })
+        .catch(function (error) {
+          console.error("Error adding document: ", error);
+        });*/
+
+      /*cartRef.add(
+        {name: elem.namep,
+        brand: elem.brand,
+        type: elem.typeproduct,
+        color: elem.color,
+        price: Number(elem.price),
+        storageImgs: elem.storageImgs[0]}).then(function (docRef) {
+          console.log("Document written with ID: ", docRef.id);
+
+
+        })
+        .catch(function (error) {
+          console.error("Error adding document: ", error);
+        });
+
+
+    });  */
+    /////////////
+
+  
 
     if (elem.storageImgs && elem.storageImgs.length > 0) {
       console.log(elem.storageImgs);
@@ -50,7 +98,7 @@ let objectsList = [];
 //función para traer los datos
 function getProducts() {
   productsRef.get().then((querySnapshot) => {
-     objectsList = [];
+    objectsList = [];
     querySnapshot.forEach((doc) => {
       const obj = doc.data();
       obj.id = doc.id;
@@ -58,25 +106,25 @@ function getProducts() {
       console.log(`${doc.id} =>${doc.data()}`);
     });
     renderProducts(objectsList);
-   // orderProducts();
-   
+    // orderProducts();
+
   });
 }
 getProducts();
 
 
 
-
+/*
 //modal carrito
-const modal = document.querySelector('.modal--vertical');
-const modalC = document.querySelector('.modalContainer--vertical');
+const modal = document.querySelector('.modal--full');
+const modalC = document.querySelector('.modalContainer--full');
 const shopBtn = document.querySelector('.btnPrimary--viewList');
 const cartBtn = document.querySelector('.optionsBar__icons--shopping');
 
 cartBtn.addEventListener("click", function () {
   modalC.style.opacity = "1";
   modalC.style.visibility = "visible";
-  modal.classList.toggle("modal__close--vertical");
+  modal.classList.toggle("modal__close--full");
 
 });
 
@@ -86,14 +134,14 @@ window.addEventListener("click", function (e) {
 
   // console.log(e.target);
   if (e.target == modalC) {
-    modal.classList.toggle("modal__close--vertical");
+    modal.classList.toggle("modal__close--full");
 
     setTimeout(function () {
       modalC.style.opacity = "0";
       modalC.style.visibility = "hidden";
     }, 850);
   }
-});
+});*/
 
 //Fonts select
 //const selects =document.querySelectorAll('select');
@@ -212,44 +260,44 @@ function orderProducts() {
   });
 }*/
 
-const filterForm =document.querySelector('.filterform');
-filterForm.addEventListener('input', function() {
+const filterForm = document.querySelector('.filterform');
+filterForm.addEventListener('input', function () {
 
   let copy = objectsList.slice();
 
   const order = filterForm.sort.value;
   //console.log(order);
 
- // renderProducts(objectsList);
-  
-  switch(order){
+  // renderProducts(objectsList);
+
+  switch (order) {
     case 'sortLess':
-      copy.sort(function(a, b){
+      copy.sort(function (a, b) {
         return a.price - b.price;
       });
       break;
     case 'sortHigher':
-      copy.sort(function(a, b){
+      copy.sort(function (a, b) {
         return b.price - a.price;
       });
       break;
 
-      case 'sortAlphabetA':
-      copy.sort(function(a, b){
-       return a.name.localeCompare(b.name);
-       
+    case 'sortAlphabetA':
+      copy.sort(function (a, b) {
+        return a.name.localeCompare(b.name);
+
       });
       break;
     case 'sortAlphabetZ':
-      copy.sort(function(a, b){
-       // return b.name.toLowerCase () - a.name.toLowerCase ();
-       // return b.name - a.name;
+      copy.sort(function (a, b) {
+        // return b.name.toLowerCase () - a.name.toLowerCase ();
+        // return b.name - a.name;
         return b.name.localeCompare(a.name);
       });
       break;
 
-      case 'sortPopularity':
-      copy.sort(function(a, b){
+    case 'sortPopularity':
+      copy.sort(function (a, b) {
         return b.popularity - a.popularity;
       });
       break;
@@ -260,11 +308,11 @@ filterForm.addEventListener('input', function() {
   //type
   const typeFilter = filterForm.typeproduct.value;
   //console.log(typeFilter);
-  if(typeFilter != '') {
+  if (typeFilter != '') {
 
-    copy = copy.filter(function(elem){
+    copy = copy.filter(function (elem) {
 
-      if(typeFilter==elem.type){
+      if (typeFilter == elem.type) {
         return true;
       }
 
@@ -275,11 +323,11 @@ filterForm.addEventListener('input', function() {
   //color
   const colorFilter = filterForm.color.value;
   //console.log(colorFilter);
-  if(colorFilter != '') {
+  if (colorFilter != '') {
 
-    copy = copy.filter(function(elem){
+    copy = copy.filter(function (elem) {
 
-      if(colorFilter==elem.color){
+      if (colorFilter == elem.color) {
         return true;
       }
 
@@ -289,13 +337,13 @@ filterForm.addEventListener('input', function() {
 
   //brand
 
-const brandFilter = filterForm.brand.value;
+  const brandFilter = filterForm.brand.value;
   //console.log(colorFilter);
-  if(brandFilter != '') {
+  if (brandFilter != '') {
 
-    copy = copy.filter(function(elem){
+    copy = copy.filter(function (elem) {
 
-      if(brandFilter==elem.brand){
+      if (brandFilter == elem.brand) {
         return true;
       }
 
@@ -306,16 +354,16 @@ const brandFilter = filterForm.brand.value;
   renderProducts(copy);
 });
 
-function translateTypes (type) {
-  switch(type){
+function translateTypes(type) {
+  switch (type) {
     case 'lipstick': return 'Labial';
     case 'liquidlipsticks': return 'Labial líquido';
     case 'lipgloss': return 'Brillo labial';
   }
 }
 
-function translateColor (color) {
-  switch(color){
+function translateColor(color) {
+  switch (color) {
     case 'beige': return 'Beige';
     case 'pink': return 'Rosado';
     case 'red': return 'Rojo';
@@ -323,8 +371,8 @@ function translateColor (color) {
   }
 }
 
-function translateBrand (brand) {
-  switch(brand){
+function translateBrand(brand) {
+  switch (brand) {
     case 'cocochanel': return 'Coco Chanel';
     case 'dior': return 'Dior';
     case 'fentybeauty': return 'Fenty Beauty';
