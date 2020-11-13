@@ -36,24 +36,30 @@ function renderProducts(list) {
     // add colection cart to firestore
     const addBtn = newProduct.querySelector('.btnPrimary--shop');
 
+   
     addBtn.addEventListener('click', function () {
 
-      const newShop = {
-        name: elem.name,
-        brand: elem.brand,
-        price: Number(elem.price),
-        image: elem.storageImgs[0],
-      };
+      if(userInfo) {
 
-      cartRef.add(newShop).then(function (docRef) {
-        console.log("Document written with ID: ", docRef.id);
-      }).catch(function (error) {
-        console.error("Error adding document: ", error);
-      });
-
-      modalC.style.opacity = "1";
-      modalC.style.visibility = "visible";
-      modal.classList.toggle("modal__close");
+        const newShop = {
+          name: elem.name,
+          brand: elem.brand,
+          price: Number(elem.price),
+          image: elem.storageImgs[0],
+        };
+  
+        cartRef.doc(userInfo.uid).doc(elem.id).set(newShop).then(function (docRef) {
+          console.log("Document written with ID: ", docRef.id);
+        }).catch(function (error) {
+          console.error("Error adding document: ", error);
+        });
+  
+        modalC.style.opacity = "1";
+        modalC.style.visibility = "visible";
+        modal.classList.toggle("modal__close");
+      }
+     
+     
     });
 
 

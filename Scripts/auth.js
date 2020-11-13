@@ -18,7 +18,11 @@ if(user) {
         const data = doc.data();
         console.log(doc.data());
         userInfo=data;
-        authProfileSpan.innerText = data.name;
+        userInfo.uid=user.uid;
+        if(authProfileSpan){
+          authProfileSpan.innerText = data.name;
+        }
+        
 
         if(data.admin){
           window.location.href = '/Html/admin.html';
@@ -31,10 +35,12 @@ if(user) {
 });
 
 // cerrar sesión
-logout.addEventListener('click', function(event) {
-  console.log("hh");
-    event.preventDefault();
-    firebase.auth().signOut();
-    //authProfileSpan.innerText = '';
-    window.location.href = "../index.html";
-  });
+if(logout){
+  logout.addEventListener('click', function(event) {
+    console.log("hh");
+      event.preventDefault();
+      firebase.auth().signOut();
+      //authProfileSpan.innerText = '';
+      window.location.href = "../index.html";
+    });
+}

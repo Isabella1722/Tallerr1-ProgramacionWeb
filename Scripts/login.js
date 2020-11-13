@@ -12,7 +12,11 @@ login.addEventListener('submit', function (event) {
       //window.location.href = '/Html/admin.html';
    
       window.location.href = '/Html/userProfile.html';
-    
+      /*
+      const data = doc.data();
+      if(data.admin){
+        window.location.href = '/Html/admin.html';
+      }*/
     
 
   })
