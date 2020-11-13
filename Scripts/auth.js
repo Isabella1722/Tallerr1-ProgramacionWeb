@@ -19,6 +19,19 @@ if(user) {
         console.log(doc.data());
         userInfo=data;
         userInfo.uid=user.uid;
+
+        /*
+
+        if(window.getCart){
+          getCart();
+
+        }*/
+
+        // if(window.getCart2){
+        //   getCart2();
+          
+        // }
+
         if(authProfileSpan){
           authProfileSpan.innerText = data.name;
         }

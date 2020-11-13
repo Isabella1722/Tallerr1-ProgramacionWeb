@@ -7,16 +7,25 @@ login.addEventListener('submit', function (event) {
   const password = login.password.value;
 
   firebase.auth().signInWithEmailAndPassword(email, password)
-  .then(function () {
+  .then(function (credentials) {
+  
+      const db = firebase.firestore();
+      const usersRef = db.collection('users');
+      usersRef.doc(credentials.user.uid).get().then(function (doc) {
+        if(doc.exists) {
+          const data = doc.data();
 
-      //window.location.href = '/Html/admin.html';
-   
-      window.location.href = '/Html/userProfile.html';
-      /*
-      const data = doc.data();
-      if(data.admin){
-        window.location.href = '/Html/admin.html';
-      }*/
+          
+  
+          if(data.admin){
+            window.location.href = '/Html/admin.html';
+          } else{
+            window.location.href = '/Html/userProfile.html';
+          }
+    
+        }
+       
+      });
     
 
   })

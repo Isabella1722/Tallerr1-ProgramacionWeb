@@ -1,10 +1,15 @@
 const db = firebase.firestore();
 const productsRef = db.collection('products');
 const productsList = document.querySelector('.productslist');
-var storageRef = firebase.storage().ref();
-
+const storageRef = firebase.storage().ref();
+const usersRef = db.collection('users');
 ///////
 const cartRef = db.collection('cart');
+
+
+let productsAddCart= [];
+
+
 
 function renderProducts(list) {
   productsList.innerHTML = '';
@@ -36,23 +41,75 @@ function renderProducts(list) {
     // add colection cart to firestore
     const addBtn = newProduct.querySelector('.btnPrimary--shop');
 
-   
-    addBtn.addEventListener('click', function () {
-
-      if(userInfo) {
-
+    function cartList(productsListProducts){
+      console.log(productsListProducts);
+      let productsArray = productsListProducts;
+      if (userInfo) {
         const newShop = {
           name: elem.name,
           brand: elem.brand,
           price: Number(elem.price),
           image: elem.storageImgs[0],
         };
+        
+        productsArray.push(newShop);
+        
+        productCartList = {
+          products: productsArray
+        }
+        
+        cartRef.doc(userInfo.uid).set(productCartList).catch(function (error) {
+          console.log(error);
+        });
+        
+        console.log(productsArray)
+      }
+    }
+
+    function getCart() {
+      cartRef
+      .doc(userInfo.uid)
+      .get()
+      .then((doc) => {
+        if (doc.exists) {
+          productsAddCart = doc.data().products;
+          console.log(productsAddCart);
+          productCartList = doc.data().products;
+          cartList(productsAddCart);
+        }
+      }).catch(function (error) {
+        console.log("hola: ", error);
+      });
+    }
+   
+    addBtn.addEventListener('click', function () {
+
+      if(userInfo) {
+        getCart();
+
+        // const newShop = {
+        //   name: elem.name,
+        //   brand: elem.brand,
+        //   price: Number(elem.price),
+        //   image: elem.storageImgs[0],
+        // };
   
-        cartRef.doc(userInfo.uid).doc(elem.id).set(newShop).then(function (docRef) {
-          console.log("Document written with ID: ", docRef.id);
+        // productsAddCart.push(newShop);
+
+        //   productCartList={
+        //     products:productsAddCart
+        //   }
+        
+        //   cartRef.doc(userInfo.uid).set(productCartList).catch(function(error){
+        //     console.log(error);
+        //   });
+        /*
+        //cartRef.doc(userInfo.uid).doc(elem.id).set(newShop).then(function (docRef 
+        usersRef.doc(userInfo.uid).collection("cart").doc(elem.id).set(newShop).then(function (docRef) {
+          //console.log("Document written with ID: ", docRef.id);
         }).catch(function (error) {
           console.error("Error adding document: ", error);
-        });
+        });*/
   
         modalC.style.opacity = "1";
         modalC.style.visibility = "visible";
@@ -76,6 +133,10 @@ function renderProducts(list) {
     }
     productsList.appendChild(newProduct);
   });
+
+  
+
+  
 }
 
 
@@ -96,6 +157,21 @@ function getProducts() {
   });
 }
 getProducts();
+
+// function getCart() {
+//   cartRef
+//     .doc(userInfo.uid)
+//     .get()
+//     .then((doc) => {
+//       if(doc.exists){
+//         productCartList = doc.data().products;
+//       }
+//     }).catch(function (error) {
+//       console.log("hola: ", error);
+//     });
+// }
+
+
 
 
 
