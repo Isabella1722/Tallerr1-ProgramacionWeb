@@ -465,5 +465,5 @@ window.addEventListener("click", function (e) {
 
 viewCartBtn.addEventListener("click", function () {
 
-  window.location.href = "/Html/cart.html";
+  window.location.href = "./cart.html";
 });

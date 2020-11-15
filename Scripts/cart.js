@@ -110,7 +110,22 @@ function getCartProducts() {
     });
 }
 
+const quantityP = document.querySelector('.order__totalProducts');
 
+function getQuantityProducts(){
+
+
+    cartRef.doc(userInfo.uid).get().then((doc) => {
+       
+        if (doc.exists) {
+            quantityP.innerText = doc.data().products.length;
+        }
+
+
+  
+    });
+   
+}
 
 function translateBrand(brand) {
     switch (brand) {

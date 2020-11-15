@@ -56,31 +56,46 @@
 
     </section>
 
+
+
+
+
+
+
+
+
+
+
+
+    <section class="order__receipt">
+        <h3 class="order__title order__title--receipt">Resumen del pedido</h3>
+        <div class="order__info">
+            <h4 class="order__subtitle">Cantidad de productos:<span class="order__totalProducts"> 2</span></h4>
+            <h4 class="order__subtitle">Envío: Gratis</h4>
+        </div>
+        <h4 class="order__subtitle">Total de compra:<span class="order__totalO"> $20000</span></h4>
+
+
+
+    </section>
+
+    <div class="modalContainer">
+
+        <div class="modal modal__close">
+          <p class="close">X</p>
+          <h3>Pago exitoso</h3>
+          <img src="../Images/check.png" alt="">
+          <div class="modal__text">
     
-
-       
-
-
-
-            
-
-      
-
-       
-            <section class="order__receipt">
-                <h3 class="order__title order__title--receipt">Resumen del pedido</h3>
-                <div class="order__info">
-                    <h4 class="order__subtitle">Cantidad de productos:<span class="order__totalProducts"> 2</span></h4>
-                    <h4 class="order__subtitle">Subtotal:<span class="order__subtotal"> $20000</span></h4>
-                    <h4 class="order__subtitle">Envío: Gratis</h4>
-                </div>
-                <h4 class="order__subtitle">Total de compra:<span class="order__total"> $20000</span></h4>
-
-                
-
-            </section>
-
+            <h4>Su pago fue recibido con éxito, su pedido será entregado en 2 días hábiles. 
+                ¡Gracias por su compra! </h4>
     
+          </div>
+          <button class="btnPrimary btnPrimary--return">Volver</button>
+    
+        </div>
+      </div>
+
 
     <h3 class="order__title">Realizar pago</h3>
 
@@ -88,12 +103,16 @@
         <form class="form formOrder">
             <h3 class="form__title">Información de usuario</h3>
 
-            <label class="form__label">Nombre
+            <label class="form__label">Nombre completo
                 <input class="input" name="namep" type="text" placeholder="Escribe tu nombre">
             </label>
 
             <label class="form__label">Dirección
-                <input  class="input"name="address" type="text" placeholder="Escribe tu dirección">
+                <input class="input" name="address" type="text" placeholder="Escribe tu dirección">
+            </label>
+
+            <label class="form__label">Cédula
+                <input class="input" name="identification" type="number" placeholder="Escribe tu cédula">
             </label>
 
             <h3 class="form__title form__title--order">Información de tarjeta</h3>
@@ -101,15 +120,19 @@
                 <input class="input" name="numberCard" type="number" placeholder="Escribe el número">
             </label>
 
-            <label class="form__label">Fecha de expiración
-                <input name="date" type="date" >
+            <label class="form__label ">Tipo de tarjeta:
+                <select class="selectCard" name="card" id="">
+                    <option selected="selected" value="predefined">Seleccione la tarjeta</option>
+                    <option value="creditCard">Crédito</option>
+                    <option value="debitCard">Débito</option>
+                </select>
             </label>
 
             <label class="form__label">Código de seguridad
-                <input class="input" name="address" type="text" placeholder="Escribe el código">
+                <input class="input" name="code" type="password" placeholder="Escribe el código">
             </label>
 
-            
+
 
 
             <button class="btnPrimary btnPrimary--payShop">Pagar</button>
@@ -163,6 +186,15 @@
         </section>
 
     </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
+    <script src="../Scripts/firebaseconfig.js"></script>
+
+    <script src="../Scripts/order.js"></script>
+    <script src="../Scripts/auth.js"></script>
 </body>
 
 </html>

@@ -23,9 +23,26 @@ firebase.auth().onAuthStateChanged(function (user) {
         
         if(window.getCartProducts){
           getCartProducts();
+          getQuantityProducts();
 
         }
 
+
+        if(window.getCartOrders){
+          getCartOrders();
+
+        }
+    
+        if(window.getOrder){
+          getOrder();
+
+        }
+
+        if(window.getValue){
+          getValue();
+
+        }
+      
         /*
 
         if(window.getCart){
