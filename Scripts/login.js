@@ -18,9 +18,9 @@ login.addEventListener('submit', function (event) {
           
   
           if(data.admin){
-            window.location.href = '/Html/admin.html';
+            window.location.href = './admin.html';
           } else{
-            window.location.href = '/Html/userProfile.html';
+            window.location.href = './userProfile.html';
           }
     
         }

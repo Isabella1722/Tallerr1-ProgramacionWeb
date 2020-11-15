@@ -38,7 +38,21 @@ function renderProducts(list) {
     <button class="btnPrimary btnPrimary--shop">Comprar</button>`;
 
 
-    // add colection cart to firestore
+
+    //storage for imag
+    if (elem.storageImgs && elem.storageImgs.length > 0) {
+      console.log(elem.storageImgs);
+      storageRef.child(elem.storageImgs[0]).getDownloadURL().then(function (url) {
+        // Or inserted into an <img> element:
+        var img = newProduct.querySelector('.product__img');
+        img.src = url;
+      }).catch(function (error) {
+        // Handle any errors
+      });
+    }
+
+
+    // add collection cart to firestore
     const addBtn = newProduct.querySelector('.btnPrimary--shop');
 
     function cartList(productsListProducts){
@@ -63,22 +77,29 @@ function renderProducts(list) {
         });
         
         console.log(productsArray)
+      } else{
+        console.log("ERROR CART LIST");
       }
     }
 
     function getCart() {
+      console.log(userInfo.uid);
       cartRef
       .doc(userInfo.uid)
       .get()
       .then((doc) => {
-        if (doc.exists) {
+        if (doc.exists && doc.data().products != undefined) {
           productsAddCart = doc.data().products;
           console.log(productsAddCart);
           productCartList = doc.data().products;
           cartList(productsAddCart);
+        }else if(doc.exists && doc.data().products == undefined){
+          cartList(productsAddCart);
+        }else if(!doc.exists){
+          cartList(productsAddCart);
         }
       }).catch(function (error) {
-        console.log("hola: ", error);
+        console.log("error: ", error);
       });
     }
    
@@ -87,22 +108,22 @@ function renderProducts(list) {
       if(userInfo) {
         getCart();
 
-        // const newShop = {
-        //   name: elem.name,
-        //   brand: elem.brand,
-        //   price: Number(elem.price),
-        //   image: elem.storageImgs[0],
-        // };
+        /* const newShop = {
+           name: elem.name,
+           brand: elem.brand,
+           price: Number(elem.price),
+           image: elem.storageImgs[0],
+         };
   
-        // productsAddCart.push(newShop);
+         productsAddCart.push(newShop);
 
-        //   productCartList={
-        //     products:productsAddCart
-        //   }
+           productCartList={
+             products:productsAddCart
+           }
         
-        //   cartRef.doc(userInfo.uid).set(productCartList).catch(function(error){
-        //     console.log(error);
-        //   });
+           cartRef.doc(userInfo.uid).set(productCartList).catch(function(error){
+             console.log(error);
+           });*/
         /*
         //cartRef.doc(userInfo.uid).doc(elem.id).set(newShop).then(function (docRef 
         usersRef.doc(userInfo.uid).collection("cart").doc(elem.id).set(newShop).then(function (docRef) {
@@ -114,23 +135,15 @@ function renderProducts(list) {
         modalC.style.opacity = "1";
         modalC.style.visibility = "visible";
         modal.classList.toggle("modal__close");
+      } else{
+        console.log("DEBE REGISTRARSE");
       }
      
      
     });
 
 
-    //storage for imag
-    if (elem.storageImgs && elem.storageImgs.length > 0) {
-      console.log(elem.storageImgs);
-      storageRef.child(elem.storageImgs[0]).getDownloadURL().then(function (url) {
-        // Or inserted into an <img> element:
-        var img = newProduct.querySelector('.product__img');
-        img.src = url;
-      }).catch(function (error) {
-        // Handle any errors
-      });
-    }
+    
     productsList.appendChild(newProduct);
   });
 
@@ -181,22 +194,15 @@ const modal = document.querySelector('.modal--full');
 const modalC = document.querySelector('.modalContainer--full');
 const shopBtn = document.querySelector('.btnPrimary--viewList');
 const cartBtn = document.querySelector('.optionsBar__icons--shopping');
-
 cartBtn.addEventListener("click", function () {
   modalC.style.opacity = "1";
   modalC.style.visibility = "visible";
   modal.classList.toggle("modal__close--full");
-
 });
-
-
-
 window.addEventListener("click", function (e) {
-
   // console.log(e.target);
   if (e.target == modalC) {
     modal.classList.toggle("modal__close--full");
-
     setTimeout(function () {
       modalC.style.opacity = "0";
       modalC.style.visibility = "hidden";
@@ -211,21 +217,15 @@ window.addEventListener("click", function (e) {
 
 
 /*
-
 const selectSort = document.querySelector('.selectSort');
 selectSort.style.fontFamily = "Montserrat";
-
 function orderProducts() {
   var sort;
-
   selectSort.addEventListener('input', function () {
-
     sort = selectSort.value;
     //console.log (sort);
     switch (sort) {
-
       case 'sortAlphabetA':
-
         productsRef.orderBy('name').get()
           .then(function (querySnapshot) {
             const objects = [];
@@ -242,7 +242,6 @@ function orderProducts() {
             console.log("Error getting documents: ", error);
           });
         break;
-
       case 'sortAlphabetZ':
         productsRef.orderBy('name', 'desc').get()
           .then(function (querySnapshot) {
@@ -260,7 +259,6 @@ function orderProducts() {
             console.log("Error getting documents: ", error);
           });
         break;
-
       case 'sortPopularity':
         productsRef.orderBy('popularity', 'desc').get()
           .then(function (querySnapshot) {
@@ -278,9 +276,7 @@ function orderProducts() {
             console.log("Error getting documents: ", error);
           });
         break;
-
       case 'sortLess':
-
         productsRef.orderBy('price').get()
           .then(function (querySnapshot) {
             const objects = [];
@@ -297,7 +293,6 @@ function orderProducts() {
             console.log("Error getting documents: ", error);
           });
         break;
-
       case 'sortHigher':
         productsRef.orderBy('price', 'desc').get()
           .then(function (querySnapshot) {
@@ -314,10 +309,8 @@ function orderProducts() {
           .catch(function (error) {
             console.log("Error getting documents: ", error);
           });
-
         break;
     }
-
   });
 }*/
 
@@ -474,6 +467,3 @@ viewCartBtn.addEventListener("click", function () {
 
   window.location.href = "/Html/cart.html";
 });
-
-
-   

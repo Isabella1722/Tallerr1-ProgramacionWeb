@@ -101,7 +101,9 @@ window.addEventListener('load', function () {
       //   console.log(productsAddCart)
       // }
       
-      
+      modalC.style.opacity = "1";
+        modalC.style.visibility = "visible";
+        modal.classList.toggle("modal__close");
     });
     
     function cartList(productsListProducts){
@@ -130,18 +132,23 @@ window.addEventListener('load', function () {
     }
 
     function getCart() {
+      console.log(userInfo.uid);
       cartRef
       .doc(userInfo.uid)
       .get()
       .then((doc) => {
-        if (doc.exists) {
+        if (doc.exists && doc.data().products != undefined) {
           productsAddCart = doc.data().products;
           console.log(productsAddCart);
           productCartList = doc.data().products;
           cartList(productsAddCart);
+        }else if(doc.exists && doc.data().products == undefined){
+          cartList(productsAddCart);
+        }else if(!doc.exists){
+          cartList(productsAddCart);
         }
       }).catch(function (error) {
-        console.log("hola: ", error);
+        console.log("error: ", error);
       });
     }
     
@@ -225,3 +232,38 @@ function translateBrand(brand) {
   }
   
 }
+
+//modal
+const modal = document.querySelector('.modal');
+const modalC = document.querySelector('.modalContainer');
+const viewCartBtn = document.querySelector('.btnPrimary--viewCartV');
+const closeBtn = document.querySelector('.close');
+
+
+closeBtn.addEventListener("click", function () {
+  modal.classList.toggle("modal__close");
+
+  setTimeout(function () {
+      modalC.style.opacity = "0";
+      modalC.style.visibility = "hidden";
+  }, 850);
+
+});
+
+window.addEventListener("click", function (e) {
+
+  console.log(e.target);
+  if (e.target == modalC) {
+      modal.classList.toggle("modal__close");
+
+      setTimeout(function () {
+          modalC.style.opacity = "0";
+          modalC.style.visibility = "hidden";
+      }, 850);
+  }
+});
+
+viewCartBtn.addEventListener("click", function () {
+
+  window.location.href = "./cart.html";
+});
