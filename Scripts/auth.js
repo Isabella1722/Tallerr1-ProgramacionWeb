@@ -14,9 +14,15 @@ firebase.auth().onAuthStateChanged(function (user) {
     // si el usuario existe quiere decir que inició sesión, se registró o ya tenía sesión iniciada
 
     if(window.location.href.indexOf("Html")> -1){
-      userAuth.href = './userProfile.html';
+      if(userAuth){
+        userAuth.href = './userProfile.html';
+      }
+    
     }else{
-      userAuth.href = './Html/userProfile.html';
+      if(userAuth){
+        userAuth.href = './Html/userProfile.html';
+      }
+      
     }
     
 

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
@@ -8,9 +7,7 @@
 
     <link rel="stylesheet" href="../Styles/main.css">
     <link rel="shortcut icon" type="image/png" href="/Images/Favicon.png" />
-
 </head>
-
 <body>
 
     <header class="navigationbar">
@@ -24,7 +21,7 @@
             <ul class="optionsBar__list">
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="../Html/productsAdmin.html">Productos</a></li>
-                <li><a href="../Html/ordersList.html">Pedidos</a></li>
+                <li><a href="#">Pedidos</a></li>
 
 
 
@@ -47,42 +44,50 @@
     </header>
     <section class="banner banner--admin">
 
-        <h1 class="banner--admin__title">Administrador</h1>
+        <h1 class="banner--admin__title">Pedidos</h1>
 
     </section>
 
+    <h2 class="profileoptions__title">Bienvenido Administrador</h2>
+    <h3 class="profileoptions__subtitle">Listado de pedidos</h3>
+    <h4 class="orderList__subtitle">Cantidad de pedidos: <span class="orderList__totalOrders"> 2</span></h4>
 
 
-    <section class="profileoptions">
+    <section class="orderList">
 
-        <h2 class="profileoptions__title">Bienvenido Administrador</h2>
-        <h3 class="profileoptions__subtitle">¿Qué deseas realizar?</h3>
-        <div class="profileoptions__logout">
-            <img src="../Images/logout.png" alt="logout">
-            <a class="logout" href="#">Cerrar sesión</a>
-        </div>
+        <div class="orderListItem">
 
-        <div class="profileoptions__items">
-            <div>
-                <img src="../Images/IconProduct.png" alt="IconProduct">
-                <h3>Productos</h3>
-                <a href="../Html/productsAdmin.html">Ver lista de productos</a>
-                <a href="../Html/addProduct.html">Agregar un producto</a>
-
+            <div class="orderListItem__imgContainer">
+                <img class="orderListItem__img" src="../Images/userOrder.svg" alt="user">
             </div>
 
-
-            <div>
-                <img src="../Images/IconOrders.png" alt="IconOrders">
-                <h3>Pedidos</h3>
-                <a href="../Html/ordersList.html">Ver lista de pedidos</a>
-
+            <div class="orderListItem__info">
+                <h3 class="orderListItem__name">Pepito pérez</h3>
+                <h4 class="orderListItem__shop">Dirección: <span class="orderListItem__adress">Calle 8#47-32</span></h4>
+                <h4 class="orderListItem__shop">Total de compra: <span class="orderListItem__value">$180.000</span></h4>
+                <h4 class="orderListItem__shop">Código del pedido: <span class="orderListItem__id">22252555</span></h4>
             </div>
+
         </div>
 
 
+        <div class="orderListItem">
+
+            <div class="orderListItem__imgContainer">
+                <img class="orderListItem__img" src="../Images/userOrder.svg" alt="user">
+            </div>
+
+            <div class="orderListItem__info">
+                <h3 class="orderListItem__name">Pepito pérez</h3>
+                <h4 class="orderListItem__shop">Dirección: <span class="orderListItem__adress">Calle 8#47-32</span></h4>
+                <h4 class="orderListItem__shop">Total de compra: <span class="orderListItem__value">$180.000</span></h4>
+                <h4 class="orderListItem__shop">Código del pedido: <span class="orderListItem__id">22252555</span></h4>
+            </div>
+
+        </div>
 
     </section>
+
 
     <footer class="finalcontent">
 
@@ -126,12 +131,5 @@
         </section>
 
     </footer>
-
-    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
-    <script src="../Scripts/firebaseconfig.js"></script>
-    <script src="../Scripts/auth.js"></script>
 </body>
-
 </html>

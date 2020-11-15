@@ -619,8 +619,8 @@ input[type=button] {
   }
   .banner--admin__title {
     width: 40%;
-    margin-left: 35px;
-    padding-top: 120px;
+    margin-left: 82px;
+    padding-top: 145px;
     font-size: 25px;
   }
   .banner--register {
@@ -2477,6 +2477,22 @@ input[type=button] {
   .profileoptions__items a {
     font-size: 26px;
   }
+  .profileoptions__logout {
+    margin-left: 180px;
+    margin-top: 20px;
+    width: 200px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .profileoptions__logout a {
+    margin-left: 15px;
+    font-size: 22px;
+    color: black;
+  }
 }
 
 .form {
@@ -3736,5 +3752,164 @@ input[type=button] {
   font-weight: 300;
   margin-top: 50px;
   text-align: center;
+}
+
+.orderList {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.orderList__subtitle {
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 60px;
+  text-align: center;
+}
+
+.orderList__totalOrders {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.orderListItem {
+  width: 40%;
+  margin-top: 20px;
+  margin-left: 50px;
+  margin-bottom: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.orderListItem__imgContainer {
+  width: 180px;
+  height: 180px;
+  padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.orderListItem__img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.orderListItem__info {
+  padding: 10px;
+}
+
+.orderListItem__name {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.orderListItem__shop {
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: 5px;
+}
+
+.orderListItem__adress {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.orderListItem__value {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.orderListItem__id {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+@media (max-width: 576px) {
+  .orderList {
+    width: 90%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .orderList__subtitle {
+    font-size: 23px;
+    font-weight: 500;
+    margin-top: 60px;
+    text-align: center;
+  }
+  .orderListItem {
+    width: 90%;
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-bottom: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  .orderListItem__imgContainer {
+    width: 180px;
+    height: 180px;
+    padding: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .orderListItem__img {
+    width: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .orderListItem__info {
+    padding: 10px;
+  }
+  .orderListItem__name {
+    font-size: 25px;
+    font-weight: 500;
+  }
+  .orderListItem__shop {
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 5px;
+  }
+  .orderListItem__adress {
+    font-size: 20px;
+    font-weight: 300;
+  }
+  .orderListItem__value {
+    font-size: 20px;
+    font-weight: 300;
+  }
+  .orderListItem__id {
+    font-size: 20px;
+    font-weight: 300;
+  }
 }
 /*# sourceMappingURL=main.css.map */
