@@ -9,6 +9,7 @@
 
         &--receipt {
             text-align: left;
+         
         }
     }
 
@@ -24,6 +25,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-bottom: 30px;
     }
 
     &__info {
@@ -37,6 +39,12 @@
         margin-top: 20px;
     }
 
+    &__totalProductsO {
+        font-size: $font-size-h4;
+        font-weight: 300;
+        margin-top: 20px;
+    }
+
     &__subtotal {
         font-size: $font-size-h4;
         font-weight: 300;
@@ -44,6 +52,12 @@
     }
 
     &__total {
+        font-size: $font-size-h4;
+        font-weight: 300;
+        margin-top: 20px;
+    }
+
+    &__totalO {
         font-size: $font-size-h4;
         font-weight: 300;
         margin-top: 20px;
@@ -114,11 +128,7 @@
         margin-top: 5px;
     }
 
-    &__price {
-        font-size: $font-size-h4;
-        font-weight: 500;
-        margin-top: 5px;
-    }
+    
 
     &__content {
         display: flex;
@@ -126,22 +136,7 @@
         margin-top: 15px;
     }
 
-    &__less {
-        width: 35px;
-        margin-left: 10px;
-    }
-
-    &__add {
-        width: 35px;
-        margin-left: 10px;
-    }
-    &__amount {
-        width: 20px;
-        font-size: $font-size-h4;
-        font-weight: 300;
-        margin-top: 5px;
-        margin-left: 10px;
-    }
+    
 }
 
 .politics {
@@ -170,4 +165,45 @@
     font-weight: 300;
     margin-top: 50px;
     text-align: center;
+}
+
+@media (max-width: 576px) {
+
+    .order {
+        width: 100%;
+    
+    
+        &__subtitle {
+            font-size: 22px;
+            font-weight: 500;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        &__total {
+            font-size: 22px;
+            font-weight: 300;
+            margin-top: 20px;
+        }
+
+        &__totalProducts {
+            font-size: 22px;
+            font-weight: 300;
+            margin-top: 20px;
+        }
+
+
+        &__totalProductsO {
+            font-size: 22px;
+            font-weight: 300;
+            margin-top: 20px;
+        }
+
+        &__totalO {
+            font-size: 22px;
+            font-weight: 300;
+            margin-top: 20px;
+        }
+}
+
 }

@@ -897,6 +897,36 @@ input[type=button] {
         -ms-grid-row-align: center;
         align-self: center;
   }
+  .btnPrimary--pay {
+    margin-top: 31px;
+    width: 340px;
+    height: 62px;
+    font-size: 25px;
+    text-align: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .btnPrimary--then {
+    margin-top: 31px;
+    width: 340px;
+    height: 62px;
+    font-size: 25px;
+    text-align: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .btnPrimary--payShop {
+    margin-top: 31px;
+    width: 340px;
+    height: 62px;
+    font-size: 25px;
+    text-align: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
 }
 
 .about {
@@ -2158,6 +2188,11 @@ input[type=button] {
   font-size: 15px;
 }
 
+label {
+  font-size: 20px;
+  font-weight: 200;
+}
+
 .optionsContainer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2359,6 +2394,10 @@ input[type=button] {
   }
   .selectSort option {
     font-size: 12px;
+  }
+  label {
+    font-size: 25px;
+    font-weight: 200;
   }
 }
 
@@ -3580,6 +3619,7 @@ input[type=button] {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 30px;
 }
 
 .order__info {
@@ -3593,6 +3633,12 @@ input[type=button] {
   margin-top: 20px;
 }
 
+.order__totalProductsO {
+  font-size: 20px;
+  font-weight: 300;
+  margin-top: 20px;
+}
+
 .order__subtotal {
   font-size: 20px;
   font-weight: 300;
@@ -3600,6 +3646,12 @@ input[type=button] {
 }
 
 .order__total {
+  font-size: 20px;
+  font-weight: 300;
+  margin-top: 20px;
+}
+
+.order__totalO {
   font-size: 20px;
   font-weight: 300;
   margin-top: 20px;
@@ -3686,12 +3738,6 @@ input[type=button] {
   margin-top: 5px;
 }
 
-.orderProduct__price {
-  font-size: 20px;
-  font-weight: 500;
-  margin-top: 5px;
-}
-
 .orderProduct__content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3701,24 +3747,6 @@ input[type=button] {
       -ms-flex-direction: row;
           flex-direction: row;
   margin-top: 15px;
-}
-
-.orderProduct__less {
-  width: 35px;
-  margin-left: 10px;
-}
-
-.orderProduct__add {
-  width: 35px;
-  margin-left: 10px;
-}
-
-.orderProduct__amount {
-  width: 20px;
-  font-size: 20px;
-  font-weight: 300;
-  margin-top: 5px;
-  margin-left: 10px;
 }
 
 .politics {
@@ -3752,6 +3780,38 @@ input[type=button] {
   font-weight: 300;
   margin-top: 50px;
   text-align: center;
+}
+
+@media (max-width: 576px) {
+  .order {
+    width: 100%;
+  }
+  .order__subtitle {
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .order__total {
+    font-size: 22px;
+    font-weight: 300;
+    margin-top: 20px;
+  }
+  .order__totalProducts {
+    font-size: 22px;
+    font-weight: 300;
+    margin-top: 20px;
+  }
+  .order__totalProductsO {
+    font-size: 22px;
+    font-weight: 300;
+    margin-top: 20px;
+  }
+  .order__totalO {
+    font-size: 22px;
+    font-weight: 300;
+    margin-top: 20px;
+  }
 }
 
 .orderList {
