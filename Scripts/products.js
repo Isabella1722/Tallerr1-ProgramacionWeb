@@ -137,6 +137,9 @@ function renderProducts(list) {
         modal.classList.toggle("modal__close");
       } else{
         console.log("DEBE REGISTRARSE");
+        modalC2.style.opacity = "1";
+        modalC2.style.visibility = "visible";
+        modal2.classList.toggle("modal__close--error");
       }
      
      
@@ -433,7 +436,7 @@ function translateBrand(brand) {
     case 'nars': return 'Nars';
   }
 }
-//modal
+//modal cart
 const modal = document.querySelector('.modal');
 const modalC = document.querySelector('.modalContainer');
 const viewCartBtn = document.querySelector('.btnPrimary--viewCart');
@@ -466,4 +469,39 @@ window.addEventListener("click", function (e) {
 viewCartBtn.addEventListener("click", function () {
 
   window.location.href = "./cart.html";
+});
+
+//modal error 
+const modal2 = document.querySelector('.modal--error');
+const modalC2 = document.querySelector('.modalContainer--error');
+const goLoginBtn = document.querySelector('.btnPrimary--goLogin');
+const close2Btn = document.querySelector('.close--error');
+
+
+close2Btn.addEventListener("click", function () {
+  modal2.classList.toggle("modal__close--error");
+
+  setTimeout(function () {
+    modalC2.style.opacity = "0";
+    modalC2.style.visibility = "hidden";
+  }, 850);
+
+});
+
+window.addEventListener("click", function (e) {
+
+  console.log(e.target);
+  if (e.target == modalC2) {
+    modal2.classList.toggle("modal__close--error");
+
+      setTimeout(function () {
+        modalC2.style.opacity = "0";
+        modalC2.style.visibility = "hidden";
+      }, 850);
+  }
+});
+
+goLoginBtn.addEventListener("click", function () {
+
+  window.location.href = "./login.html";
 });

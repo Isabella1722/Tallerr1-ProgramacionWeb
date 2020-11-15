@@ -12,6 +12,21 @@
     justify-content: center;
     align-items: center;
 
+    &--error {
+        opacity: 0;
+        visibility: hidden;
+        position: fixed;
+        z-index: 100;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        background: rgba($color: #000000, $alpha: 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     &--vertical {
         opacity: 0;
         visibility: hidden;
@@ -55,6 +70,19 @@
     transform: translateY(0%);
     border-radius: 10px;
 
+    &--error {
+        width: 40%;
+        height: 55%;
+        background: white;
+        text-align: center;
+        //display: flex;
+        //flex-direction: column;
+        justify-content: space-evenly;
+        position: relative;
+        transition: transform 1s;
+        transform: translateY(0%);
+        border-radius: 10px;
+    }
     &--vertical {
         width: 50%;
         height: 100%;
@@ -66,12 +94,11 @@
         position: relative;
         transition: transform 1s;
         transform: translateX(0%);
-       
+
         border-radius: 10px;
         align-items: center;
 
-
-        h3{
+        h3 {
             font-size: $font-size-h3;
             font-weight: 500;
             margin-top: 20px;
@@ -90,12 +117,11 @@
         position: relative;
         transition: transform 1s;
         transform: translateX(0%);
-       
+
         border-radius: 10px;
         align-items: center;
 
-
-        h3{
+        h3 {
             font-size: $font-size-h3;
             font-weight: 500;
             margin-top: 20px;
@@ -112,9 +138,11 @@
             transform: translateX(100%);
         }
 
+        &--error{
+            transform: translateY(-200%);
+        }
     }
 
-  
     img {
         height: 140px;
         width: 140px;
@@ -128,22 +156,28 @@
             font-weight: 300;
         }
 
-        &--vertical{
-            h4{
+        &--vertical {
+            h4 {
                 font-size: $font-size-h4;
                 padding: 17px 75px 24px 75px;
                 font-weight: 300;
             }
-          
         }
 
-        &--full{
-            h4{
+        &--full {
+            h4 {
                 font-size: $font-size-h4;
                 padding: 17px 75px 24px 75px;
                 font-weight: 300;
             }
-          
+        }
+
+        &--error{
+            h4 {
+                font-size: $font-size-h4;
+                padding: 17px 75px 24px 75px;
+                font-weight: 300;
+            }
         }
     }
 
@@ -163,6 +197,17 @@
     display: inline-block;
     color: gray;
     cursor: pointer;
+
+    &--error{
+        position: absolute;
+        top: 11px;
+        right: 17px;
+        font-size: 20px;
+        display: inline-block;
+        color: gray;
+        cursor: pointer;
+    
+    }
 }
 
 //Big Mobile
@@ -177,7 +222,7 @@
         }
     }
 
-    .close{
+    .close {
         font-size: 30px;
     }
 }

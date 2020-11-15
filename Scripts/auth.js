@@ -6,6 +6,8 @@ var userInfo;
 
 const userAuth= document.querySelector('.userAuth'); 
 
+
+
 firebase.auth().onAuthStateChanged(function (user) {
   console.log(user);
   if (user) {
@@ -41,7 +43,7 @@ firebase.auth().onAuthStateChanged(function (user) {
 
         if(window.getCartOrders){
           getCartOrders();
-
+          getQuantityProducts();
         }
     
         if(window.getOrder){

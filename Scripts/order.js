@@ -24,7 +24,7 @@ formOrder.addEventListener('submit', function(event){
         identification: formOrder.identification.value,
         cardNumber: Number(formOrder.numberCard.value),
         cardType: formOrder.card.value,
-        //totalValue:value.price,
+        totalValue:value.price,
         
        
         
@@ -74,12 +74,14 @@ function getOrder(){
       });
 }
 
+let value;
+
 function getValue(){
     cartRef.doc(userInfo.uid).get().then((doc)=>{
 
         if(doc.exists){
     
-            let value = doc.data().products.reduce(function(pastValue, newValue){
+            value= doc.data().products.reduce(function(pastValue, newValue){
                 return{
                     price:pastValue.price+newValue.price,
                 }
@@ -88,6 +90,22 @@ function getValue(){
             document.querySelector('.order__totalO').innerHTML= value.price;
         }
     });
+}
+
+const quantityP = document.querySelector('.order__totalProductsO');
+function getQuantityProducts(){
+
+
+    cartRef.doc(userInfo.uid).get().then((doc) => {
+       
+        if (doc.exists) {
+            quantityP.innerText = doc.data().products.length;
+        }
+
+
+  
+    });
+   
 }
 
 //modal
