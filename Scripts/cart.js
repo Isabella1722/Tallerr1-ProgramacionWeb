@@ -7,14 +7,14 @@ window.addEventListener('load', function () {
 
     if (finalBtn) {
         finalBtn.addEventListener("click", function () {
-            window.location.href = "../Html/order.html";
+            window.location.href = "./order.html";
         });
 
     }
 
     if (shoppingBtn) {
         shoppingBtn.addEventListener("click", function () {
-            window.location.href = "../Html/products.html";
+            window.location.href = "./products.html";
         });
 
     }
@@ -70,6 +70,23 @@ function renderCartProducts(list) {
         }).catch(function (error) {
             // Handle any errors
         });
+
+
+        //cálculo
+        cartRef.doc(userInfo.uid).get().then((doc)=>{
+
+            if(doc.exists){
+
+                let value = doc.data().products.reduce(function(pastValue, newValue){
+                    return{
+                        price:pastValue.price+newValue.price,
+                    }
+                });
+
+                document.querySelector('.order__total').innerHTML= value.price;
+            }
+        });
+
 
         pCartList.appendChild(newCartProduct);
 

@@ -105,7 +105,7 @@ window.addEventListener("click", function (e) {
 
 viewBtn.addEventListener("click", function () {
 
-    window.location.href = "/Html/productsAdmin.html";
+    window.location.href = "./productsAdmin.html";
 });
 
 
