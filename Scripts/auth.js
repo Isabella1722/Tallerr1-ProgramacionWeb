@@ -4,11 +4,22 @@ const logout = document.querySelector('.logout');
 
 var userInfo;
 
+const userAuth= document.querySelector('.userAuth'); 
 
 firebase.auth().onAuthStateChanged(function (user) {
   console.log(user);
   if (user) {
     // si el usuario existe quiere decir que inició sesión, se registró o ya tenía sesión iniciada
+
+    if(window.location.href.indexOf("Html")> -1){
+      userAuth.href = './userProfile.html';
+    }else{
+      userAuth.href = './Html/userProfile.html';
+    }
+    
+
+
+
 
 
     const db = firebase.firestore();
@@ -67,6 +78,13 @@ firebase.auth().onAuthStateChanged(function (user) {
       }
 
     });
+  }else{
+    if(window.location.href.indexOf("Html")> -1){
+      
+      userAuth.href = './login.html';
+    }else{
+      userAuth.href = './Html/login.html';
+    }
   }
 });
 
