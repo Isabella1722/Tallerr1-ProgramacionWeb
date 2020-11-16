@@ -88,6 +88,6 @@ register.addEventListener('submit', function (event) {
 
 viewBtn.addEventListener("click", function () {
 
-  window.location.href = '/Html/userProfile.html';
+  window.location.href = './userProfile.html';
 });
   
