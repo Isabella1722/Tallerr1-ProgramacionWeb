@@ -67,7 +67,11 @@ firebase.auth().onAuthStateChanged(function (user) {
         if(window.getValue){
           getValue();
 
+
+        
         }
+
+        
       
         /*
 

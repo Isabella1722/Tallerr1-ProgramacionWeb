@@ -25,6 +25,7 @@ formOrder.addEventListener('submit', function(event){
         cardNumber: Number(formOrder.numberCard.value),
         cardType: formOrder.card.value,
         totalValue:value.price,
+        quantity:quantity,
         
        
         
@@ -93,6 +94,7 @@ function getValue(){
 }
 
 const quantityP = document.querySelector('.order__totalProductsO');
+let quantity ;
 function getQuantityProducts(){
 
 
@@ -100,6 +102,7 @@ function getQuantityProducts(){
        
         if (doc.exists) {
             quantityP.innerText = doc.data().products.length;
+            quantity= doc.data().products.length;
         }
 
 

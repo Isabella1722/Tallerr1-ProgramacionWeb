@@ -19,20 +19,7 @@ window.addEventListener('load', function () {
 
     }
 
-    /*
-    firebase.auth().onAuthStateChanged(function (user) {
-        console.log(user);
-        if (user) {
-            // si el usuario existe quiere decir que inició sesión, se registró o ya tenía sesión iniciada
-            const userId = user.uid;
-            console.log("USUARIO" + userId);
-
-
-        }
-    });
     
-
-    */
 
 
 });

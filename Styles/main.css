@@ -3919,6 +3919,11 @@ label {
   font-weight: 300;
 }
 
+.orderListItem__quantity {
+  font-size: 20px;
+  font-weight: 300;
+}
+
 @media (max-width: 576px) {
   .orderList {
     width: 90%;
