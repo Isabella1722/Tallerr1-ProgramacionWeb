@@ -92,7 +92,7 @@ function renderProducts(list) {
              storage.setItem("selectItemtorage", selectItem);*/
             console.log(elem.id);
             storage.setItem("selectItemtorage", elem.id);
-            window.location.href = "/Html/editProduct.html";
+            window.location.href = "./editProduct.html";
 
         });
 
