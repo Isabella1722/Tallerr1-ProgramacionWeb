@@ -663,6 +663,17 @@ input[type=button] {
     padding-top: 120px;
     font-size: 25px;
   }
+  .banner--productsView {
+    width: 100%;
+    height: 350px;
+  }
+  .banner--productsView__title {
+    width: 40%;
+    height: 40%;
+    margin-left: 325px;
+    padding-top: 262px;
+    font-size: 25px;
+  }
 }
 
 .containerlines {
@@ -918,6 +929,16 @@ input[type=button] {
         align-self: center;
   }
   .btnPrimary--payShop {
+    margin-top: 31px;
+    width: 340px;
+    height: 62px;
+    font-size: 25px;
+    text-align: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .btnPrimary--add {
     margin-top: 31px;
     width: 340px;
     height: 62px;
@@ -2545,58 +2566,6 @@ label {
   width: 50%;
   padding: 50px;
   margin-bottom: 100px;
-  /*
-    &__loadimage{
-
-        margin-top: 16px;
-        box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.25));
-        width: 475px;
-        height: 305px;
-        border-radius: 25px;
-        display: flex;
-        align-items: center;
-       
-        
-    
-    }*/
-  /*
-    &--user{
-        width: 40%;
-
-    }*/
-  /*&--second{
-
-        width: 100%;
-        padding: 0px;
-        margin-top: 80px;
-        
-        &__loadimage{
-
-            margin-top: 50px;
-            box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.25));
-            width: 475px;
-            height: 305px;
-            border-radius: 25px;
-            display: flex;
-            align-items: center;
-           
-            
-        
-        }
-
-        &__image{
-
-            padding: 44px;
-            
-           
-        }
-
-        &__info{
-            font-size:$font-size-p-secondary;
-            color: gray;
-            padding: 10px;
-        }
-    }*/
 }
 
 .form__title {
@@ -2770,12 +2739,6 @@ label {
           justify-content: center;
 }
 
-/*
-.select{
-    font-family: 'Montserrat';
-    margin-top: 10px;
-    height: 37px;
-}*/
 .login {
   width: 40%;
 }
@@ -2786,6 +2749,11 @@ label {
 
 .hidden {
   display: none;
+}
+
+.selectCity {
+  margin-top: 10px;
+  font-family: "Montserrat", sans-serif;
 }
 
 @media (max-width: 576px) {
@@ -2852,6 +2820,15 @@ label {
     margin-top: 8px;
     font-size: 22px;
     text-align: center;
+  }
+  .selectCity {
+    margin-top: 10px;
+    height: 50px;
+    width: 254px;
+    font-size: 20px;
+  }
+  .selectCity option {
+    font-size: 12px;
   }
 }
 
@@ -3528,10 +3505,16 @@ label {
   font-weight: 500;
 }
 
-.productsInfo h4 {
-  margin-top: 10px;
-  font-size: 20px;
-  font-weight: 300;
+.productsInfo__sub {
+  margin-top: 5px;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.productsInfo__popularity {
+  margin-top: 5px;
+  font-size: 22px;
+  font-weight: 500;
 }
 
 .productsInfo__items {
@@ -3565,26 +3548,58 @@ label {
   font-weight: 300;
 }
 
-/*
-.preloader {
-    width: 70px;
-    height: 70px;
-    border: 10px solid #eee;
-    border-top: 10px solid rgb(22, 22, 22);
-    border-radius: 50%;
-    animation-name: girar;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
+@media (max-width: 576px) {
+  .gallery__items {
+    width: 30%;
+    margin-left: 35px;
+    margin-top: 40px;
   }
-  @keyframes girar {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }*/
+  .gallery__items img {
+    width: 250px;
+    height: 150px;
+    -o-object-fit: contain;
+       object-fit: contain;
+    padding: 10px;
+  }
+  .gallery__items img:hover {
+    cursor: pointer;
+    border: 3px solid gray;
+  }
+  .gallery__view {
+    width: 70%;
+    margin-right: 35px;
+    margin-top: 20px;
+  }
+  .gallery__view .imgPrincipal {
+    width: 579px;
+    height: 571px;
+    -o-object-fit: contain;
+       object-fit: contain;
+    padding: 10px;
+  }
+  .productsInfo {
+    width: 70%;
+  }
+  .productsInfo__title {
+    font-size: 26px;
+  }
+  .productsInfo h4 {
+    font-size: 23px;
+  }
+  .productsInfo__items div h4 {
+    font-size: 24px;
+  }
+  .description {
+    margin-bottom: 0px;
+  }
+  .description h3 {
+    font-size: 25px;
+  }
+  .description__text {
+    font-size: 23px;
+  }
+}
+
 .order {
   width: 100%;
 }
@@ -3811,6 +3826,10 @@ label {
     font-size: 22px;
     font-weight: 300;
     margin-top: 20px;
+  }
+  .order__info {
+    border-bottom: 1px solid #b6b6b6;
+    width: 55%;
   }
 }
 

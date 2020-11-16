@@ -5,6 +5,7 @@ const logout = document.querySelector('.logout');
 var userInfo;
 
 const userAuth= document.querySelector('.userAuth'); 
+const cartAuth=document.querySelector('.cartAuth'); 
 
 
 
@@ -17,12 +18,18 @@ firebase.auth().onAuthStateChanged(function (user) {
       if(userAuth){
         userAuth.href = './userProfile.html';
       }
+
+      if(cartAuth){
+        cartAuth.href = './cart.html';
+      }
     
     }else{
       if(userAuth){
         userAuth.href = './Html/userProfile.html';
       }
-      
+      if(cartAuth){
+        cartAuth.href = './Html/cart.html';
+      }
     }
     
 
@@ -89,9 +96,26 @@ firebase.auth().onAuthStateChanged(function (user) {
   }else{
     if(window.location.href.indexOf("Html")> -1){
       
-      userAuth.href = './login.html';
+      if(userAuth){
+        userAuth.href = './login.html';
+      }
+
+      if(cartAuth){
+        cartAuth.href = './login.html';
+      }
+     
+  
     }else{
-      userAuth.href = './Html/login.html';
+
+      if(userAuth){
+        userAuth.href = './Html/login.html';
+      }
+
+      if(cartAuth){
+        cartAuth.href = './Html/login.html';
+      }
+ 
+  
     }
   }
 });

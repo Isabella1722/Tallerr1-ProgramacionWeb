@@ -37,37 +37,33 @@
     font-size: $font-size-h2;
     font-weight: 500;
     text-align: center;
-    
 }
-.description{
-
+.description {
     margin-bottom: 220px;
-    h3{
+    h3 {
         margin-top: 50px;
         font-size: $font-size-h3;
         font-weight: 500;
         text-align: center;
-    
     }
 
-    &__text{
+    &__text {
         padding: 50px;
         font-size: $font-size-p;
         font-weight: 300;
     }
 }
 
-.ingredients{
+.ingredients {
     margin-bottom: 220px;
-    h3{
+    h3 {
         margin-top: 50px;
         font-size: $font-size-h3;
         font-weight: 500;
         text-align: center;
-       
     }
 
-    &__text{
+    &__text {
         padding: 50px;
         font-size: $font-size-p;
         font-weight: 300;
@@ -107,12 +103,20 @@
         font-weight: 500;
     }
 
-    h4 {
-        margin-top: 10px;
-        font-size: $font-size-h4;
-        font-weight: 300;
+    &__sub{
+        margin-top: 5px;
+        font-size: 22px;
+        font-weight: 500;
     }
-    
+
+    &__popularity{
+        margin-top: 5px;
+        font-size: 22px;
+        font-weight: 500;
+    }
+
+
+   
 
     &__items {
         display: flex;
@@ -133,23 +137,82 @@
         }
     }
 }
-/*
-.preloader {
-    width: 70px;
-    height: 70px;
-    border: 10px solid #eee;
-    border-top: 10px solid rgb(22, 22, 22);
-    border-radius: 50%;
-    animation-name: girar;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-  }
-  @keyframes girar {
-    from {
-      transform: rotate(0deg);
+
+//Big Mobile
+
+@media (max-width: 576px) {
+    .gallery {
+        &__items {
+            width: 30%;
+            margin-left: 35px;
+            margin-top: 40px;
+
+            img {
+                width: 250px;
+                height: 150px;
+                object-fit: contain;
+                padding: 10px;
+                &:hover {
+                    cursor: pointer;
+                    border: 3px solid gray;
+                }
+            }
+        }
+
+        &__view {
+            width: 70%;
+            margin-right: 35px;
+            margin-top: 20px;
+            .imgPrincipal {
+                width: 579px;
+                height: 571px;
+                object-fit: contain;
+                padding: 10px;
+            }
+        }
+
+
     }
-    to {
-      transform: rotate(360deg);
+
+    .productsInfo {
+        width: 70%;
+
+        &__title {
+       
+            font-size: 26px
+  
+        }
+        h4{
+            font-size: 23px;
+        }
+
+        &__items {
+            
+    
+            div {
+               
+                h4 {
+                  
+                    font-size: 24px;
+              
+                }
+            }
+        }
+
     }
-  }*/
+
+    .description {
+        margin-bottom: 0px;
+        h3 {
+           
+            font-size: 25px;
+          
+        }
+    
+        &__text {
+      
+            font-size: 23px;
+        
+        }
+    }
+}
