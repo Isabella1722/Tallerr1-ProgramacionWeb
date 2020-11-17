@@ -41,7 +41,10 @@ function getOrdersInformation() {
         querySnapshot.forEach((doc) => {
             const obj = doc.data().ordersInformation;
             orderListP.push(obj);
+            obj.id=doc.id;
             console.log(`${doc.id} => ${doc.data().ordersInformation}`);
+
+           
         });
         renderOrdersList(orderListP);
     });

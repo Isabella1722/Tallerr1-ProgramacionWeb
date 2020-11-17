@@ -82,14 +82,7 @@ function renderProducts(list) {
         const editBtn = newProduct.querySelector('.btnPrimary--edit');
         editBtn.addEventListener('click', function () {
 
-            /* form.namep.value= elem.namep;
-             form.image.value= elem.image;
-             form.brand.value= elem.brand;
-             form.typeproduct.value= elem.typeproduct;
-             form.color.value= elem.color;
-             form.price.value= elem.price;
-             selectItem = elem;
-             storage.setItem("selectItemtorage", selectItem);*/
+            
             console.log(elem.id);
             storage.setItem("selectItemtorage", elem.id);
             window.location.href = "./editProduct.html";

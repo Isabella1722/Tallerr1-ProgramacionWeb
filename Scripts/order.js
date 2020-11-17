@@ -111,6 +111,20 @@ function getQuantityProducts(){
    
 }
 
+
+function getDeleteShop(){
+
+  cartRef.doc(userInfo.uid).delete().then(function(){
+
+    console.log("Document successfully delected!");
+  })
+  .catch(function(error){
+    console.log("Error removing document: ", error);
+  });
+
+}
+
+
 //modal
 const modal = document.querySelector('.modal');
 const modalC = document.querySelector('.modalContainer');

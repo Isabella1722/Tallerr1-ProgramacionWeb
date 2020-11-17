@@ -4,8 +4,8 @@ const logout = document.querySelector('.logout');
 
 var userInfo;
 
-const userAuth= document.querySelector('.userAuth'); 
-const cartAuth=document.querySelector('.cartAuth'); 
+const userAuth = document.querySelector('.userAuth');
+const cartAuth = document.querySelector('.cartAuth');
 
 
 
@@ -14,24 +14,24 @@ firebase.auth().onAuthStateChanged(function (user) {
   if (user) {
     // si el usuario existe quiere decir que inició sesión, se registró o ya tenía sesión iniciada
 
-    if(window.location.href.indexOf("Html")> -1){
-      if(userAuth){
+    if (window.location.href.indexOf("Html") > -1) {
+      if (userAuth) {
         userAuth.href = './userProfile.html';
       }
 
-      if(cartAuth){
+      if (cartAuth) {
         cartAuth.href = './cart.html';
       }
-    
-    }else{
-      if(userAuth){
+
+    } else {
+      if (userAuth) {
         userAuth.href = './Html/userProfile.html';
       }
-      if(cartAuth){
+      if (cartAuth) {
         cartAuth.href = './Html/cart.html';
       }
     }
-    
+
 
 
 
@@ -46,80 +46,71 @@ firebase.auth().onAuthStateChanged(function (user) {
         userInfo = data;
         userInfo.uid = user.uid;
 
-        
-        if(window.getCartProducts){
+
+        if (window.getCartProducts) {
           getCartProducts();
           getQuantityProducts();
 
         }
 
 
-        if(window.getCartOrders){
+        if (window.getCartOrders) {
           getCartOrders();
           getQuantityProducts();
         }
-    
-        if(window.getOrder){
+
+        if (window.getOrder) {
           getOrder();
 
         }
 
-        if(window.getValue){
+        if (window.getValue) {
           getValue();
 
 
-        
+
         }
 
-        
-      
-        /*
+        if (window.getDeleteShop) {
+          const pay2Btn = document.querySelector('.btnPrimary--payShop');
 
-        if(window.getCart){
-          getCart();
+          pay2Btn.addEventListener('click', function () {
+            getDeleteShop();
+          });
+        }
 
-        }*/
-
-        // if(window.getCart2){
-        //   getCart2();
-
-        // }
 
         if (authProfileSpan) {
           authProfileSpan.innerText = data.name;
         }
 
-        /*
-                if(data.admin){
-                  window.location.href = '/Html/admin.html';
-                }
-          */
+
       }
 
     });
-  }else{
-    if(window.location.href.indexOf("Html")> -1){
-      
-      if(userAuth){
+  } else {
+    if (window.location.href.indexOf("Html") > -1) {
+
+      if (userAuth) {
         userAuth.href = './login.html';
       }
 
-      if(cartAuth){
+      if (cartAuth) {
         cartAuth.href = './login.html';
       }
-     
-  
-    }else{
 
-      if(userAuth){
+
+    } else {
+
+      if (userAuth) {
         userAuth.href = './Html/login.html';
       }
 
-      if(cartAuth){
+      if (cartAuth) {
         cartAuth.href = './Html/login.html';
       }
- 
-  
+
+
     }
   }
 });

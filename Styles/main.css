@@ -3790,11 +3790,9 @@ label {
           flex-direction: column;
 }
 
-.requirement__title {
-  font-size: 25px;
-  font-weight: 300;
-  margin-top: 50px;
-  text-align: center;
+.selectCard {
+  margin-top: 10px;
+  font-family: "Montserrat", sans-serif;
 }
 
 @media (max-width: 576px) {
@@ -3830,6 +3828,15 @@ label {
   .order__info {
     border-bottom: 1px solid #b6b6b6;
     width: 55%;
+  }
+  .selectCard {
+    margin-top: 10px;
+    height: 50px;
+    width: 254px;
+    font-size: 20px;
+  }
+  .selectCard option {
+    font-size: 12px;
   }
 }
 

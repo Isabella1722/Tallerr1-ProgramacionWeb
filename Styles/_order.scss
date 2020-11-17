@@ -155,13 +155,11 @@
     flex-direction: column;
 }
 
-.requirement__title {
-    font-size: $font-size-h3;
-    font-weight: 300;
-    margin-top: 50px;
-    text-align: center;
-}
 
+.selectCard{
+    margin-top: 10px;
+    font-family: "Montserrat", sans-serif;
+}
 @media (max-width: 576px) {
     .order {
         width: 100%;
@@ -200,6 +198,17 @@
         &__info {
             border-bottom: 1px solid rgb(182, 182, 182);
             width: 55%;
+        }
+    }
+
+    .selectCard {
+        margin-top: 10px;
+        height: 50px;
+        width: 254px;
+        font-size: 20px;
+
+        option {
+            font-size: 12px;
         }
     }
 }

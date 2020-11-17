@@ -66,12 +66,10 @@ window.addEventListener('load', function () {
     document.querySelector('.productsInfo__type').innerText = translateTypes(product.type);
     document.querySelector('.productsInfo__brand').innerText = translateBrand(product.brand);
     document.querySelector('.productsInfo__color').innerText = translateColor(product.color);
+    document.querySelector('.productsInfo__popularity').innerText = product.popularity;
     document.querySelector('.description__text').innerText = product.description;
     document.querySelector('.ingredients__text').innerText = product.ingredients;
-    // document.querySelector('.gallery').classList.remove('hidden');
-    //document.querySelector('.productsInfo').classList.remove('hidden');
-    
-    //let productsAddCart = [];
+   
     
     const addCartBtn = document.querySelector('.addCart');
     console.log(productsAddCart);
@@ -80,26 +78,7 @@ window.addEventListener('load', function () {
       if(userInfo) {
         getCart();
       }
-      // if (userInfo) {
-      //   const newShop = {
-      //     name: product.name,
-      //     brand: product.brand,
-      //     price: Number(product.price),
-      //     image: product.storageImgs[0],
-      //   };
       
-      //   productsAddCart.push(newShop);
-      
-      //   productCartList = {
-      //     products: productsAddCart
-      //   }
-      
-      //   cartRef.doc(userInfo.uid).set(productCartList).catch(function (error) {
-      //     console.log(error);
-      //   });
-      
-      //   console.log(productsAddCart)
-      // }
       
       modalC.style.opacity = "1";
         modalC.style.visibility = "visible";
@@ -174,37 +153,6 @@ galleryItems.forEach(function (elem, index) {
 
 
 
-
-
-
-/*
-//modal carrito
-const modal = document.querySelector('.modal--vertical');
-const modalC = document.querySelector('.modalContainer--vertical');
-const shopBtn = document.querySelector('.btnPrimary--viewList');
-const cartBtn = document.querySelector('.optionsBar__icons--shopping');
-
-cartBtn.addEventListener("click", function () {
-  modalC.style.opacity = "1";
-  modalC.style.visibility = "visible";
-  modal.classList.toggle("modal__close--vertical");
-  
-});
-
-
-
-window.addEventListener("click", function (e) {
-  
-  console.log(e.target);
-  if (e.target == modalC) {
-    modal.classList.toggle("modal__close--vertical");
-    
-    setTimeout(function () {
-      modalC.style.opacity = "0";
-      modalC.style.visibility = "hidden";
-    }, 850);
-  }
-});*/
 
 function translateTypes(type) {
   switch (type) {
