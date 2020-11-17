@@ -11,19 +11,18 @@ window.addEventListener('load', function () {
 
   console.log(location.search);
 
-  // partimos el location con el separador -
+
   const parts = location.search.split('-');
-  // usamos la primer parte y la limpiamos
+
   const uid = parts[0].replace('?', '');
 
-  // referencia a la base de datos
   const db = firebase.firestore();
-  // referencia a la coleción productos
+
   const productsRef = db.collection('products');
 
-  //referencia al producto 
+
   productsRef.doc(uid)
-    .get() // traer info de ese producto
+    .get() 
     .then(function (snapshot) {
 
       const product = snapshot.data();

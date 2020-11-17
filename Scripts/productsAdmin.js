@@ -12,7 +12,7 @@ function renderProducts(list) {
     list.forEach(function (elem) {
 
         const newProduct = document.createElement('article');
-        //para traer solo el primero
+        
         if (elem.storageImgs && elem.storageImgs.length > 0) {
             console.log(elem.storageImgs);
             storageRef.child(elem.storageImgs[0]).getDownloadURL().then(function (url) {
@@ -25,7 +25,7 @@ function renderProducts(list) {
         }
         newProduct.classList.add('product--admin');
         const url = `productView.html?${elem.id}-${elem.name}`;
-        //newProduct.setAttribute('href', url);
+        
         newProduct.innerHTML = `
         
         <img class="product__delete"src="../Images/delete.png" alt="delete">
@@ -47,22 +47,7 @@ function renderProducts(list) {
 
 
 
-        /*
-        para todo el arreglo
-                if(elem.storageImgs) {
-                
-                    elem.storageImgs.forEach(function(imageRef){
-                        storageRef.child(imageRef).getDownloadURL().then(function(url) {
-                            // Or inserted into an <img> element:
-                            var img = newProduct.querySelector('img');
-                            img.src = url;
-                          }).catch(function(error) {
-                            // Handle any errors
-                          });
-                    });
-                      
-                    
-                  }*/
+        
 
         //Delete
         const deleteBtn = newProduct.querySelector('.product__delete');
@@ -99,7 +84,7 @@ function renderProducts(list) {
     });
 }
 
-//función para traer los datos
+
 function getProducts() {
     productsRef.get().then((querySnapshot) => {
         const objects = [];

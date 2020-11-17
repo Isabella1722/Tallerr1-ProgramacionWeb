@@ -43,7 +43,7 @@ register.addEventListener('submit', function (event) {
           
         
         }).then(function () {
-         //window.location.href = '/Html/userProfile.html';
+         
          modalC.style.opacity = "1";
         modalC.style.visibility = "visible";
         modal.classList.toggle("modal__close");

@@ -20,7 +20,7 @@ function renderProducts(list) {
     newProduct.classList.add('product');
 
     const url = `productView.html?${elem.id}-${elem.name}`;
-    //newProduct.setAttribute('href', url);
+    
 
     newProduct.innerHTML = `
     <a href="${url}">
@@ -133,7 +133,7 @@ function renderProducts(list) {
 
 
 let objectsList = [];
-//función para traer los datos
+
 function getProducts() {
   productsRef.get().then((querySnapshot) => {
     objectsList = [];
@@ -144,7 +144,7 @@ function getProducts() {
       console.log(`${doc.id} =>${doc.data()}`);
     });
     renderProducts(objectsList);
-    // orderProducts();
+  
 
   });
 }

@@ -14,8 +14,7 @@ let ordersArray;
 formOrder.addEventListener('submit', function(event){
     event.preventDefault();
 
-    /*
-    */
+    
 
     const newOrder = {
 
@@ -39,7 +38,7 @@ formOrder.addEventListener('submit', function(event){
         orders: ordersArray,
       }
       
-      //arrayOrders.push();
+      
       orderRef.add(ordersListC).then().catch(function (error) {
         console.error("Error adding document: ", error);
       });
@@ -69,7 +68,7 @@ function getOrder(){
     cartRef.doc(userInfo.uid).get().then((doc) => {
         if(doc.exists){
             doc.data().products.forEach (function (item) {
-                ordersArray=doc.data();//console.log(doc.data().products);
+                ordersArray=doc.data();
             });
         }
       });

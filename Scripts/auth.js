@@ -12,7 +12,7 @@ const cartAuth = document.querySelector('.cartAuth');
 firebase.auth().onAuthStateChanged(function (user) {
   console.log(user);
   if (user) {
-    // si el usuario existe quiere decir que inició sesión, se registró o ya tenía sesión iniciada
+    
 
     if (window.location.href.indexOf("Html") > -1) {
       if (userAuth) {
@@ -115,13 +115,12 @@ firebase.auth().onAuthStateChanged(function (user) {
   }
 });
 
-// cerrar sesión
+
 if (logout) {
   logout.addEventListener('click', function (event) {
     console.log("hh");
     event.preventDefault();
     firebase.auth().signOut();
-    //authProfileSpan.innerText = '';
     window.location.href = "../index.html";
     console.log("cerró sesión");
   });

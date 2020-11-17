@@ -34,7 +34,7 @@ const pCartList = document.querySelector('.order');
 function renderCartProducts(list) {
     pCartList.innerHTML = '';
     list.forEach(function (elem, i) {
-        // console.log(elem.nameProduct);
+      
         const newCartProduct = document.createElement('section');
         newCartProduct.classList.add('orderProduct');
 
@@ -59,7 +59,7 @@ function renderCartProducts(list) {
         });
 
 
-        //cálculo
+      
         cartRef.doc(userInfo.uid).get().then((doc)=>{
 
             if(doc.exists){

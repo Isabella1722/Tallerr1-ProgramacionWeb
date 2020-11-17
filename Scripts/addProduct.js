@@ -10,13 +10,13 @@ const viewBtn = document.querySelector('.btnPrimary--viewList');
 
 var storageRef = firebase.storage().ref();
 
-//arreglo de los inputs
+
 var imagePaths = [];
 
 //form
 const form = document.querySelector('.formAdd');
 console.log(form);
-//console.log(form.color.options[0].text);
+
 
 
 
@@ -25,7 +25,6 @@ form.addEventListener('submit', function (event) {
 
     const newProduct = {
         name: form.namep.value,
-       //img: form.image.value,
         brand: form.brand.value,
         type: form.typeproduct.value,
         color: form.color.value,
@@ -36,13 +35,10 @@ form.addEventListener('submit', function (event) {
         storageImgs: imagePaths,
     }
 
-    //subir a la base de datos
+    
     productsRef.add(newProduct).then(function (docRef) {
         console.log("Document written with ID: ", docRef.id);
-        //getProducts();
-        //form.name.value = '';
         form.namep.value = '';
-        //form.image.value = '';
         form.brand.value = '';
         form.typeproduct.value = '';
         form.color.value = '';

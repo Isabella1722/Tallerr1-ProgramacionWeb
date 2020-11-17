@@ -9,7 +9,7 @@ console.log(selectItem);
 
 var storageRef = firebase.storage().ref();
 
-//arreglo de los inputs
+
 var imagePaths = [];
 
 //modal
@@ -22,7 +22,7 @@ const viewBtn = document.querySelector('.btnPrimary--viewList');
 const form = document.querySelector('.form');
 console.log(form);
 
-//Con esto se trae la información del elemento al que le dimos editar anteriormente
+
 productsRef.doc(selectItem).get().then(function(doc) {
 
     if (doc.exists) {
@@ -33,7 +33,6 @@ productsRef.doc(selectItem).get().then(function(doc) {
         console.log("No such document!");
     }
     form.namep.value = elem.name;
-    //form.image.value = elem.img;
     form.brand.value = elem.brand;
     form.typeproduct.value = elem.type;
     form.color.value = elem.color;
@@ -42,7 +41,6 @@ productsRef.doc(selectItem).get().then(function(doc) {
     form.description.value = elem.description;
     form.ingredients.value = elem.ingredients;
 
-   // form.imageFile.value = elem.imageFile;
 
 }).catch(function(error) {
     console.log("Error getting document:", error);
@@ -70,7 +68,6 @@ form.addEventListener('submit', function (event) {
 
     const editProduct = {
         name: form.namep.value,
-        //img: form.image.value,
         brand: form.brand.value,
         type: form.typeproduct.value,
         color: form.color.value,
@@ -79,14 +76,13 @@ form.addEventListener('submit', function (event) {
         description: form.description.value,
         ingredients: form.ingredients.value,
         storageImgs: imagePaths
-        //imageFile: form.imageFile.value
+       
     }
 
-    //parte de editar
+    //Edit
     
     function handleThen(docRef) {
         form.namep.value = '';
-       // form.image.value = '';
         form.brand.value = '';
         form.typeproduct.value = '';
         form.color.value = '';
@@ -94,7 +90,6 @@ form.addEventListener('submit', function (event) {
         form.popularity.value = '';
         form.description.value = '';
         form.ingredients.value = '';
-       // form.imageFile.value = '';
         selectItem = null;
     }
 
@@ -104,7 +99,7 @@ form.addEventListener('submit', function (event) {
 
 
     if (selectItem) {
-        //si existe selectItem quiere decir que es porque va a editar
+        
         productsRef.doc(selectItem).set(editProduct)
             .then(handleThen)
             .catch(handleCatch);
