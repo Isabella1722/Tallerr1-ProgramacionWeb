@@ -108,30 +108,6 @@ function renderProducts(list) {
       if(userInfo) {
         getCart();
 
-        /* const newShop = {
-           name: elem.name,
-           brand: elem.brand,
-           price: Number(elem.price),
-           image: elem.storageImgs[0],
-         };
-  
-         productsAddCart.push(newShop);
-
-           productCartList={
-             products:productsAddCart
-           }
-        
-           cartRef.doc(userInfo.uid).set(productCartList).catch(function(error){
-             console.log(error);
-           });*/
-        /*
-        //cartRef.doc(userInfo.uid).doc(elem.id).set(newShop).then(function (docRef 
-        usersRef.doc(userInfo.uid).collection("cart").doc(elem.id).set(newShop).then(function (docRef) {
-          //console.log("Document written with ID: ", docRef.id);
-        }).catch(function (error) {
-          console.error("Error adding document: ", error);
-        });*/
-  
         modalC.style.opacity = "1";
         modalC.style.visibility = "visible";
         modal.classList.toggle("modal__close");
@@ -174,148 +150,7 @@ function getProducts() {
 }
 getProducts();
 
-// function getCart() {
-//   cartRef
-//     .doc(userInfo.uid)
-//     .get()
-//     .then((doc) => {
-//       if(doc.exists){
-//         productCartList = doc.data().products;
-//       }
-//     }).catch(function (error) {
-//       console.log("hola: ", error);
-//     });
-// }
 
-
-
-
-
-/*
-//modal carrito
-const modal = document.querySelector('.modal--full');
-const modalC = document.querySelector('.modalContainer--full');
-const shopBtn = document.querySelector('.btnPrimary--viewList');
-const cartBtn = document.querySelector('.optionsBar__icons--shopping');
-cartBtn.addEventListener("click", function () {
-  modalC.style.opacity = "1";
-  modalC.style.visibility = "visible";
-  modal.classList.toggle("modal__close--full");
-});
-window.addEventListener("click", function (e) {
-  // console.log(e.target);
-  if (e.target == modalC) {
-    modal.classList.toggle("modal__close--full");
-    setTimeout(function () {
-      modalC.style.opacity = "0";
-      modalC.style.visibility = "hidden";
-    }, 850);
-  }
-});*/
-
-//Fonts select
-//const selects =document.querySelectorAll('select');
-//selectType.style.fontFamily="Montserrat", sans-serif;
-
-
-
-/*
-const selectSort = document.querySelector('.selectSort');
-selectSort.style.fontFamily = "Montserrat";
-function orderProducts() {
-  var sort;
-  selectSort.addEventListener('input', function () {
-    sort = selectSort.value;
-    //console.log (sort);
-    switch (sort) {
-      case 'sortAlphabetA':
-        productsRef.orderBy('name').get()
-          .then(function (querySnapshot) {
-            const objects = [];
-            querySnapshot.forEach(function (doc) {
-              const obj = doc.data();
-              obj.id = doc.id;
-              objects.push(obj);
-              // doc.data() is never undefined for query doc snapshots
-              console.log(doc.id, " => ", doc.data());
-              renderProducts(objects);
-            });
-          })
-          .catch(function (error) {
-            console.log("Error getting documents: ", error);
-          });
-        break;
-      case 'sortAlphabetZ':
-        productsRef.orderBy('name', 'desc').get()
-          .then(function (querySnapshot) {
-            const objects = [];
-            querySnapshot.forEach(function (doc) {
-              const obj = doc.data();
-              obj.id = doc.id;
-              objects.push(obj);
-              // doc.data() is never undefined for query doc snapshots
-              console.log(doc.id, " => ", doc.data());
-              renderProducts(objects);
-            });
-          })
-          .catch(function (error) {
-            console.log("Error getting documents: ", error);
-          });
-        break;
-      case 'sortPopularity':
-        productsRef.orderBy('popularity', 'desc').get()
-          .then(function (querySnapshot) {
-            const objects = [];
-            querySnapshot.forEach(function (doc) {
-              const obj = doc.data();
-              obj.id = doc.id;
-              objects.push(obj);
-              // doc.data() is never undefined for query doc snapshots
-              console.log(doc.id, " => ", doc.data());
-              renderProducts(objects);
-            });
-          })
-          .catch(function (error) {
-            console.log("Error getting documents: ", error);
-          });
-        break;
-      case 'sortLess':
-        productsRef.orderBy('price').get()
-          .then(function (querySnapshot) {
-            const objects = [];
-            querySnapshot.forEach(function (doc) {
-              const obj = doc.data();
-              obj.id = doc.id;
-              objects.push(obj);
-              // doc.data() is never undefined for query doc snapshots
-              console.log(doc.id, " => ", doc.data());
-              renderProducts(objects);
-            });
-          })
-          .catch(function (error) {
-            console.log("Error getting documents: ", error);
-          });
-        break;
-      case 'sortHigher':
-        productsRef.orderBy('price', 'desc').get()
-          .then(function (querySnapshot) {
-            const objects = [];
-            querySnapshot.forEach(function (doc) {
-              const obj = doc.data();
-              obj.id = doc.id;
-              objects.push(obj);
-              // doc.data() is never undefined for query doc snapshots
-              console.log(doc.id, " => ", doc.data());
-              renderProducts(objects);
-            });
-          })
-          .catch(function (error) {
-            console.log("Error getting documents: ", error);
-          });
-        break;
-    }
-  });
-}*/
 
 const filterForm = document.querySelector('.filterform');
 filterForm.addEventListener('input', function () {
@@ -323,9 +158,7 @@ filterForm.addEventListener('input', function () {
   let copy = objectsList.slice();
 
   const order = filterForm.sort.value;
-  //console.log(order);
-
-  // renderProducts(objectsList);
+  
 
   switch (order) {
     case 'sortLess':
@@ -347,8 +180,6 @@ filterForm.addEventListener('input', function () {
       break;
     case 'sortAlphabetZ':
       copy.sort(function (a, b) {
-        // return b.name.toLowerCase () - a.name.toLowerCase ();
-        // return b.name - a.name;
         return b.name.localeCompare(a.name);
       });
       break;
@@ -364,7 +195,7 @@ filterForm.addEventListener('input', function () {
   //filters
   //type
   const typeFilter = filterForm.typeproduct.value;
-  //console.log(typeFilter);
+
   if (typeFilter != '') {
 
     copy = copy.filter(function (elem) {
@@ -379,7 +210,7 @@ filterForm.addEventListener('input', function () {
 
   //color
   const colorFilter = filterForm.color.value;
-  //console.log(colorFilter);
+ 
   if (colorFilter != '') {
 
     copy = copy.filter(function (elem) {
@@ -395,7 +226,7 @@ filterForm.addEventListener('input', function () {
   //brand
 
   const brandFilter = filterForm.brand.value;
-  //console.log(colorFilter);
+
   if (brandFilter != '') {
 
     copy = copy.filter(function (elem) {
